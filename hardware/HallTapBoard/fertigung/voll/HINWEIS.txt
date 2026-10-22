@@ -1,0 +1,54 @@
+Samba Solar Track - HallTapBoard, Fertigungsdaten für JLCPCB, Bestückungsvariante „voll“
+Platine Entwurf 0.5; erzeugt am 13.10.2026 22:18 mit tools/halltap_erzeugen.py (Stand d0c5e90 13.10.2026 mit nicht eingecheckten Änderungen).
+
+Verwendung und Haftung: nur Schutzkleinspannung (SELV), höchstens 30 V DC an allen Anschlüssen, keine
+Netzspannung. Für Schäden durch unsachgemäßes Löten, Falschpolung oder falschen Anschluss externer
+Komponenten wird keine Haftung übernommen, soweit gesetzlich zulässig (README, Abschnitt „Verwendung,
+Spannung und Haftung“).
+
+ENTWURF - MUSTERBESTELLUNG ZUR ERPROBUNG (Freigabe des Nutzers vom 13.10.2026). Nichts davon ist gefertigt oder
+gemessen. Vor einer größeren Stückzahl den Prüfplan am Rack abarbeiten (README, „Platine HallTapBoard“): Impulsrate
+der Antriebe, Pegel der Hall-Leitung, ob die SCN4 den Abgriff verträgt (HAKIWO hat dazu nicht geantwortet).
+Passende Stecker: hardware/HallTapBoard/STECKER-BESTELLLISTE.md.
+
+Dateien:
+  HallTapBoard-gerber.zip  Gerber und Bohrdaten (11 Dateien): HallTapBoard-B_Cu.gbl, HallTapBoard-B_Mask.gbs, HallTapBoard-B_Paste.gbp, HallTapBoard-B_Silkscreen.gbo, HallTapBoard-Edge_Cuts.gm1, HallTapBoard-F_Cu.gtl, HallTapBoard-F_Mask.gts, HallTapBoard-F_Paste.gtp, HallTapBoard-F_Silkscreen.gto, HallTapBoard-NPTH.drl, HallTapBoard-PTH.drl
+  HallTapBoard-bom.csv     Stückliste (Comment, Designator, Footprint, JLCPCB Part #)
+  HallTapBoard-cpl.csv     Bestückungsdatei (Mitte der Padmitten in mm wie die Gerber; Oberseite)
+
+Bestellung (JLCPCB):
+  Leiterplatte: 2 Lagen, 1,6 mm, 70 x 40 mm, Kupfer 1 oz, Oberfläche HASL bleifrei, Lötstopp grün.
+  Keine Schlitze; vier Bohrungen 3,2 mm ohne Kupfer (NPTH), drei Werkzeuglöcher 1,152 mm.
+  Bestückung: Economic PCBA, nur Oberseite.
+  Bestückungsvariante voll: JLCPCB bestückt 45 SMD-Bauteile und 3 Durchsteckteile (J1, J2, J3),
+  die Durchsteckteile von Hand („Wave Soldering“, Preis je Lötstelle laut JLCPCB).
+
+Vor dem Bezahlen prüfen:
+  - Drehwinkel in der Bestückungsvorschau von JLCPCB. Der rote Punkt dort ist die Polaritätsmarke des
+    JLCPCB-Footprints, nicht immer Pin 1. Er liegt an der Marke im Druck bei:
+      D2 (C95872): Kathode (Pad 1); Druck: Strich an der Kathode. D2: Kathode an V24_D.
+      D10 (C123817): Kathode (Pad 1); Druck: Strich an der Kathode. D10: Kathode an +5V.
+      U1 (C108469): Pin 1 (IN); Druck: Strich an Pin 1. U1: Kuehlfahne = GND (Pin 2).
+      U2 (C2869804): Pin 1; Druck: Marke an Pin 1
+      U3, U4 (C109227): Pin 1 (Anode der LED, ANNAHME); Druck: Marke an Pin 1
+    Ausnahmen - der Punkt liegt NICHT an der Marke im Druck; Drehwinkel trotzdem NICHT ändern:
+      D4 (C2297): Punkt an der Anode (Pad 2, LED_PWR); Druck: Winkel an der Kathode (Pad 1). Im Auftrag an JLCPCB vermerken: "D4: red dot = anode, cathode at silkscreen bracket, keep rotation".
+      D9 (C2296): Punkt an der Anode (Pad 2, LED_24V); Druck: Winkel an der Kathode (Pad 1). Im Auftrag an JLCPCB vermerken: "D9: red dot = anode, cathode at silkscreen bracket, keep rotation".
+      J1 (C441236): Punkt vorn am Körper auf der Seite von Pin 1; Druck: Dreieck hinter Pin 1. Maßgeblich ist der Körper: Steckseite über der Platinenkante.
+      J2 (C441183): Punkt vorn am Körper auf der Seite von Pin 1 (ANNAHME); Druck: Dreieck hinter Pin 1. Massgeblich ist der Koerper: Steckseite ueber der Platinenkante.
+      J3 (C441172): Punkt vorn am Körper auf der Seite von Pin 1; Druck: Dreieck hinter Pin 1. Maßgeblich ist der Körper: Steckseite über der Platinenkante.
+    Ohne Polung (bidirektional): D1, D5, D6, D7, D8 (SMAJ30CA).
+    ANNAHME (H4): Drehkorrekturen aus den EasyEDA-Footprints vom 12. und 13.10.2026 (Tabelle in
+    tools/halltap_erzeugen.py); U1 (C108469) 180°, Kuehlfahne nach oben zum Platinenrand mit den Leuchten.
+  - Lagerbestand und Klasse jeder Nummer (Stand der Stückliste siehe README).
+
+Lose dazu bestellen (JLCPCB verschickt keine Einzelteile; zum Beispiel bei LCSC):
+  Stecker zu J1: 1 x KF2EDGK-5.08-2P-AA (C440880)
+  Stecker zu J2: 1 x KF2EDGK-3.81-3P (C440859)
+  Stecker zu J3: 1 x KF2EDGK-3.5-3P (C440848)
+  ANNAHME: Stecker KF2EDGK-5.08-2P-AA (C440880) zur Grundleiste KF2EDGRC-5.08-2P von J1 - Paarung laut
+  Datenblatt nicht belegt (wie J11 der RCB10, P15), am Muster prüfen.
+  Befestigung: im 3D-Druck-Gehäuse (hardware/HallTapBoard/gehaeuse/), Teileliste in der README.
+
+© Silvio Sternitzke, 10/2026 - Samba Solar Track - Lizenz CC BY-NC-SA 4.0: keine kommerzielle Verwendung durch Dritte, privater Nachbau erlaubt
+Lizenztext: LICENSE und LIZENZ.md im Projekt.

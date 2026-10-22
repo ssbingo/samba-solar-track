@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "HallTapBoard")(type "KiCad")(uri "${KIPRJMOD}/HallTapBoard.pretty")(options "")(descr "Eigene Footprints der Platine HallTapBoard"))
+)

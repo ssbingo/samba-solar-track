@@ -1,0 +1,92 @@
+Samba Solar Track - RearCircuitBoard_10, Fertigungsdaten für JLCPCB, Bestückungsvariante „smd“
+Platine Entwurf 0.10; erzeugt am 11.10.2026 18:29 mit tools/fertigung_export.py (Stand f404c5e 08.10.2026 mit nicht eingecheckten Änderungen).
+
+Verwendung und Haftung: nur Schutzkleinspannung (SELV), höchstens 30 V DC an allen Anschlüssen, keine
+Netzspannung. Für Schäden durch unsachgemäßes Löten, Falschpolung oder falschen Anschluss externer
+Komponenten wird keine Haftung übernommen, soweit gesetzlich zulässig (README, Abschnitt „Verwendung,
+Spannung und Haftung“).
+
+ENTWURF - NICHT BESTELLEN. Die Mechanik (Rückwand, Bohrungen, Länge von J1, Höhe der Bolzen) ist eine
+ANNAHME bis zur Messung am Gerät. Vor der Bestellung nach der Messung neu erzeugen
+(python3 tools/platine_layout.py, dann python3 tools/fertigung_export.py).
+
+Dateien:
+  RearCircuitBoard_10-gerber.zip  Gerber und Bohrdaten (13 Dateien): RearCircuitBoard_10-B_Cu.gbl, RearCircuitBoard_10-B_Mask.gbs, RearCircuitBoard_10-B_Paste.gbp, RearCircuitBoard_10-B_Silkscreen.gbo, RearCircuitBoard_10-Edge_Cuts.gm1, RearCircuitBoard_10-F_Cu.gtl, RearCircuitBoard_10-F_Mask.gts, RearCircuitBoard_10-F_Paste.gtp, RearCircuitBoard_10-F_Silkscreen.gto, RearCircuitBoard_10-In1_Cu.g1, RearCircuitBoard_10-In2_Cu.g2, RearCircuitBoard_10-NPTH.drl, RearCircuitBoard_10-PTH.drl
+  RearCircuitBoard_10-bom.csv     Stückliste (Comment, Designator, Footprint, JLCPCB Part #)
+  RearCircuitBoard_10-cpl.csv     Bestückungsdatei (Mitte der Padmitten in mm wie die Gerber, Oberseite)
+
+Bestellung (JLCPCB):
+  Leiterplatte: 4 Lagen, Lagenaufbau JLC04161H-7628, 1,6 mm, 100 x 102 mm, Oberfläche ENIG.
+  Kupfer: außen 1 oz, Innenlagen 0,5 oz (Entscheidung des Nutzers vom 7.10.2026).
+  Via Covering: Epoxy Filled & Capped (alle Vias; Vias in den Kühlflächen von U7 und U16 und im Drain-Pad von Q2, E21).
+  Schlitze um die NTC-Insel oben links (Edge.Cuts, 1,0 mm breit, nicht durchkontaktiert, Fräser Ø 1,0 mm; oben zur
+  Kante offen): Die Insel hängt an einem Finger 1,9 x 2,5 mm und ist links und rechts über je einen Steg aus FR4
+  ohne Kupfer gestützt (1,0 mm breit, 2,5 mm lang, y 5,0-6,0 mm; dort ist der Schlitz auf 2,5 mm verbreitert, die
+  Radien R 0,5 mm sind gezeichnet). Die Stege sind gewollt und bleiben stehen (keine Nutzenstege, nicht entfernen).
+  Bestückung: Economic PCBA, nur Oberseite. R92 und C38 nicht bestücken (DNP, Platz für einen Dämpfer).
+  Bestückungsvariante smd: JLCPCB bestückt 233 SMD-Bauteile. Von Hand: J1 (2 x 20, lange Stifte), alle
+  Klemmen (J2-J11, J14, J15, J22), J16 und J21 mit Steckbrücke (C5305); Bestellliste unten.
+
+Vor dem Bezahlen prüfen:
+  - Drehwinkel in der Bestückungsvorschau von JLCPCB. Der rote Punkt dort ist die Polaritätsmarke des
+    JLCPCB-Footprints, nicht immer Pin 1 (Lage je Nummer: Tabelle POLARITY in tools/fertigung_export.py,
+    aus den EasyEDA-Footprints vom 5.10.2026, für C2927414 vom 6.10.2026, für die Teile von Entwurf 0.9
+    vom 7.10.2026; C709481 war dort nicht abrufbar). Der Punkt liegt an
+    der Marke im Druck bei:
+      C14 (C487384): Pluspol (Pad 1); Druck: „+“ und abgeschrägte Ecken an Pad 1
+      C22 (C709481): Pluspol (Pad 1, ANNAHME); Druck: „+“ und abgeschrägte Ecken an Pad 1. C22: Pluspol an Pad 1 (V5_BUCK); Punkt in der Vorschau prüfen, EasyEDA-Footprint war nicht abrufbar.
+      D5 (C2927414): Pin 1 (Anodenbein); Druck: Dreieck an Pin 1 (Anode). D5: Punkt an der Anode, die Kathode ist die große Kühlfahne (Pin 3).
+      D6 (C113998): Kathode (Pad 1); Druck: Winkel an der Kathode
+      D10 (C2827321): Pad 1 (Kathode Blau); Druck: Strich an Pad 1
+      D13 (C2128): Kathode (Pad 1); Druck: Strich an der Kathode
+      D14 (C173407): Kathode (Pad 1); Druck: Strich an der Kathode
+      D15 (C19077402): Kathode (Pad 1, ANNAHME); Druck: Strich an der Kathode. D15: Kathode an V5_LOG (Pad 1); Punkt in der Vorschau prüfen, EasyEDA-Footprint war nicht abrufbar.
+      K1, K2, K3, K4 (C415471): Pin 1 (Anode der Leuchtdiode); Druck: Strich an Pin 1
+      Q1, Q11, Q12 (C20526): Pin 1 (Basis); Druck: Marke an Pin 1
+      Q2, Q3 (C840100): Pin 1 (Source); Druck: Strich an Pin 1. Q2/Q3: Pin 1-3 Source, Pin 4 Gate, Drain die große Fläche.
+      Q4, Q5, Q6, Q7, Q8, Q9 (C8545): Pin 1 (Gate); Druck: Marke an Pin 1
+      Q10 (C8542): Pin 1 (Basis); Druck: Marke an Pin 1
+      U1, U20 (C37593): Pin 1; Druck: Dreieck an Pin 1
+      U2, U8 (C201530): Pin 1; Druck: Dreieck an Pin 1
+      U3, U4, U6, U10, U13, U14 (C124691): Pin 1; Druck: Dreieck an Pin 1
+      U5, U9 (C55266): Pin 1; Druck: Dreieck an Pin 1
+      U7 (C3188679): Pin 1 (EN/UVLO); Druck: Strich an Pin 1
+      U11 (C1849398): Pin 1; Druck: Dreieck an Pin 1
+      U12 (C460397): Pin 1; Druck: Dreieck an Pin 1
+      U15 (C3662799): Pin 1 (EN/UVLO); Druck: Strich an Pin 1
+      U16 (C544399): Pin 1 (IN); Druck: Strich an Pin 1
+      U17 (C5219772): Pin 1; Druck: Strich an Pin 1
+      U18, U22 (C2869804): Pin 1; Druck: Marke an Pin 1
+      U19 (C5649): Pin 1; Druck: Marke an Pin 1
+      U21 (C398375): Pin 1 (REF); Druck: Marke an Pin 1. U21: Pinfolge DBZ 1 REF, 2 K, 3 A.
+    Ausnahmen - der Punkt liegt NICHT an der Marke im Druck; Drehwinkel trotzdem NICHT ändern:
+      D9 (C2297): Punkt an der Anode (Pad 2, LED_5V); Druck: Winkel an der Kathode (Pad 1). Im Auftrag an JLCPCB vermerken: "D9: red dot = anode, cathode at silkscreen bracket, keep rotation".
+    Ohne Polung (bidirektional, Lage des Punkts gleichgültig): D1, D2, D3, D4, D11, D12, D16, D17 (SMAJ33CA).
+    ANNAHME (H4): JLCPCB bestückt bei Widerspruch zwischen Druck und Bestückungsdatei nach dem Druck (so
+    beschreibt es JLCPCB in „PCB Assembly FAQs (Part 2)“, abgerufen 5.10.2026); ob das im Einzelfall
+    geschieht, ist nicht belegt. Deshalb die Ausnahmen im Auftrag vermerken. Dass die Vorschau den
+    Punkt aus der Polaritätslage des EasyEDA-Footprints zeichnet, ist ebenfalls eine ANNAHME. Die
+    Korrekturen der Drehwinkel sind aus den JLCPCB-Footprints abgeleitet (ANNAHME, siehe ROTATION).
+  - Lagerbestand und Klasse jeder Nummer (Stand der Stückliste siehe README); bei Engpässen
+    gleichwertige Teile erst nach Prüfung des Datenblatts eintragen (H5).
+
+Lose dazu bestellen (JLCPCB verschickt keine Einzelteile; zum Beispiel bei LCSC):
+  Durchsteckteile zum Selbstlöten (aus der Platine gezählt):
+    1 x KF2EDGR-3.5-6P (C441175): J2
+    2 x KF2EDGSR-3.5-2*2P (C2923260): J3, J4
+    2 x KF2EDGSR-3.5-2*3P (C2923261): J5, J6
+    4 x KF2EDGR-3.5-2P (C441171): J7, J8, J9, J10
+    1 x KF2EDGRC-5.08-2P (C441236): J11
+    1 x KF2EDGR-3.5-5P (C441174): J14
+    2 x KF2EDGR-3.5-3P (C441172): J15, J22
+    2 x PZ254V-11-03P (C2937625): J16, J21
+  Steckbrücken: 2 x Steckbrücke 2,54 mm (C5305) für J16 (1-2 = Abschluss ein, 2-3 = aus) und J21 (2-3 = Betrieb, 1-2 = Ladesperre erzwingen), von Hand stecken.
+  Stecker: 4 x KF2EDGK-3.5-2P (C440847), 2 x KF2EDGK-3.5-3P (C440848), 1 x KF2EDGK-3.5-5P (C440850), 1 x KF2EDGK-3.5-6P (C440851), 1 x KF2EDGK-5.08-2P-AA (C440880), 2 x KF2EDGKS-3.5-2*2P (C2923215), 2 x KF2EDGKS-3.5-2*3P (C2923216)
+  ANNAHME: Stecker KF2EDGK-5.08-2P-AA (C440880) zur Grundleiste KF2EDGRC-5.08-2P von J11 - Paarung laut Datenblatt nicht belegt, am Muster prüfen (P15).
+  J1: Stiftleiste 1 x 40 mit langen Stiften (Länge nach der Messung, Vorschläge in der README).
+  Wärmeweg der NTC-Insel (von Hand, kein JLCPCB-Teil für das Pad, E31): Distanzbolzen Messing M3, SW 4,7 mm,
+  6 mm (C551326) oder 8 mm (C551328) nach dem gemessenen Spalt, dazu zwei Wärmeleitpads 6 x 6 mm, 1,0 oder
+  1,5 mm (zum Beispiel Thermal Grizzly Minus Pad 8 oder Arctic TP-3; Auswahl in der README).
+
+© Silvio Sternitzke, 10/2026 - Samba Solar Track - Lizenz CC BY-NC-SA 4.0: keine kommerzielle Verwendung durch Dritte, privater Nachbau erlaubt
+Lizenztext: LICENSE und LIZENZ.md im Projekt.

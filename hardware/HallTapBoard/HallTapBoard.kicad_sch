@@ -1,0 +1,3299 @@
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0")
+  (uuid "084816fb-1818-5f78-9fa5-34db59deedd6")
+  (paper "A3")
+  (title_block
+    (title "Samba Solar Track - HallTapBoard")
+    (date "10/2026")
+    (rev "0.5 Entwurf")
+    (company "Samba Solar Track")
+    (comment 1 "Hall-Abgriff an der HAKIWO SCN4 (Antrieb 1), Ausgang zu J22 der RearCircuitBoard_10")
+    (comment 2 "Erzeugt mit tools/halltap_erzeugen.py - nur am Rechner geprueft, nicht gefertigt, nicht gemessen")
+    (comment 3 "Lizenz CC BY-NC-SA 4.0: keine kommerzielle Verwendung durch Dritte, privater Nachbau erlaubt")
+    (comment 4 "© Silvio Sternitzke, 10/2026"))
+  (lib_symbols
+  (symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Device:LED"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "LED diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LED_0_1"
+			(polyline
+				(pts
+					(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 0) (xy 1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 -1.27) (xy -1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "LED_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Device:Polyfuse"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "F"
+			(at -2.54 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Polyfuse"
+			(at 2.54 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 1.27 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "resettable fuse PTC PPTC polyfuse polyswitch"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "*polyfuse* *PTC*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Polyfuse_0_1"
+			(polyline
+				(pts
+					(xy -1.524 2.54) (xy -1.524 1.524) (xy 1.524 -1.524) (xy 1.524 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -0.762 2.54)
+				(end 0.762 -2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Polyfuse_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Diode:SMAJ30CA"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMAJ30CA"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "400W bidirectional Transient Voltage Suppressor, 30.0Vr, SMA(DO-214AC)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "bidirectional diode TVS voltage suppressor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "D*SMA*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SMAJ30CA_0_1"
+			(polyline
+				(pts
+					(xy -2.54 -1.27) (xy 0 0) (xy -2.54 1.27) (xy -2.54 -1.27)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy 2.54 -1.27) (xy 0 0) (xy 2.54 1.27)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "SMAJ30CA_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Diode:SMAJ6.5A"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMAJ6.5A"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+			(at -1.27 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "400W unidirectional Transient Voltage Suppressor, 6.5Vr, SMA(DO-214AC)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "unidirectional diode TVS voltage suppressor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "D*SMA*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SMAJ6.5A_0_1"
+			(polyline
+				(pts
+					(xy -0.762 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "SMAJ6.5A_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Diode:1N4007"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4007"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 0 -4.445 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "D*DO?41*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "1N4007_0_1"
+			(polyline
+				(pts
+					(xy -1.27 1.27) (xy -1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "1N4007_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Isolator:LTV-817S"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -3.81 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LTV-817S"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:SMDIP-4_W9.53mm"
+			(at 0 -7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF"
+			(at -8.89 7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "DC Optocoupler, Vce 35V, CTR 50%, SMDIP-4"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "NPN DC Optocoupler"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "SMDIP*W9.53mm*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LTV-817S_1_1"
+			(rectangle
+				(start -5.08 3.81)
+				(end 5.08 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -5.08 2.54) (xy -2.54 2.54) (xy -2.54 -0.762)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.175 -0.635) (xy -1.905 -0.635)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -0.635) (xy -2.54 -2.54) (xy -5.08 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -0.635) (xy -3.175 0.635) (xy -1.905 0.635) (xy -2.54 -0.635)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.508 0.508) (xy 0.762 0.508) (xy 0.381 0.381) (xy 0.381 0.635) (xy 0.762 0.508)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.508 -0.508) (xy 0.762 -0.508) (xy 0.381 -0.635) (xy 0.381 -0.381) (xy 0.762 -0.508)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.905) (xy 2.54 -1.905) (xy 2.54 -1.905)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0.635) (xy 4.445 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.048 -1.651) (xy 3.556 -1.143) (xy 4.064 -2.159) (xy 3.048 -1.651) (xy 3.048 -1.651)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.445 2.54) (xy 5.08 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.445 -2.54) (xy 2.54 -0.635)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.445 -2.54) (xy 5.08 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 2.54 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 -2.54 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Regulator_Linear:LM2936-5.0"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -3.81 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM2936-5.0"
+			(at 0 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 5.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2936.pdf"
+			(at 0 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "50mA Ultra-Low Quiescent Current LDO Voltage Regulator, 5.0V fixed output, TO-252/SOT-223"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "linear regulator ldo fixed positive"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TO?252* SOT?223*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LM2936-5.0_0_1"
+			(rectangle
+				(start -5.08 1.905)
+				(end 5.08 -5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LM2936-5.0_1_1"
+			(pin power_in line
+				(at -7.62 0 0)
+				(length 2.54)
+				(name "VI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "VO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Connector:Screw_Terminal_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "screw terminal"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TerminalBlock*:*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Screw_Terminal_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 0.508) (xy 0.508 -0.3302)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 0)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -2.54)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Connector:Screw_Terminal_01x03"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x03"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "screw terminal"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TerminalBlock*:*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Screw_Terminal_01x03_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 2.8702) (xy 0.3302 2.032)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 3.048) (xy 0.508 2.2098)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 0.508) (xy 0.508 -0.3302)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 2.54)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 0)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -2.54)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Mechanical:MountingHole"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(property "Reference" "H"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "MountingHole_0_1"
+			(circle
+				(center 0 0)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "power:GND"
+		(power)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "#PWR"
+			(at 0 -6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "GND_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "GND_1_1"
+			(pin power_in line
+				(at 0 0 270)
+				(length 0)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "power:+5V"
+		(power)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 0 3.556 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "+5V_0_1"
+			(polyline
+				(pts
+					(xy -0.762 1.27) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "+5V_1_1"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "power:PWR_FLAG"
+		(power)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+  (symbol "Samba:LM2903" (pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+    (property "Reference" "U" (at 2.54 8.89 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM2903" (at 2.54 -8.89 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm2903b.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "Zwei Komparatoren, offener Kollektor, -40 bis 125 Grad C" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (symbol "LM2903_0_1"
+      (rectangle (start -7.62 7.62) (end 7.62 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "LM2903_1_1"
+      (pin input line (at -10.16 5.08 0) (length 2.54) (name "INA+" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+      (pin input line (at -10.16 2.54 0) (length 2.54) (name "INA-" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+      (pin input line (at -10.16 -2.54 0) (length 2.54) (name "INB+" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+      (pin input line (at -10.16 -5.08 0) (length 2.54) (name "INB-" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+      (pin open_collector line (at 10.16 2.54 180) (length 2.54) (name "OUTA" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+      (pin open_collector line (at 10.16 -2.54 180) (length 2.54) (name "OUTB" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at 0 10.16 270) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at 0 -10.16 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))))
+    (embedded_fonts no)))
+  (text "Versorgung 24 V -> 5 V (Eingangsseite)" (exclude_from_sim no) (at 20.32 25.40 0) (effects (font (size 2.5 2.5) (bold yes)) (justify left bottom)) (uuid "f3ec96d5-4fa4-5f28-aa45-3086e41bf34d"))
+  (text "Versorgung aus der 24-V-Versorgung der Antriebe, NICHT aus dem 5-V-Anschluss der SCN4. Masse der Eingangsseite = Masse der SCN4.\nF1 PTC 50 mA (haelt 38 mA bei 50 Grad C, 30 mA bei 70 Grad C; loest ab 150 mA sicher aus), D1 SMAJ30CA (leitet bis +-30 V nicht, klemmt\nhoechstens 48,4 V, bis 5,9 A unter 45 V), D2 M7 Verpolschutz (1 A, 30 A Stossstrom). Kein Vorwiderstand und keine Klemmdiode vor dem Regler:\nU1 TPS7B6950-Q1 (40 V Betrieb, 45 V fuer 200 ms). Last an +5V hoechstens 14,5 mA: U1 0,28 W bei 25,2 V, 0,35 W bei 30 V (SOT-223).\nD10 SMAJ6.5A an +5V: Schlaegt U1 durch, klemmt D10 +5V auf etwa 8 V, der Strom (ueber 0,3 A) loest F1 aus. Kurzschluss vor U1 (C1, D1, U1):\nF1 loest aus. Jeder Vorwiderstand ist geteilt (R17+R23, R18+R24): Ein kurzgeschlossener Widerstand ueberlastet die Leuchte nicht.\nD9 gelb '24V' an V24_D: 2 x 10 kOhm, 0,9-1,4 mA bei 22-30 V. D4 gruen '5V OK' an +5V: 2 x 1 kOhm, 1,0-1,4 mA. Nur '24V' an:\n24 V da, aber keine 5 V (U1 oder Kurzschluss auf +5V). Beide Leuchten unter je einem Lichtschacht mit Lichtleiter im Deckel." (exclude_from_sim no) (at 20.32 43.18 0) (effects (font (size 1.3 1.3)) (justify left bottom)) (uuid "6e46506e-5e2d-54fd-bc8a-8d023fbd6c07"))
+  (symbol (lib_id "Connector:Screw_Terminal_01x02") (at 25.4 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f91fb385-7b0d-535b-a90e-582768b41c34")
+    (property "Reference" "J1" (at 24.13 76.20 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "24 V Antriebe" (at 24.13 88.90 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "HallTapBoard:Klemme_5.08_2P_KF2EDGRC" (at 25.4 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 25.4 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 25.4 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C441236" (at 25.4 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "Grundleiste KF2EDGRC-5.08-2P, Stecker KF2EDGK-5.08-2P-AA (C440880) lose dazu" (at 25.4 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "7860e685-6f16-5e4e-b1f5-c4c58741ae6f")) (pin "2" (uuid "af54088e-d1b2-514c-949c-48d14c69fec1"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "J1") (unit 1)))))
+  (label "V24_IN" (at 15.24 81.28 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c381c6fe-c013-55d0-81d1-1c624442f777"))
+  (symbol (lib_id "power:GND") (at 15.24 83.82 270) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "5aebe69f-5cfe-5c66-afe9-66cd7b453d91")
+    (property "Reference" "#PWR01" (at 17.78 82.55 90) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 7.62 83.82 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 15.24 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 15.24 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 15.24 83.82 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "8ee64378-a0bd-5278-ba3b-8ba355fce619"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR01") (unit 1)))))
+  (text "J1: 1 = +24 V, 2 = Minus (0 V)" (exclude_from_sim no) (at 12.70 93.98 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "346f9fd3-aa32-5553-8fad-3cd33088683a"))
+  (symbol (lib_id "Device:Polyfuse") (at 50.8 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "329cba3a-f4a4-556d-a50c-1e8708a3fe05")
+    (property "Reference" "F1" (at 52.70 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "50mA" (at 52.70 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Fuse:Fuse_1206_3216Metric" (at 50.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 50.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 50.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C70064" (at 50.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "TECHFUSE nSMD005: Ihold 50 mA, Itrip 150 mA, 60 V" (at 50.8 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6d138d4b-ed86-5be1-ab62-0aa646504211")) (pin "2" (uuid "3670e633-aeec-59b8-97b1-b5982bcfa5c7"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "F1") (unit 1)))))
+  (label "V24_IN" (at 50.80 74.93 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ea3a9710-058c-5852-a1aa-f5ee0299a31e"))
+  (label "V24_F" (at 50.80 87.63 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "eed07351-d1a6-53de-b0ca-2c15a1459a2c"))
+  (symbol (lib_id "Diode:SMAJ30CA") (at 71.12 81.28 270) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "018b2168-1e8a-5324-93dc-dc44cf44534f")
+    (property "Reference" "D1" (at 73.02 80.01 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SMAJ30CA" (at 73.02 82.55 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Diode_SMD:D_SMA" (at 71.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 71.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 71.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C110043" (at 71.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "bidirektional, 30 V" (at 71.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "7a0319f7-b7c6-5dbc-86bc-8ce389cb3813")) (pin "2" (uuid "99165c60-1d52-58e1-8fcc-067f598fbdac"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D1") (unit 1)))))
+  (label "V24_F" (at 71.12 74.93 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3d678414-9f2a-5078-941b-551053b38ebb"))
+  (symbol (lib_id "power:GND") (at 71.12 85.09 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "b3c3a3bd-9c2e-5022-9158-ae044bd02c78")
+    (property "Reference" "#PWR02" (at 73.66 83.82 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 71.12 88.90 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 71.12 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 71.12 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 71.12 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "085c639a-3f11-5387-931f-75af14e1cf47"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR02") (unit 1)))))
+  (symbol (lib_id "Diode:1N4007") (at 96.52 81.28 180) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "53147b48-c58b-50e3-94ec-f375a537f632")
+    (property "Reference" "D2" (at 93.98 77.47 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "M7" (at 93.98 85.09 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Diode_SMD:D_SMA" (at 96.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 96.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 96.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C95872" (at 96.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "MDD M7, SMA, 1 A, 1000 V, 30 A Stossstrom" (at 96.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "51f104cf-38b7-5284-afe4-dd9648afa9ac")) (pin "2" (uuid "37a8f98d-0a42-5a83-b82d-f67aa537134a"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D2") (unit 1)))))
+  (label "V24_F" (at 90.17 81.28 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "384c459b-36c3-53c1-9537-023a8b0db087"))
+  (label "V24_D" (at 102.87 81.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ba2fcc95-4081-5b63-9663-864cf5a3deba"))
+  (symbol (lib_id "Device:C") (at 121.92 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "31a880c3-68b1-54c9-8545-0da6b34e4c39")
+    (property "Reference" "C1" (at 123.82 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "1u 50V" (at 123.82 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 121.92 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 121.92 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 121.92 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C28323" (at 121.92 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "ee51b419-673b-56fd-a969-fe1a1a47e728")) (pin "2" (uuid "4749ec4a-2043-500a-82a5-030108d69084"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "C1") (unit 1)))))
+  (label "V24_D" (at 121.92 74.93 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1ad459d9-434e-5e78-89dc-7f7f7c184b63"))
+  (symbol (lib_id "power:GND") (at 121.92 85.09 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "aea3646b-521d-57bd-9178-8de9982989a8")
+    (property "Reference" "#PWR03" (at 124.46 83.82 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 121.92 88.90 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 121.92 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 121.92 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 121.92 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6477006c-c412-5309-b384-6f776f05ba68"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR03") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 139.7 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7f1e9a74-3b03-5847-8340-2bf2e6a3abaf")
+    (property "Reference" "R18" (at 141.60 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 141.60 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 139.7 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 139.7 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 139.7 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 139.7 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "0603, hoechstens 19 mW bei 30 V" (at 139.7 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "2be05c3d-9908-5eab-bb9c-830a64e968c7")) (pin "2" (uuid "57fa7369-f16d-5db2-9d87-038d1838b278"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R18") (unit 1)))))
+  (label "V24_D" (at 139.70 74.93 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f703a659-88ca-5c28-bcaa-8588ea90eb2e"))
+  (label "LED_24V_M" (at 139.70 87.63 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "500fe9ec-f554-5d94-b6d8-06b0dda5d695"))
+  (symbol (lib_id "Device:R") (at 157.48000000000002 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "950bdeee-14dd-51af-8451-3b35e935b27f")
+    (property "Reference" "R24" (at 159.38 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 159.38 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 157.48000000000002 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 157.48000000000002 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 157.48000000000002 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 157.48000000000002 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "0603, zweiter Vorwiderstand von D9" (at 157.48000000000002 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "94f4bc71-1ee1-58f7-8ffe-fadcaa8b93da")) (pin "2" (uuid "098f81e3-fff4-5714-8059-11225d3a3210"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R24") (unit 1)))))
+  (label "LED_24V_M" (at 157.48 74.93 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5fd65d1f-00e5-5656-9a26-3e99b0497b23"))
+  (label "LED_24V" (at 157.48 87.63 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b6f21523-cc19-5e06-8de4-152dd723f9c0"))
+  (symbol (lib_id "Device:LED") (at 182.88 81.28 180) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e2750bc6-7c66-5f9e-928c-a4682b41f2e0")
+    (property "Reference" "D9" (at 184.78 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "gelb" (at 184.78 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "LED_SMD:LED_0805_2012Metric" (at 182.88 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 182.88 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 182.88 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C2296" (at 182.88 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "KENTO KT-0805Y, Kathode Pad 1, Aufdruck 24V" (at 182.88 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "1df97c00-899c-5dba-8e6b-5230e3019a1b")) (pin "2" (uuid "fc19c212-3317-5c42-a41e-cd688f4723c0"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D9") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 189.23 81.28 90) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "0e182449-4390-517a-82a0-296263a19274")
+    (property "Reference" "#PWR04" (at 191.77 80.01 90) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 194.31 81.28 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 189.23 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 189.23 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 189.23 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a919a7ea-ccb4-5441-8fdf-f2c7c49f241c"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR04") (unit 1)))))
+  (label "LED_24V" (at 176.53 81.28 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "dbb2ad5e-880c-5fce-8683-2c4eb31ca870"))
+  (symbol (lib_id "Regulator_Linear:LM2936-5.0") (at 220.98 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "84cb0986-282d-5f16-806e-4f74c19df2b3")
+    (property "Reference" "U1" (at 218.44 76.20 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "TPS7B6950QDCYRQ1" (at 218.44 88.90 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (at 220.98 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 220.98 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 220.98 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C108469" (at 220.98 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "TI TPS7B6950QDCYRQ1: 1 IN, 2 GND (und Kuehlfahne), 3 OUT; 40 V, 45 V fuer 200 ms" (at 220.98 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "1a1eca28-6217-530f-9dd3-febd2c01459b")) (pin "2" (uuid "45cddbe9-9baa-5475-a9d2-d7f80f245084")) (pin "3" (uuid "b2ee84fa-afa4-5948-860d-936102ff93da"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "U1") (unit 1)))))
+  (label "V24_D" (at 210.82 81.28 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "6ce535cc-ae1a-5424-861f-d07aec8efcda"))
+  (symbol (lib_id "power:GND") (at 220.98 88.9 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "2c38ecdd-b2ea-5ce7-8ece-1bc336c96d27")
+    (property "Reference" "#PWR05" (at 223.52 87.63 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 220.98 92.71 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 220.98 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 220.98 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 220.98 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "e81a538b-2812-5ea1-ae6d-ed50498d9756"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR05") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 231.14 81.28 270) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "fa5518f4-13f5-58bf-9f76-893091bc0cbc")
+    (property "Reference" "#PWR06" (at 233.68 80.01 90) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 236.22 81.28 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 231.14 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 231.14 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 231.14 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "67442811-5738-583a-b947-8efab2f3e2e0"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR06") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 254.0 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f0387b08-66d2-5ff0-8e12-4e3d2bc65979")
+    (property "Reference" "C2" (at 255.90 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10u 25V" (at 255.90 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 254.0 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 254.0 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 254.0 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C15850" (at 254.0 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "X5R, U1 braucht 2,2 uF wirksam" (at 254.0 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "85f99ace-d206-5cf2-8325-280a4fb3eba0")) (pin "2" (uuid "cd3dcc72-b7fa-501f-8a0f-cad68934544c"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "C2") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 254.0 77.47 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "edd87466-7069-5f40-b22f-517da6193639")
+    (property "Reference" "#PWR07" (at 256.54 76.20 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 254.00 73.66 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 254.0 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 254.0 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 254.0 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "843aeb0a-5639-57e6-87d2-f8b596284774"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR07") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 254.0 85.09 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "96a6bc67-ec61-56ba-8157-45aa06552523")
+    (property "Reference" "#PWR08" (at 256.54 83.82 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 254.00 88.90 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 254.0 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 254.0 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 254.0 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a6371afc-f014-5546-9b40-e6a4c51e02cf"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR08") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 271.78 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d54e3744-f86c-5b6f-92c1-d0b9052d25ad")
+    (property "Reference" "C3" (at 273.68 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "100n" (at 273.68 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 271.78 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 271.78 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 271.78 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C14663" (at 271.78 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "34313048-5104-58f7-8ada-32501d52c9ec")) (pin "2" (uuid "64397288-7409-57b5-853a-9db0678a0e35"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "C3") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 271.78 77.47 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "8cf85d16-4b2d-5c5f-8e09-8b22224277cf")
+    (property "Reference" "#PWR09" (at 274.32 76.20 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 271.78 73.66 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 271.78 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 271.78 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 271.78 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "7cbfae95-274c-5313-b3a7-df4a3827ce1c"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR09") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 271.78 85.09 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "d7e9d636-d62f-5659-be3e-afc8b2e699c2")
+    (property "Reference" "#PWR10" (at 274.32 83.82 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 271.78 88.90 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 271.78 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 271.78 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 271.78 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "709a8162-71d8-5e9e-b286-434178819947"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR10") (unit 1)))))
+  (symbol (lib_id "Diode:SMAJ6.5A") (at 289.56 81.28 270) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4b9b040a-87d6-5103-8688-901c8d87509d")
+    (property "Reference" "D10" (at 291.46 80.01 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SMAJ6.5A" (at 291.46 82.55 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Diode_SMD:D_SMA" (at 289.56 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 289.56 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 289.56 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C123817" (at 289.56 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "Kathode an +5V; klemmt, wenn U1 durchschlaegt" (at 289.56 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "4467c2e2-c1a2-5994-9e15-f25f385809d2")) (pin "2" (uuid "b57c83a4-0f38-57eb-b1cc-bef4eb95eea2"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D10") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 289.56 77.47 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "fb172d8b-f1bd-537c-a2f2-c651755cd3b8")
+    (property "Reference" "#PWR11" (at 292.10 76.20 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 289.56 73.66 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 289.56 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 289.56 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 289.56 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "03fc4a57-fb73-5c4c-b953-5ac9f7886540"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR11") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 289.56 85.09 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "31a98fc5-2aa7-5040-89bb-40a8924de89f")
+    (property "Reference" "#PWR12" (at 292.10 83.82 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 289.56 88.90 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 289.56 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 289.56 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 289.56 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "0df7d606-c98d-52e3-be47-cf6422e7cc35"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR12") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 307.34000000000003 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7d33028f-ef90-5c20-bb03-e1cd72c8cb7c")
+    (property "Reference" "R17" (at 309.24 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "1k" (at 309.24 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 307.34000000000003 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 307.34000000000003 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 307.34000000000003 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C21190" (at 307.34000000000003 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "019fb120-61f8-57df-9ee7-4aa6be74b54c")) (pin "2" (uuid "a1b82476-560b-5423-93ea-49fe3a39a59e"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R17") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 307.34 77.47 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "e455e373-5088-5bf1-9587-3b42bd7dfa98")
+    (property "Reference" "#PWR13" (at 309.88 76.20 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 307.34 73.66 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 307.34 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 307.34 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 307.34 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a7f53b03-4af2-5605-ab90-50ca0dffe00a"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR13") (unit 1)))))
+  (label "LED_PWR_M" (at 307.34 87.63 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "9fc56310-9c6d-5497-b3c8-ce2d1a44dc48"))
+  (symbol (lib_id "Device:R") (at 325.12 81.28 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "671da4bd-fd24-5afa-a657-92308609b1f9")
+    (property "Reference" "R23" (at 327.02 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "1k" (at 327.02 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 325.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 325.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 325.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C21190" (at 325.12 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "3391a746-bdc1-5c53-b3a2-531a2f8e57e0")) (pin "2" (uuid "88c19020-4849-5a35-972e-f7d0a766ef49"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R23") (unit 1)))))
+  (label "LED_PWR_M" (at 325.12 74.93 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "58ca86b4-caab-554f-aaf7-a00c6534e354"))
+  (label "LED_PWR" (at 325.12 87.63 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "fac29977-f3d8-5165-a012-5155eb3e8ffb"))
+  (symbol (lib_id "Device:LED") (at 350.52 81.28 180) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "043bf14c-d5d3-510d-9539-28c8fd5fc37b")
+    (property "Reference" "D4" (at 352.42 80.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "gruen" (at 352.42 82.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "LED_SMD:LED_0805_2012Metric" (at 350.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 350.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 350.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C2297" (at 350.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "KENTO KT-0805G, Kathode Pad 1, Aufdruck 5V OK" (at 350.52 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "b2fc4939-f35b-5603-b6b6-dc29ef2f2849")) (pin "2" (uuid "369519b4-a1e9-5c10-93cf-b47eb5ece29e"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D4") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 356.87 81.28 90) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "ffd29e1f-3dce-5e99-9e43-73d301fa9d7f")
+    (property "Reference" "#PWR14" (at 359.41 80.01 90) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 361.95 81.28 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 356.87 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 356.87 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 356.87 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "288d4695-2c35-5f5b-ba5a-2ecb8509c06d"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR14") (unit 1)))))
+  (label "LED_PWR" (at 344.17 81.28 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "ba710385-d3b8-5e7a-bda4-5ebbe3f76f8e"))
+  (label "V24_D" (at 109.22 63.50 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "2a29ca8a-146a-5591-8cbb-37980e3ad6b4"))
+  (symbol (lib_id "power:PWR_FLAG") (at 114.3 63.5 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "56bdab36-f1c8-538b-863c-5add83f697b8")
+    (property "Reference" "#FLG15" (at 116.84 62.23 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 116.84 64.77 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Footprint" "" (at 114.3 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 114.3 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 114.3 63.5 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "0f9a7640-0890-5cad-aa2b-8293582a1f16"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#FLG15") (unit 1)))))
+  (symbol (lib_id "power:PWR_FLAG") (at 381.0 73.66 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "dac0121b-4273-57d4-9f5b-797bffb6243e")
+    (property "Reference" "#FLG16" (at 383.54 72.39 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 383.54 74.93 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Footprint" "" (at 381.0 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 381.0 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 381.0 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "15549889-a3fd-58f4-a63a-29f58dfdde01"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#FLG16") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 381.0 73.66 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "abe1cdd9-99c9-5297-8b90-8beefe2b47b3")
+    (property "Reference" "#PWR17" (at 383.54 72.39 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 381.00 77.47 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 381.0 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 381.0 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 381.0 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "90b292c3-c87f-58c5-b72f-5d4bb4a91d4b"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR17") (unit 1)))))
+  (text "Hall-Eingang A und B (Eingangsseite, Masse = SCN4)" (exclude_from_sim no) (at 20.32 110.49 0) (effects (font (size 2.5 2.5) (bold yes)) (justify left bottom)) (uuid "8dff7720-24cd-5040-ab9e-3c936bf37881"))
+  (text "Hall-Eingang parallel zur Hall-Klemme der SCN4 (etwa 10 cm Leitung). Im Antrieb: offener Kollektor, 1 kOhm an VCC (5 V der SCN4),\n100 Ohm in Reihe (Angaben HAKIWO vom 12.10.2026). R25+R26 bzw. R27+R28 (2 x 10 kOhm) vor D5/D6 SMAJ30CA (leiten bis 30 V nicht):\nSchlaegt D5/D6 durch, sieht die SCN4 20 kOhm gegen GND (HIGH 4,74 V statt 5 V) statt eines Kurzschlusses; 24 V auf H1/H2 schaden nicht.\nR3/R4 1 MOhm: Belastung der Hall-Leitung in jedem Fall unter 6 uA (auch ohne Versorgung, auch bei kurzgeschlossenem Eingang);\nLM2903B Eingang bis 38 V unabhaengig von VCC, Eingangsstrom hoechstens 25 nA. C4/C5 10 pF: Zeitkonstante etwa 14 us (Grenze 11 kHz).\nSchwelle an IN+: 10k/10k an +5V, Mitkopplung 47 kOhm vom Ausgang (Pull-up 2 x 5,1 kOhm): steigend 2,70 V, fallend 2,27 V (Hysterese 0,43 V).\nHall HIGH (Transistor im Antrieb sperrt) -> Ausgang LOW -> LED des Optokopplers an (2 x 510 Ohm: 3,0 bis 4,0 mA). Geteilte Widerstaende:\nIst einer kurzgeschlossen, bleibt der Strom im Ausgang des Komparators unter 8 mA (zulaessig 25 mA)." (exclude_from_sim no) (at 20.32 128.27 0) (effects (font (size 1.3 1.3)) (justify left bottom)) (uuid "6206f8ae-851e-5fb1-a074-e0dd2f5f196c"))
+  (symbol (lib_id "Connector:Screw_Terminal_01x03") (at 25.4 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1b09c598-41da-5221-b615-0f88e028dc6c")
+    (property "Reference" "J2" (at 24.13 160.02 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "Hall von SCN4" (at 24.13 172.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "HallTapBoard:Klemme_3.81_3P_KF2EDGR" (at 25.4 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 25.4 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 25.4 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C441183" (at 25.4 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "Grundleiste KF2EDGR-3.81-3P, Stecker KF2EDGK-3.81-3P (C440859) lose dazu; Raster 3,81 mm (Verwechslungsschutz gegen J3)" (at 25.4 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "babbd5a4-53f9-5442-9aae-916bdbb8d1d8")) (pin "2" (uuid "50434aa2-1b3c-5208-990a-da32b9bca81f")) (pin "3" (uuid "4645daf7-f138-5d4a-9120-b742583e2ae5"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "J2") (unit 1)))))
+  (label "H1" (at 15.24 162.56 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "9621c994-ad6c-5846-9715-288761cb3c1a"))
+  (label "H2" (at 15.24 165.10 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "357395ec-79fe-5b6f-a4d5-71f8480829f0"))
+  (symbol (lib_id "power:GND") (at 15.24 167.64 270) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "08e2aa3d-fc9f-5ac1-9b11-3a91d1e2bdfb")
+    (property "Reference" "#PWR18" (at 17.78 166.37 90) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 7.62 167.64 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 15.24 167.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 15.24 167.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 15.24 167.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "b50df77e-0eac-5496-a8cb-f074bd6202e9"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR18") (unit 1)))))
+  (text "J2: 1 = H1 (gelb), 2 = H2 (gruen), 3 = GND (schwarz); VCC (rot) NICHT anschliessen" (exclude_from_sim no) (at 12.70 180.34 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "76910640-ee35-5d5a-a5f6-b0414e72af3e"))
+  (symbol (lib_id "Device:R") (at 50.8 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e30e60a9-874e-525a-84d5-daf5445f4957")
+    (property "Reference" "R25" (at 52.70 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 52.70 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 50.8 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 50.8 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 50.8 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 50.8 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "vor D5" (at 50.8 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "90d3eded-8427-5ece-af29-84e7758d6a52")) (pin "2" (uuid "ab9bf49b-a7e9-5baa-ab97-261036aca41c"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R25") (unit 1)))))
+  (label "H1" (at 50.80 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f4bac507-642d-5685-9c24-d3262a3ac216"))
+  (label "H1_M" (at 50.80 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "ae6ca6b7-72bc-5c8d-a8ca-3cd628e8a4b9"))
+  (symbol (lib_id "Device:R") (at 63.5 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "39faad53-f644-5ec6-90d3-40243bcc6125")
+    (property "Reference" "R26" (at 65.40 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 65.40 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 63.5 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 63.5 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 63.5 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 63.5 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "vor D5" (at 63.5 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "f9c1c33c-1d72-5909-b320-3eede88634df")) (pin "2" (uuid "2fa1a609-92cf-5110-b2e4-aeaf3a60f2ec"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R26") (unit 1)))))
+  (label "H1_M" (at 63.50 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f7bfe9e8-0440-5810-878f-2d2c7d63caf4"))
+  (label "H1_S" (at 63.50 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "ff86bed1-c4d0-578e-ba0b-5a4d27374f81"))
+  (symbol (lib_id "Device:R") (at 76.19999999999999 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "67cf2409-e0fe-5b07-aaf2-e3f31c5b4785")
+    (property "Reference" "R27" (at 78.10 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 78.10 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 76.19999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 76.19999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 76.19999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 76.19999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "vor D6" (at 76.19999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d59230e4-573d-5af2-864d-b0c5788d0ae3")) (pin "2" (uuid "2e463e88-c661-5381-b3df-966feb99ab99"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R27") (unit 1)))))
+  (label "H2" (at 76.20 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "aab0f9cf-006c-5197-85a6-7ec4c38f04f6"))
+  (label "H2_M" (at 76.20 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "bc0f9418-6c97-5303-9a62-2191fada163f"))
+  (symbol (lib_id "Device:R") (at 88.89999999999999 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "996a74f6-7cdc-5b51-a16c-45a26455c49f")
+    (property "Reference" "R28" (at 90.80 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 90.80 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 88.89999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 88.89999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 88.89999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 88.89999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "vor D6" (at 88.89999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6deea001-e5d8-541f-89a8-18b287d4b71d")) (pin "2" (uuid "2c317d70-864a-58d7-9a0b-7c339d9fe42b"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R28") (unit 1)))))
+  (label "H2_M" (at 88.90 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "423b270b-83ce-54d4-afdf-44f433daeffc"))
+  (label "H2_S" (at 88.90 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b50b0f0b-480f-5db0-9ddb-28589dbe692a"))
+  (symbol (lib_id "Diode:SMAJ30CA") (at 101.6 165.1 270) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3c841c6d-a1fb-5ab3-888e-344ad7c597ab")
+    (property "Reference" "D5" (at 103.50 163.83 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SMAJ30CA" (at 103.50 166.37 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Diode_SMD:D_SMA" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C110043" (at 101.6 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a9fe5d6e-3ffc-57be-bcb1-319ae2582d66")) (pin "2" (uuid "59e29dca-fbb3-5054-bd51-c8f15570ed2a"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D5") (unit 1)))))
+  (label "H1_S" (at 101.60 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f128eecc-002f-501c-a56d-d77734b0352e"))
+  (symbol (lib_id "power:GND") (at 101.6 168.91 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "b90c9390-d58c-5d52-b185-8222d4557208")
+    (property "Reference" "#PWR19" (at 104.14 167.64 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 101.60 172.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 101.6 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 101.6 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 101.6 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "9035303f-5347-544c-8eab-a52696ae956b"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR19") (unit 1)))))
+  (symbol (lib_id "Diode:SMAJ30CA") (at 114.3 165.1 270) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5a264482-f20e-5d5e-b3d1-c9ef525c1886")
+    (property "Reference" "D6" (at 116.20 163.83 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SMAJ30CA" (at 116.20 166.37 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Diode_SMD:D_SMA" (at 114.3 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 114.3 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 114.3 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C110043" (at 114.3 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "fbc3033f-899c-53f2-b4ee-0842f9658cc9")) (pin "2" (uuid "c402ab8a-5ae2-551d-8c1f-8db2f02455cb"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D6") (unit 1)))))
+  (label "H2_S" (at 114.30 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b0ad399e-7867-578c-bd30-cc4ff3d2e26a"))
+  (symbol (lib_id "power:GND") (at 114.3 168.91 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "13bc3417-e9ac-5fdf-b1ad-405ef32cb3b3")
+    (property "Reference" "#PWR20" (at 116.84 167.64 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 114.30 172.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 114.3 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 114.3 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 114.3 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "12f095eb-2de3-5206-ac48-a3d17e3de502"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR20") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 126.99999999999999 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b8cd87dd-eb1f-5479-80f0-ab871d08b844")
+    (property "Reference" "R3" (at 128.90 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "1M" (at 128.90 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 126.99999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 126.99999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 126.99999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C22935" (at 126.99999999999999 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "5450e515-c221-5f0e-9b7f-0416b424376a")) (pin "2" (uuid "4aad61af-419d-536b-86bd-05bae158ed55"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R3") (unit 1)))))
+  (label "H1_S" (at 127.00 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "51ab3c33-410a-57bc-908f-55e1a87faf2b"))
+  (label "HA_IN" (at 127.00 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "e0391d14-91f8-5695-ac27-ee56620e5e92"))
+  (symbol (lib_id "Device:R") (at 139.7 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "995cd280-d882-5d96-80d3-fceae6c59abd")
+    (property "Reference" "R4" (at 141.60 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "1M" (at 141.60 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 139.7 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 139.7 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 139.7 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C22935" (at 139.7 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a1038a2e-707d-51e1-916e-fd7e41befeaa")) (pin "2" (uuid "e261afcc-0437-5538-bdd0-462ff2a3a907"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R4") (unit 1)))))
+  (label "H2_S" (at 139.70 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a84733f5-ed2d-5610-abd1-2274d2bac8a1"))
+  (label "HB_IN" (at 139.70 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "941a89b6-c7f2-5126-85dc-75c6ba17191a"))
+  (symbol (lib_id "Device:C") (at 152.39999999999998 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ec70d53b-f9d2-5ef9-bd32-5dd13f21cfc8")
+    (property "Reference" "C4" (at 154.30 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10p" (at 154.30 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 152.39999999999998 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 152.39999999999998 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 152.39999999999998 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C1634" (at 152.39999999999998 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "C0G" (at 152.39999999999998 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "33ba3968-fac2-549c-b8da-27c87c3a9bf1")) (pin "2" (uuid "3f3a5ada-5771-578b-9b37-1056d75025c6"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "C4") (unit 1)))))
+  (label "HA_IN" (at 152.40 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "77d60749-51d3-55a9-bf75-4ae20ecd1a81"))
+  (symbol (lib_id "power:GND") (at 152.4 168.91 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "8a9021f4-0577-56ce-b758-13e71c822fa9")
+    (property "Reference" "#PWR21" (at 154.94 167.64 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 152.40 172.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 152.4 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 152.4 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 152.4 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "b5dffe48-18ea-5ca0-a1b6-5ca55fe8cd07"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR21") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 165.1 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d21e392f-df77-5f0e-ac94-269859e85da5")
+    (property "Reference" "C5" (at 167.00 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10p" (at 167.00 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 165.1 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 165.1 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 165.1 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C1634" (at 165.1 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "C0G" (at 165.1 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "dced6bee-abb3-5475-b0ee-0c05062b81f7")) (pin "2" (uuid "8885e8e0-0e73-56a2-a8f4-867b267f720f"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "C5") (unit 1)))))
+  (label "HB_IN" (at 165.10 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "912f1de2-25c5-5c3e-ad4c-a048b17e14ff"))
+  (symbol (lib_id "power:GND") (at 165.1 168.91 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "4e36579a-45c3-57be-a9e7-eb8f26d35b32")
+    (property "Reference" "#PWR22" (at 167.64 167.64 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 165.10 172.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 165.1 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 165.1 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 165.1 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "4dfca387-4a7b-507b-a037-3f53694fef4c"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR22") (unit 1)))))
+  (symbol (lib_id "Samba:LM2903") (at 198.12 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b29a378b-e85b-5048-9e33-014fc959fb07")
+    (property "Reference" "U2" (at 200.66 153.67 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM2903BIDR" (at 200.66 177.80 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 198.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 198.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 198.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C2869804" (at 198.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "TI LM2903BIDR, Eingaenge bis 38 V unabhaengig von VCC" (at 198.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "3" (uuid "8f2a06dc-adf9-5b4e-ad86-d0fd14ee4ac3")) (pin "2" (uuid "04718118-1cec-52d5-afe2-2222d783efab")) (pin "5" (uuid "50dd97d9-cce9-5ee6-b2be-6eb41e101bfa")) (pin "6" (uuid "5e52c399-de64-512b-ae6f-606277a2e27a")) (pin "1" (uuid "4eac3b69-5719-5d87-8c05-38dee0de6b34")) (pin "7" (uuid "f800c6da-3831-55a2-9c5a-d5cd30848ae7")) (pin "8" (uuid "f1875902-7b9b-5687-8e5b-963f0e466134")) (pin "4" (uuid "89058f66-056b-5e28-bb4c-36be1975c6fc"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "U2") (unit 1)))))
+  (label "DRV_A" (at 210.82 162.56 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c3b66a26-3a2a-5c66-8b16-e03cb1bf89a9"))
+  (label "HA_IN" (at 185.42 162.56 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "38bc93fd-984d-5477-9525-86fb83ad5e27"))
+  (label "REF_A" (at 185.42 160.02 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c7be1294-d5e2-51dd-80a2-cb12fd251ae4"))
+  (symbol (lib_id "power:GND") (at 198.12 175.26 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "990f5eb3-8313-53f8-bfba-785c109e6ff4")
+    (property "Reference" "#PWR23" (at 200.66 173.99 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 198.12 179.07 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 198.12 175.26 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 198.12 175.26 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 198.12 175.26 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "921983f3-0c1d-5f1a-8c35-563d82724103"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR23") (unit 1)))))
+  (label "REF_B" (at 185.42 167.64 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f4d52e68-bd54-5e18-9a0c-07533398d669"))
+  (label "HB_IN" (at 185.42 170.18 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c8306f78-1fe4-560a-88fd-1915bbd2cb17"))
+  (label "DRV_B" (at 210.82 167.64 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "03fcc633-4f84-53fb-aa56-da0e263c880b"))
+  (symbol (lib_id "power:+5V") (at 198.12 154.94 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "b85483cb-ca89-5170-8510-e4bd366b7fba")
+    (property "Reference" "#PWR24" (at 200.66 153.67 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 198.12 151.13 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 198.12 154.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 198.12 154.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 198.12 154.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "3b83a0c4-1135-56ea-ae90-dba1d188aed1"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR24") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 223.52 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cddef9d6-dddf-5a11-95e1-90cc3afdca2d")
+    (property "Reference" "R5" (at 225.42 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 225.42 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 223.52 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 223.52 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 223.52 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 223.52 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6bea3e0e-df46-5d8e-873e-33bfab8a1a65")) (pin "2" (uuid "2f23872f-f524-53bc-88e1-376c19f8c871"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R5") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 223.52 161.29 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "02d266bf-b26c-53b4-b7f3-5861a656fc76")
+    (property "Reference" "#PWR25" (at 226.06 160.02 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 223.52 157.48 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 223.52 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 223.52 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 223.52 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "5ce600ea-509a-58f6-a1d8-0ac67ea0533a"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR25") (unit 1)))))
+  (label "REF_A" (at 223.52 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b54c5090-b070-5337-bbcb-0c1775621194"))
+  (symbol (lib_id "Device:R") (at 236.22 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "074177e6-02fa-5352-a0ae-bad72b39b91d")
+    (property "Reference" "R7" (at 238.12 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 238.12 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 236.22 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 236.22 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 236.22 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 236.22 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "cd56d926-fe9f-5f43-bc78-cdd1a5068af3")) (pin "2" (uuid "467aa301-97e5-5166-9289-aa7a2594d3db"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R7") (unit 1)))))
+  (label "REF_A" (at 236.22 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "30e4b1da-da22-56c8-b697-2fbbb661c1c8"))
+  (symbol (lib_id "power:GND") (at 236.22 168.91 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "bfea4153-4fd9-50ef-a035-d08a23d53ecd")
+    (property "Reference" "#PWR26" (at 238.76 167.64 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 236.22 172.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 236.22 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 236.22 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 236.22 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "e6ce4b66-78d7-595a-b8c7-a07507e9d00c"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR26") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 248.92000000000002 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9f355a2a-bd7e-5b74-b51a-5737c5ab95f6")
+    (property "Reference" "R9" (at 250.82 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "47k" (at 250.82 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 248.92000000000002 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 248.92000000000002 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 248.92000000000002 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25819" (at 248.92000000000002 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a54d7f78-9d44-5deb-872f-08e96711613d")) (pin "2" (uuid "ba823e64-2fdc-5769-8a91-12d6726deb74"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R9") (unit 1)))))
+  (label "DRV_A" (at 248.92 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "adc93123-a53c-56bd-a14d-6a9825804451"))
+  (label "REF_A" (at 248.92 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "e640f3f1-9662-5234-ad0f-e78efc13833f"))
+  (symbol (lib_id "Device:R") (at 261.62 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bab86e94-08ba-5b65-ad22-7594df92adda")
+    (property "Reference" "R11" (at 263.52 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "5k1" (at 263.52 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 261.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 261.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 261.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C23186" (at 261.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "0c266d33-ee53-5224-bd58-0d25a18db6ad")) (pin "2" (uuid "a4882d0b-9a2d-5628-926b-8afd5974eb9e"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R11") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 261.62 161.29 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "fd70fed2-0742-54b7-ab6e-14e6cc45984a")
+    (property "Reference" "#PWR27" (at 264.16 160.02 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 261.62 157.48 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 261.62 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 261.62 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 261.62 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "f5fa9e9d-d3f9-5873-b3c9-dbcf4ff75b6d"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR27") (unit 1)))))
+  (label "PU_A" (at 261.62 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "44e6df2e-7774-57ba-b132-ae703cc0f6a3"))
+  (symbol (lib_id "Device:R") (at 274.32 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fe5a40ca-fc3e-52b5-9520-f682be5f09e9")
+    (property "Reference" "R21" (at 276.22 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "5k1" (at 276.22 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 274.32 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 274.32 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 274.32 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C23186" (at 274.32 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "1e6eb8b0-6a94-5da8-8eab-361fb6c18019")) (pin "2" (uuid "572711f6-a990-5a8d-ab8e-e01f5842c5eb"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R21") (unit 1)))))
+  (label "PU_A" (at 274.32 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4c79477e-fe18-596b-ab47-aa91fa900de9"))
+  (label "DRV_A" (at 274.32 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c2e6bd0d-f3d7-5bf5-a442-09ee1079a07b"))
+  (symbol (lib_id "Device:R") (at 287.02 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b880a6a3-7d9c-54f8-996e-5f30471734e4")
+    (property "Reference" "R13" (at 288.92 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "510" (at 288.92 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 287.02 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 287.02 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 287.02 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C23193" (at 287.02 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d71b5921-6510-5001-ad29-24869abc7cc5")) (pin "2" (uuid "7dbc2e38-849e-5bd6-bc4b-2219e42b52c9"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R13") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 287.02 161.29 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "e9fea19d-7f3c-55a9-b1a4-92d1672447d1")
+    (property "Reference" "#PWR28" (at 289.56 160.02 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 287.02 157.48 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 287.02 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 287.02 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 287.02 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d802a892-b851-5f56-8aff-34e27fd47a35"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR28") (unit 1)))))
+  (label "LEDV_A" (at 287.02 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "edefb980-1e6c-5192-ade6-6e74c1659d18"))
+  (symbol (lib_id "Device:R") (at 299.72 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fe03fa91-0b91-596a-bb2b-29f2ed744fff")
+    (property "Reference" "R19" (at 301.62 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "510" (at 301.62 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 299.72 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 299.72 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 299.72 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C23193" (at 299.72 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d25fdc56-065f-551d-9160-1b92bdda66ef")) (pin "2" (uuid "d480d56a-59b0-50f2-8aa2-569875373211"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R19") (unit 1)))))
+  (label "LEDV_A" (at 299.72 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7937e865-5f24-57bb-9b1e-d59e5a393684"))
+  (label "LED_A" (at 299.72 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b9f3a73e-1abe-5ea7-b7f8-b216f29bd20d"))
+  (symbol (lib_id "Device:R") (at 312.42 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b8c89773-42bb-50de-b668-0bb01610583c")
+    (property "Reference" "R6" (at 314.32 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 314.32 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 312.42 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 312.42 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 312.42 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 312.42 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "46635509-9b54-5d2e-bd97-84c155bf8a29")) (pin "2" (uuid "e1ef610f-0217-5f80-a1b2-e7b090060b5b"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R6") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 312.42 161.29 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "c066b9e3-579c-5040-b79a-de87e4d706e6")
+    (property "Reference" "#PWR29" (at 314.96 160.02 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 312.42 157.48 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 312.42 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 312.42 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 312.42 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "f944368b-ce7f-520e-b1ff-ccf56696badc"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR29") (unit 1)))))
+  (label "REF_B" (at 312.42 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "4c25cb3f-b490-5e22-bdf7-36cd0d700c78"))
+  (symbol (lib_id "Device:R") (at 325.12 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7626e484-706e-5d76-9cb7-5840753636a5")
+    (property "Reference" "R8" (at 327.02 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "10k" (at 327.02 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 325.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 325.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 325.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25804" (at 325.12 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "3e3783f2-5fb4-5f71-996f-0dd443db8911")) (pin "2" (uuid "468802a4-9305-57c5-853f-50a73e56665e"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R8") (unit 1)))))
+  (label "REF_B" (at 325.12 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "899f2fca-6c21-57d3-86c9-62c75b3bff07"))
+  (symbol (lib_id "power:GND") (at 325.12 168.91 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "16f9750d-4164-5fd2-8e1c-0142a804713c")
+    (property "Reference" "#PWR30" (at 327.66 167.64 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "GND" (at 325.12 172.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 325.12 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 325.12 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 325.12 168.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "751de95b-a79d-5f38-9ec1-74dcae175b08"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR30") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 337.82 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "611507f7-2bc3-584b-8532-16a816f69251")
+    (property "Reference" "R10" (at 339.72 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "47k" (at 339.72 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 337.82 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 337.82 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 337.82 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C25819" (at 337.82 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "2a54260d-be3b-5a8c-9ad0-2ac629e0a2cd")) (pin "2" (uuid "b5f2e2fd-14bc-5dda-bd40-756313477900"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R10") (unit 1)))))
+  (label "DRV_B" (at 337.82 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "53f66d1d-751e-5f6c-9670-422ab53b5ebc"))
+  (label "REF_B" (at 337.82 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "db0a52e3-8aab-5d59-b823-1cfe850d72a5"))
+  (symbol (lib_id "Device:R") (at 350.52 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "129b64ea-a529-51b0-acf1-b07987e885fd")
+    (property "Reference" "R12" (at 352.42 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "5k1" (at 352.42 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 350.52 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 350.52 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 350.52 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C23186" (at 350.52 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "cdab29d8-cb14-59e3-bf42-cffc216385b2")) (pin "2" (uuid "c26c5f47-2bdf-52f7-8df6-2d090bd15725"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R12") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 350.52 161.29 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "df451c48-2c42-5c7a-a9dd-9b428737a838")
+    (property "Reference" "#PWR31" (at 353.06 160.02 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 350.52 157.48 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 350.52 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 350.52 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 350.52 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "ef5224b6-7c5b-55b9-9b4b-b9a432d1f63c"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR31") (unit 1)))))
+  (label "PU_B" (at 350.52 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "70d58c2a-9b45-54a9-a8f1-91a32c05165d"))
+  (symbol (lib_id "Device:R") (at 363.22 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f9a65d78-b356-5953-87aa-6475d3dc55c1")
+    (property "Reference" "R22" (at 365.12 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "5k1" (at 365.12 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 363.22 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 363.22 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 363.22 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C23186" (at 363.22 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "324ce430-dc80-5606-b4b9-10097733f74a")) (pin "2" (uuid "dc5cbf09-b501-56a3-9e96-7410f5cf25bb"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R22") (unit 1)))))
+  (label "PU_B" (at 363.22 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "78354931-c33f-52e7-af27-ea3b244ea017"))
+  (label "DRV_B" (at 363.22 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "2b00c7c4-0686-5d81-ac4c-10b552337689"))
+  (symbol (lib_id "Device:R") (at 375.91999999999996 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a59690e2-836f-5786-82b7-35f35e0a6968")
+    (property "Reference" "R14" (at 377.82 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "510" (at 377.82 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 375.91999999999996 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 375.91999999999996 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 375.91999999999996 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C23193" (at 375.91999999999996 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "11209a22-d0d0-58aa-8a05-a300f52387f9")) (pin "2" (uuid "5aaa18ee-af81-5dec-83d0-b71ecb43eb30"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R14") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 375.92 161.29 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "c03db107-bb20-5b7e-b33b-743fc813afbf")
+    (property "Reference" "#PWR32" (at 378.46 160.02 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+    (property "Value" "+5V" (at 375.92 157.48 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "" (at 375.92 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 375.92 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 375.92 161.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "5ea57c34-2d8f-5050-a263-e9ef68d0af66"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "#PWR32") (unit 1)))))
+  (label "LEDV_B" (at 375.92 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "fdd1b7b1-c1fb-5519-b4a5-f7903a372cfa"))
+  (symbol (lib_id "Device:R") (at 388.62 165.1 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b58e330d-8da9-5c25-bbd4-e5fc21c33276")
+    (property "Reference" "R20" (at 390.52 163.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "510" (at 390.52 166.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 388.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 388.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 388.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C23193" (at 388.62 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "0ff1f2cb-1d26-52ab-b672-11bb2ae25201")) (pin "2" (uuid "e032ed54-7756-5685-bbb5-d0a3435f23d9"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R20") (unit 1)))))
+  (label "LEDV_B" (at 388.62 158.75 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e9793462-a264-5cd3-bc57-8daf80b5bd2e"))
+  (label "LED_B" (at 388.62 171.45 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "90d8fbdf-d47f-51a3-8ad5-78c302a24b56"))
+  (text "Optokoppler und Ausgang zu J22 der Platine RearCircuitBoard_10 (Ausgangsseite, potentialfrei)" (exclude_from_sim no) (at 20.32 198.12 0) (effects (font (size 2.5 2.5) (bold yes)) (justify left bottom)) (uuid "3bdac0cf-0b35-583a-9c4d-8b3d4e421ac3"))
+  (text "Ausgangsseite potentialfrei (keine Versorgung), Trennstrecke auf der Platine 7 mm (Pads der Optokoppler 7,5 mm auseinander).\nLTV-817S-TA1-C (CTR 200-400 % bei 5 mA): bei 3,0 mA, 75 Grad C und halbem CTR durch Alterung sicher mindestens 2,0 mA;\ngebraucht werden 0,84 mA (4,7 kOhm an +5V auf der RCB10). R15/R16 1 kOhm 1206 begrenzen die Last des Transistors bei 24 V auf der Ader\nauf hoechstens 144 mW (Pc 150 mW); Kontakt zu: Ader an J22 etwa 1,0 V (Schwelle der RCB10 fallend 2,05 V). D7/D8 SMAJ30CA an der Klemme.\nJ3 wie J22 der RCB10 (KF2EDGR-3.5-3P): 1 = A, 2 = B, 3 = Rueckleitung (GND der RCB10, Schirm nur an J22.3). Kontakt zu = GPIO HIGH." (exclude_from_sim no) (at 20.32 213.36 0) (effects (font (size 1.3 1.3)) (justify left bottom)) (uuid "24de803a-2a5d-5a85-ad3b-89703117e81b"))
+  (symbol (lib_id "Isolator:LTV-817S") (at 50.8 248.92 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "04ec3112-bae0-5cfa-9b24-3b1ced6b33d9")
+    (property "Reference" "U3" (at 48.26 242.57 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LTV-817S-TA1-C" (at 48.26 256.54 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_DIP:SMDIP-4_W9.53mm" (at 50.8 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 50.8 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 50.8 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C109227" (at 50.8 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "Lite-On LTV-817S-TA1-C: 1 Anode, 2 Kathode, 3 Emitter, 4 Kollektor" (at 50.8 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "680c4788-6574-58e4-b4ea-fd07442dc899")) (pin "2" (uuid "985eaa81-03c6-5e7c-9490-13a4d7b9b519")) (pin "4" (uuid "5f5faf79-35f4-56a2-95fe-c6f3a4cb36e9")) (pin "3" (uuid "a75f6ac6-e753-52df-8eb2-626f99f95679"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "U3") (unit 1)))))
+  (label "LED_A" (at 40.64 246.38 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f01524b1-ae66-5529-84a6-b42ef727d3f4"))
+  (label "DRV_A" (at 40.64 251.46 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "a9f58cc9-1056-594e-bc19-195ba7c89694"))
+  (label "KOM" (at 60.96 251.46 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5b17a396-21f8-5930-aafc-04a2283c1c48"))
+  (label "KOL_A" (at 60.96 246.38 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bd95bb79-bb7c-5c70-81e4-d6c3edd505e4"))
+  (symbol (lib_id "Isolator:LTV-817S") (at 106.68 248.92 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bc26da47-a2b1-5774-994d-dbe0347428ac")
+    (property "Reference" "U4" (at 104.14 242.57 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LTV-817S-TA1-C" (at 104.14 256.54 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_DIP:SMDIP-4_W9.53mm" (at 106.68 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 106.68 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 106.68 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C109227" (at 106.68 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "Lite-On LTV-817S-TA1-C: 1 Anode, 2 Kathode, 3 Emitter, 4 Kollektor" (at 106.68 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "88285ff5-a47a-53ca-9337-680255b45d9a")) (pin "2" (uuid "7f7b1264-066c-5584-85f9-e19b28294e75")) (pin "4" (uuid "5b1f7de3-02f2-54f4-bfc6-5a15e0747668")) (pin "3" (uuid "380ae69c-6501-585b-8993-d262a9f76c1f"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "U4") (unit 1)))))
+  (label "LED_B" (at 96.52 246.38 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "952faaa9-fe37-54df-851f-4a74469b0d5c"))
+  (label "DRV_B" (at 96.52 251.46 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "3b714791-1c99-55c1-9dc5-7e27cd5fb875"))
+  (label "KOM" (at 116.84 251.46 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d3831d0b-30ab-5345-8ec2-8092c8de1069"))
+  (label "KOL_B" (at 116.84 246.38 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1595aa30-d4df-54f1-87c3-c5dc35c4a31d"))
+  (symbol (lib_id "Device:R") (at 160.02 248.92 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5c8e4fea-71fa-57dd-9397-26ff1b255420")
+    (property "Reference" "R15" (at 161.92 247.65 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "1k" (at 161.92 250.19 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 160.02 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 160.02 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 160.02 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C4410" (at 160.02 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "1206, 24 V auf der Ader: hoechstens 144 mW" (at 160.02 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "52b132a9-650a-5a3a-a544-50fb549f741f")) (pin "2" (uuid "792ca9c7-29f9-526e-bb68-b52f41aec6ee"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R15") (unit 1)))))
+  (label "KOL_A" (at 160.02 242.57 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "60e6be1a-dda0-5e7a-85d6-077822c7d017"))
+  (label "OUT_A" (at 160.02 255.27 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "d184182c-c557-5a30-b747-3aebd99274c3"))
+  (symbol (lib_id "Device:R") (at 175.26000000000002 248.92 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "732c79e6-fda5-545d-b85a-74f3fff963ab")
+    (property "Reference" "R16" (at 177.16 247.65 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "1k" (at 177.16 250.19 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 175.26000000000002 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 175.26000000000002 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 175.26000000000002 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C4410" (at 175.26000000000002 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "1206, 24 V auf der Ader: hoechstens 144 mW" (at 175.26000000000002 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "e59c0e05-c719-5b46-b65c-32e2c0c19b37")) (pin "2" (uuid "11e0eb2d-c437-5761-9feb-64ba0d736731"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "R16") (unit 1)))))
+  (label "KOL_B" (at 175.26 242.57 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e72fc718-8041-5daf-b00c-eca502a183e8"))
+  (label "OUT_B" (at 175.26 255.27 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f960dcaf-f805-50bd-9525-328fa9a90e3d"))
+  (symbol (lib_id "Diode:SMAJ30CA") (at 190.5 248.92 270) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "efeb41a6-fc6e-5295-9f79-adbed5ecfe98")
+    (property "Reference" "D7" (at 192.40 247.65 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SMAJ30CA" (at 192.40 250.19 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Diode_SMD:D_SMA" (at 190.5 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 190.5 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 190.5 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C110043" (at 190.5 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "9e260c74-e6ba-595c-823d-756f7dd4fd35")) (pin "2" (uuid "fc59dc30-0fa9-5a9b-ac80-84536e9be912"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D7") (unit 1)))))
+  (label "OUT_A" (at 190.50 242.57 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "7ca9264a-03c0-5b72-85db-d96adb405749"))
+  (label "KOM" (at 190.50 255.27 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "116729f4-6424-5ff0-8bf9-ec3bbc3978c9"))
+  (symbol (lib_id "Diode:SMAJ30CA") (at 205.74 248.92 270) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "90fdb72f-b787-583c-8860-55d51ddaec8f")
+    (property "Reference" "D8" (at 207.64 247.65 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SMAJ30CA" (at 207.64 250.19 90) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Diode_SMD:D_SMA" (at 205.74 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 205.74 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 205.74 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C110043" (at 205.74 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "1ef358a8-aa8f-5b82-884e-fab22df038ec")) (pin "2" (uuid "d4b9b581-dbeb-5f17-be79-1c0ce7f0c56e"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "D8") (unit 1)))))
+  (label "OUT_B" (at 205.74 242.57 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2910c617-6600-5a8f-b742-b79c42b9aee3"))
+  (label "KOM" (at 205.74 255.27 270) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "73f1dcf5-5a50-5ee8-acb3-52f77fb6e930"))
+  (symbol (lib_id "Connector:Screw_Terminal_01x03") (at 254.0 248.92 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f47d72c2-d336-5246-8e93-015bedf00760")
+    (property "Reference" "J3" (at 252.73 243.84 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "Kontakte zu J22" (at 252.73 256.54 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "HallTapBoard:Klemme_3.5_3P_KF2EDGR" (at 254.0 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 254.0 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 254.0 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "LCSC" "C441172" (at 254.0 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Hinweis" "Grundleiste KF2EDGR-3.5-3P, Stecker KF2EDGK-3.5-3P (C440848) lose dazu; Belegung wie J22 der RCB10" (at 254.0 248.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "1791932d-119f-5118-b5b1-a65cc5ed1fcd")) (pin "2" (uuid "69a32284-b8c0-59d6-ba8a-01737aef813b")) (pin "3" (uuid "a58c33d5-2f65-5cfe-880a-9c82c56bb768"))
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "J3") (unit 1)))))
+  (label "OUT_A" (at 243.84 246.38 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "d06763e3-4820-5567-bdcf-853a5b302ced"))
+  (label "OUT_B" (at 243.84 248.92 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "47cf2f30-a5a6-57af-b188-e69bac9d28da"))
+  (label "KOM" (at 243.84 251.46 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "975e6df6-8725-5366-b54b-c8f7fded0ff1"))
+  (text "J3: 1 = A, 2 = B, 3 = Rueckleitung (an J22.3)" (exclude_from_sim no) (at 236.22 264.16 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b696f6cb-67f7-5661-b5ba-1f92344c9750"))
+  (text "Befestigung: vier Bohrungen M3 ohne Kupfer,\nim Gehaeuse auf Kunststoffdomen mit Gewindeeinsaetzen (README)" (exclude_from_sim no) (at 299.72 218.44 0) (effects (font (size 1.5 1.5)) (justify left bottom)) (uuid "35b5518b-5ba4-54cf-bf3a-14a011362e71"))
+  (symbol (lib_id "Mechanical:MountingHole") (at 304.8 231.14 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "ac1261ca-78c4-5b00-b8d3-c6ce2e438b86")
+    (property "Reference" "H1" (at 308.61 229.87 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "M3" (at 308.61 232.41 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 304.8 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 304.8 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 304.8 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "H1") (unit 1)))))
+  (symbol (lib_id "Mechanical:MountingHole") (at 325.12 231.14 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "8940eab5-a9dd-53c5-bb24-11b3d76b5bd4")
+    (property "Reference" "H2" (at 328.93 229.87 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "M3" (at 328.93 232.41 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 325.12 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 325.12 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 325.12 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "H2") (unit 1)))))
+  (symbol (lib_id "Mechanical:MountingHole") (at 345.44 231.14 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "f20e3dd3-6f26-5644-9422-22743610fafb")
+    (property "Reference" "H3" (at 349.25 229.87 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "M3" (at 349.25 232.41 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 345.44 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 345.44 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 345.44 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "H3") (unit 1)))))
+  (symbol (lib_id "Mechanical:MountingHole") (at 365.76 231.14 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "aa449f08-72dc-5dd1-9254-d1cd38c38ff3")
+    (property "Reference" "H4" (at 369.57 229.87 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "M3" (at 369.57 232.41 0) (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 365.76 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 365.76 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 365.76 231.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    
+    (instances (project "HallTapBoard" (path "/084816fb-1818-5f78-9fa5-34db59deedd6" (reference "H4") (unit 1)))))
+  (wire (pts (xy 15.24 81.28) (xy 20.32 81.28)) (stroke (width 0) (type default)) (uuid "33300cc0-b2d7-56b1-a053-2ca5a0d17a59"))
+  (wire (pts (xy 15.24 83.82) (xy 20.32 83.82)) (stroke (width 0) (type default)) (uuid "97cf00b7-e3f4-5473-93b5-a86946516500"))
+  (wire (pts (xy 50.80 74.93) (xy 50.80 77.47)) (stroke (width 0) (type default)) (uuid "abc115f1-8d94-5e7c-adec-4fae9ef3a2f9"))
+  (wire (pts (xy 50.80 85.09) (xy 50.80 87.63)) (stroke (width 0) (type default)) (uuid "1fce9c6a-0f27-559f-b90b-b33b4dac73d5"))
+  (wire (pts (xy 71.12 74.93) (xy 71.12 77.47)) (stroke (width 0) (type default)) (uuid "c22a5f2d-18ef-533a-9552-03792bad2166"))
+  (wire (pts (xy 90.17 81.28) (xy 92.71 81.28)) (stroke (width 0) (type default)) (uuid "8c711c89-9835-50c3-a00e-1030d74f4f5e"))
+  (wire (pts (xy 100.33 81.28) (xy 102.87 81.28)) (stroke (width 0) (type default)) (uuid "777d9c2b-50ec-5733-bab2-30732d719495"))
+  (wire (pts (xy 121.92 74.93) (xy 121.92 77.47)) (stroke (width 0) (type default)) (uuid "072575b2-defb-5be1-a1be-4f815aa53e2e"))
+  (wire (pts (xy 139.70 74.93) (xy 139.70 77.47)) (stroke (width 0) (type default)) (uuid "c7af90d6-14cd-57be-9d26-639133a1191f"))
+  (wire (pts (xy 139.70 85.09) (xy 139.70 87.63)) (stroke (width 0) (type default)) (uuid "3e98851b-d03e-5ab3-bc84-f923805562be"))
+  (wire (pts (xy 157.48 74.93) (xy 157.48 77.47)) (stroke (width 0) (type default)) (uuid "9c6bc960-0de6-594d-8038-4effc0ffa365"))
+  (wire (pts (xy 157.48 85.09) (xy 157.48 87.63)) (stroke (width 0) (type default)) (uuid "ceff8e87-9f2c-54ad-acf8-b318128e10b7"))
+  (wire (pts (xy 186.69 81.28) (xy 189.23 81.28)) (stroke (width 0) (type default)) (uuid "88219930-583a-54bb-87a3-dfd780eea0e9"))
+  (wire (pts (xy 176.53 81.28) (xy 179.07 81.28)) (stroke (width 0) (type default)) (uuid "76be9eac-f435-5547-9705-cc4efef486b1"))
+  (wire (pts (xy 210.82 81.28) (xy 213.36 81.28)) (stroke (width 0) (type default)) (uuid "133ebc1b-e9bd-5d4e-9d24-40532c655d41"))
+  (wire (pts (xy 228.60 81.28) (xy 231.14 81.28)) (stroke (width 0) (type default)) (uuid "bb87e520-4916-523b-86ba-9ad01997c5d0"))
+  (wire (pts (xy 307.34 85.09) (xy 307.34 87.63)) (stroke (width 0) (type default)) (uuid "343fa64f-6029-5257-a38e-550546a8e1ae"))
+  (wire (pts (xy 325.12 74.93) (xy 325.12 77.47)) (stroke (width 0) (type default)) (uuid "64d8b795-8b3d-50f4-8a34-f2d48a1d5b92"))
+  (wire (pts (xy 325.12 85.09) (xy 325.12 87.63)) (stroke (width 0) (type default)) (uuid "e71b1edd-0683-5358-8de8-0ef7fbd0292f"))
+  (wire (pts (xy 354.33 81.28) (xy 356.87 81.28)) (stroke (width 0) (type default)) (uuid "6adc98dd-336c-5bda-acd4-f703e84811c0"))
+  (wire (pts (xy 344.17 81.28) (xy 346.71 81.28)) (stroke (width 0) (type default)) (uuid "c0a71bbf-2981-5214-9d27-2bf0e6d00a28"))
+  (wire (pts (xy 109.22 63.50) (xy 114.30 63.50)) (stroke (width 0) (type default)) (uuid "49c10fa2-9ec4-5593-96a8-085c3939bce0"))
+  (wire (pts (xy 15.24 162.56) (xy 20.32 162.56)) (stroke (width 0) (type default)) (uuid "8511cc27-b170-5575-910d-bf50f8bc65d0"))
+  (wire (pts (xy 15.24 165.10) (xy 20.32 165.10)) (stroke (width 0) (type default)) (uuid "7f5dbe1e-2358-5547-bc5b-a9e4d143b1b7"))
+  (wire (pts (xy 15.24 167.64) (xy 20.32 167.64)) (stroke (width 0) (type default)) (uuid "7d726b1a-ddc5-5d3c-ac03-6fd692927416"))
+  (wire (pts (xy 50.80 158.75) (xy 50.80 161.29)) (stroke (width 0) (type default)) (uuid "0a2602bb-9764-5ce8-9006-982d58682ea5"))
+  (wire (pts (xy 50.80 168.91) (xy 50.80 171.45)) (stroke (width 0) (type default)) (uuid "f19e1f93-7d8b-5c7d-87be-75752ca9ade8"))
+  (wire (pts (xy 63.50 158.75) (xy 63.50 161.29)) (stroke (width 0) (type default)) (uuid "7cd8832b-e92e-5c05-ba28-b4c2e8f06215"))
+  (wire (pts (xy 63.50 168.91) (xy 63.50 171.45)) (stroke (width 0) (type default)) (uuid "def307b2-d209-5426-84ba-07f6e519790b"))
+  (wire (pts (xy 76.20 158.75) (xy 76.20 161.29)) (stroke (width 0) (type default)) (uuid "a8965427-c242-5e37-8df7-0e652b95bee2"))
+  (wire (pts (xy 76.20 168.91) (xy 76.20 171.45)) (stroke (width 0) (type default)) (uuid "d233373e-cf39-5db4-a552-c3805c43a2ef"))
+  (wire (pts (xy 88.90 158.75) (xy 88.90 161.29)) (stroke (width 0) (type default)) (uuid "dcbc68c3-74e3-522d-a508-66a9d49256ea"))
+  (wire (pts (xy 88.90 168.91) (xy 88.90 171.45)) (stroke (width 0) (type default)) (uuid "0f41b6bf-0eee-57b2-b729-a16efd11fd09"))
+  (wire (pts (xy 101.60 158.75) (xy 101.60 161.29)) (stroke (width 0) (type default)) (uuid "268df8a0-13d1-5b4d-9fb0-754eef177f1f"))
+  (wire (pts (xy 114.30 158.75) (xy 114.30 161.29)) (stroke (width 0) (type default)) (uuid "6872e03a-1d29-5601-a9c7-b0abf3deb9ba"))
+  (wire (pts (xy 127.00 158.75) (xy 127.00 161.29)) (stroke (width 0) (type default)) (uuid "06aee708-4dd2-570c-a6d8-6e2f9af3c715"))
+  (wire (pts (xy 127.00 168.91) (xy 127.00 171.45)) (stroke (width 0) (type default)) (uuid "bddb7c32-384d-5cf6-b294-33ae1cc9cf62"))
+  (wire (pts (xy 139.70 158.75) (xy 139.70 161.29)) (stroke (width 0) (type default)) (uuid "da27ceb9-1fea-5174-a950-664ef88db8dd"))
+  (wire (pts (xy 139.70 168.91) (xy 139.70 171.45)) (stroke (width 0) (type default)) (uuid "e1b0b938-b3b4-5278-a959-cfcd289994dc"))
+  (wire (pts (xy 152.40 158.75) (xy 152.40 161.29)) (stroke (width 0) (type default)) (uuid "f34c5f84-74c5-5521-97c8-ade040773631"))
+  (wire (pts (xy 165.10 158.75) (xy 165.10 161.29)) (stroke (width 0) (type default)) (uuid "28bcb743-42f2-5fd4-b14e-4df442be0e2e"))
+  (wire (pts (xy 208.28 162.56) (xy 210.82 162.56)) (stroke (width 0) (type default)) (uuid "d22b2d53-48b3-5d50-97cf-ed7e88a41644"))
+  (wire (pts (xy 185.42 162.56) (xy 187.96 162.56)) (stroke (width 0) (type default)) (uuid "9a1681ce-159c-5c93-bcdb-341a34de7ace"))
+  (wire (pts (xy 185.42 160.02) (xy 187.96 160.02)) (stroke (width 0) (type default)) (uuid "2303082c-7f1b-57e3-bf59-2ecf05d877f8"))
+  (wire (pts (xy 185.42 167.64) (xy 187.96 167.64)) (stroke (width 0) (type default)) (uuid "1b48fee3-5cdd-5ced-a972-4e68b154f58c"))
+  (wire (pts (xy 185.42 170.18) (xy 187.96 170.18)) (stroke (width 0) (type default)) (uuid "2f3dc5f4-5c15-5bb7-9480-0f36cc0b96e7"))
+  (wire (pts (xy 208.28 167.64) (xy 210.82 167.64)) (stroke (width 0) (type default)) (uuid "0c9075e9-0079-5d43-959a-b134d89990fe"))
+  (wire (pts (xy 223.52 168.91) (xy 223.52 171.45)) (stroke (width 0) (type default)) (uuid "b189b009-2976-51b7-baa1-b4b8f197c230"))
+  (wire (pts (xy 236.22 158.75) (xy 236.22 161.29)) (stroke (width 0) (type default)) (uuid "f56154df-6bd6-5768-8d72-6b456872d84d"))
+  (wire (pts (xy 248.92 158.75) (xy 248.92 161.29)) (stroke (width 0) (type default)) (uuid "af3f7624-c73f-519d-b2fd-3c7b63619885"))
+  (wire (pts (xy 248.92 168.91) (xy 248.92 171.45)) (stroke (width 0) (type default)) (uuid "1439a73f-f59c-5155-b3ba-440d1048412c"))
+  (wire (pts (xy 261.62 168.91) (xy 261.62 171.45)) (stroke (width 0) (type default)) (uuid "e3be7f1e-ba39-54c2-8928-4b02ed830377"))
+  (wire (pts (xy 274.32 158.75) (xy 274.32 161.29)) (stroke (width 0) (type default)) (uuid "44d78c88-2418-54eb-9c98-bf0d7681e4cb"))
+  (wire (pts (xy 274.32 168.91) (xy 274.32 171.45)) (stroke (width 0) (type default)) (uuid "39e56229-69b3-5f4c-a5aa-227e1167efc0"))
+  (wire (pts (xy 287.02 168.91) (xy 287.02 171.45)) (stroke (width 0) (type default)) (uuid "f2be83ee-ac7f-5201-93e4-e67865060320"))
+  (wire (pts (xy 299.72 158.75) (xy 299.72 161.29)) (stroke (width 0) (type default)) (uuid "d7f818b6-3d65-57f0-a7aa-b473ae3bc2f1"))
+  (wire (pts (xy 299.72 168.91) (xy 299.72 171.45)) (stroke (width 0) (type default)) (uuid "b00efc9e-b14e-514d-bdc0-762e9addebaf"))
+  (wire (pts (xy 312.42 168.91) (xy 312.42 171.45)) (stroke (width 0) (type default)) (uuid "f3294c1e-8d84-5472-8f00-d9ef577f422f"))
+  (wire (pts (xy 325.12 158.75) (xy 325.12 161.29)) (stroke (width 0) (type default)) (uuid "1b9f9904-5308-51a1-8bb5-ad9188c4012d"))
+  (wire (pts (xy 337.82 158.75) (xy 337.82 161.29)) (stroke (width 0) (type default)) (uuid "fa345241-6990-5318-9e45-9deb0057f30f"))
+  (wire (pts (xy 337.82 168.91) (xy 337.82 171.45)) (stroke (width 0) (type default)) (uuid "4ce5a720-146b-5c52-8bd7-198f2b17bf53"))
+  (wire (pts (xy 350.52 168.91) (xy 350.52 171.45)) (stroke (width 0) (type default)) (uuid "e8f128a2-d9e6-5ed6-90cf-46e63a01d5de"))
+  (wire (pts (xy 363.22 158.75) (xy 363.22 161.29)) (stroke (width 0) (type default)) (uuid "d25c4b5b-c708-5e79-8915-7501163b8524"))
+  (wire (pts (xy 363.22 168.91) (xy 363.22 171.45)) (stroke (width 0) (type default)) (uuid "5bb4b7ee-03cb-53f9-97f9-52256e9420dd"))
+  (wire (pts (xy 375.92 168.91) (xy 375.92 171.45)) (stroke (width 0) (type default)) (uuid "836ad4ac-12f0-570d-913e-5afffca68377"))
+  (wire (pts (xy 388.62 158.75) (xy 388.62 161.29)) (stroke (width 0) (type default)) (uuid "29e2d1a8-1b75-5f8f-a478-5a36193e2401"))
+  (wire (pts (xy 388.62 168.91) (xy 388.62 171.45)) (stroke (width 0) (type default)) (uuid "0bdbbfba-018b-5bc8-a445-04804b1771b1"))
+  (wire (pts (xy 40.64 246.38) (xy 43.18 246.38)) (stroke (width 0) (type default)) (uuid "0c42f05f-aa0b-5b65-8ed9-884c5c3e8449"))
+  (wire (pts (xy 40.64 251.46) (xy 43.18 251.46)) (stroke (width 0) (type default)) (uuid "d5652162-0ca1-5571-8a48-c1b9d5007597"))
+  (wire (pts (xy 58.42 251.46) (xy 60.96 251.46)) (stroke (width 0) (type default)) (uuid "227a8538-ac3c-5d0a-8a03-3fdaba46e86f"))
+  (wire (pts (xy 58.42 246.38) (xy 60.96 246.38)) (stroke (width 0) (type default)) (uuid "67ab3f56-4d97-5760-b34b-33de08e07345"))
+  (wire (pts (xy 96.52 246.38) (xy 99.06 246.38)) (stroke (width 0) (type default)) (uuid "26463d07-597f-5807-a2bd-ca89e18f7a8b"))
+  (wire (pts (xy 96.52 251.46) (xy 99.06 251.46)) (stroke (width 0) (type default)) (uuid "b0959a71-f636-59e4-ab1e-dccdf7c0a0f7"))
+  (wire (pts (xy 114.30 251.46) (xy 116.84 251.46)) (stroke (width 0) (type default)) (uuid "db04b402-6f26-545c-bc93-201f455df357"))
+  (wire (pts (xy 114.30 246.38) (xy 116.84 246.38)) (stroke (width 0) (type default)) (uuid "22877a9a-7d3e-51e4-8e6a-559a4cf01caf"))
+  (wire (pts (xy 160.02 242.57) (xy 160.02 245.11)) (stroke (width 0) (type default)) (uuid "a354f4df-c0c5-5d26-b02e-8f10da68b405"))
+  (wire (pts (xy 160.02 252.73) (xy 160.02 255.27)) (stroke (width 0) (type default)) (uuid "f29d7e4f-2ee8-5036-b58e-9bcd9fd1e699"))
+  (wire (pts (xy 175.26 242.57) (xy 175.26 245.11)) (stroke (width 0) (type default)) (uuid "ee7b2cc6-65b6-5376-9d7a-c552af6f6e1c"))
+  (wire (pts (xy 175.26 252.73) (xy 175.26 255.27)) (stroke (width 0) (type default)) (uuid "92a61fdf-1f9a-5497-97d6-e2fe1f15525f"))
+  (wire (pts (xy 190.50 242.57) (xy 190.50 245.11)) (stroke (width 0) (type default)) (uuid "3a1389e9-e6f8-5fb5-b72b-e81a0a578f27"))
+  (wire (pts (xy 190.50 252.73) (xy 190.50 255.27)) (stroke (width 0) (type default)) (uuid "02aa7655-33ee-5afa-a62d-c30c56b2888d"))
+  (wire (pts (xy 205.74 242.57) (xy 205.74 245.11)) (stroke (width 0) (type default)) (uuid "364eb6da-b4fd-5659-9d7d-abdccac64b30"))
+  (wire (pts (xy 205.74 252.73) (xy 205.74 255.27)) (stroke (width 0) (type default)) (uuid "c4fad521-fa93-5421-a229-5b4ccfb5e24d"))
+  (wire (pts (xy 243.84 246.38) (xy 248.92 246.38)) (stroke (width 0) (type default)) (uuid "da596d3b-18c6-58b0-9826-2b760136e9e8"))
+  (wire (pts (xy 243.84 248.92) (xy 248.92 248.92)) (stroke (width 0) (type default)) (uuid "098048c6-6868-5423-b018-168abf3621b8"))
+  (wire (pts (xy 243.84 251.46) (xy 248.92 251.46)) (stroke (width 0) (type default)) (uuid "71b25cff-0f0e-592f-a5f2-9f3e799a27da"))
+  (sheet_instances (path "/" (page "1")))
+  (embedded_fonts no))

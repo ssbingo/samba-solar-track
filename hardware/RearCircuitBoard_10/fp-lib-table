@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "RearCircuitBoard_10")(type "KiCad")(uri "${KIPRJMOD}/RearCircuitBoard_10.pretty")(options "")(descr "Eigene Footprints der Platine RearCircuitBoard_10"))
+)
