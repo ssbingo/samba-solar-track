@@ -491,6 +491,7 @@ h2 .num { white-space: nowrap; }
 </ol>
 <h3 id="z10-sonne-halter">Halter für ein Profil 40 × 40</h3>
 <p>Für Gestelle aus <a href="#z10-glossar">Aluminiumprofil</a> 40 × 40 gibt es einen passenden Halter für den Sonnensensor. Er gehört nicht zu Samba Solar Track und wird später als Bauanleitung, Fertigteil oder Bausatz erhältlich sein.</p>
+<figure><div class="frame"><img src="../img/sonnensensor-halter-foto-4.jpg" alt="Sonnensensor am Halter festgeschraubt, von vorn" width="1000" height="861" style="width:100%;max-width:420px;height:auto"></div><figcaption><b>Abb. 4a</b> – Foto: der Sonnensensor am Halter.</figcaption></figure>
 <div class="note open"><strong>Noch am Gerät zu prüfen</strong><p>Der Hersteller liefert nur eine Anschlussskizze. Drei Dinge sind deshalb Annahmen: dass der Ausgang einer Richtung am höchsten ist, wenn die Sonne in dieser Richtung steht; dass NORD zur Oberkante des Moduls gehört; und wie hoch die Signale bei voller Sonne sind. Die <a href="#z10-inbetriebnahme">Inbetriebnahme</a> prüft alle drei. Stimmt eine Richtung nicht, lässt sie sich in den <a href="#z10-software">Einstellungen</a> tauschen, ohne umzuklemmen.</p></div>
 <div class="note info"><strong>Vom Hersteller für seinen eigenen Controller gedacht</strong><p>Der Hersteller weist darauf hin, dass der Sensor vor allem zu seinem eigenen Controller passt. Für andere Systeme nennt er genau die Beschaltung, die Samba Solar Track verwendet: 3,3 V Versorgung und je Ausgang 200 Ω nach Masse.</p></div>
 <div class="note info"><strong>Schirm des Sensorkabels</strong><p>Auf der Platine RearCircuitBoard_10 hat die Klemme J2 einen sechsten Pol für den Schirm des verlängerten Sensorkabels. Den Schirm nur dort an der Steuerung anschließen, am Sensor nicht.</p></div>
@@ -829,6 +830,8 @@ h2 .num { white-space: nowrap; }
 
 <h3 id="z10-windpendel">Pendelhalter für den Windmesser</h3>
 <p>Ein Windmesser misst nur richtig, wenn er senkrecht steht; an einem Kipptisch bewegt sich aber alles mit, was am Modulträger sitzt. Dafür gibt es einen Pendelhalter, der den Windmesser bei jeder Neigung des Tisches senkrecht hält. Er gehört nicht zu Samba Solar Track und wird später als Bauanleitung, Fertigteil oder Bausatz erhältlich sein.</p>
+<figure><div class="frame"><img src="../img/windpendel/00_Prinzip.png" alt="Prinzip: Das Pendel bleibt bei 0 und 50 Grad Tischneigung senkrecht" width="1491" height="760" style="width:100%;height:auto"></div>
+<figcaption><b>Abb. 10a</b> – Das Prinzip, von der Seite in Richtung der Kippachse gesehen (schematisch, nicht maßstäblich). Links der Tisch auf 0°, rechts auf 50° gekippt: Das Pendel mit dem Windmesser hängt in beiden Fällen senkrecht.</figcaption></figure>
 
 <h3 id="z10-leuchten">Leuchten im Gehäuse</h3>
 <p>Auf der Platine sitzen die Meldeleuchten BEREIT (grün) und FAIL (dreifarbig). Für eine zweite Leuchte außen am Gehäuse hängen beide an der fünfpoligen Klemme J14: Pol 1 ist der gemeinsame Pluspol beider Leuchten (am einfachsten im Gehäuse zusammenlöten und eine Ader zu Pol 1 führen), Pol 2 bis 4 sind Rot, Grün und Blau der FAIL-Leuchte, Pol 5 der Minuspol der BEREIT-Leuchte.</p>
@@ -1748,7 +1751,7 @@ h2 .num { white-space: nowrap; }
 </ol>
 <p>Der vollständige Messplan steht in der README des Projekts (Abschnitt der Platine RearCircuitBoard_10, „Offen, Messplan und Restrisiken“).</p>
 <h3>F. Unterlagen</h3>
-<p>Schaltplan, Zeichnung und 3D-Ansichten der Platine liegen im Projekt unter <code>hardware/RearCircuitBoard_10/vorschau/</code>, die Fertigungsdaten unter <code>hardware/RearCircuitBoard_10/fertigung/</code>, die Planung unter <code>docs/planung/esp32-p4-10zoll.md</code>.</p>
+<p>Schaltplan, Zeichnung und 3D-Ansichten der Platine liegen im Projekt unter <code>hardware/RearCircuitBoard_10/vorschau/</code> und die Fertigungsdaten unter <code>hardware/RearCircuitBoard_10/fertigung/</code>.</p>
 <h3 id="z10-anhang-halltap">G. HallTapBoard: Stückliste, Bezugsquellen und Kosten (Entwurf 0.5)</h3>
 <p>Die JLCPCB-Nummern sind in der Teilebibliothek nachgeschlagen: die übernommenen am 12.10.2026 zwischen 08:34 und 08:51 Uhr, die neuen von Entwurf 0.4 (U1, D1/D5–D8, D2, D10, C2 und die Widerstände 510 Ω und 5,1 kΩ) am 13.10.2026 zwischen 18:02 und 18:12 Uhr. Entwurf 0.5 braucht keine neue Nummer (die vier Widerstände vor den Schutzdioden sind 10 kΩ, C25804). Klasse, Bestand und Preise aller Nummern am 13.10.2026 um 18:46 Uhr neu abgefragt. JLCPCB bestückt 45 SMD-Teile (20 Nummern, davon 5 „<a href="#z10-glossar">Extended</a>“). Unterlagen: <code>hardware/HallTapBoard/</code> (Vorschau in <code>vorschau/</code>, Fertigungsdaten in <code>fertigung/</code>), Werkzeug <code>tools/halltap_erzeugen.py</code>.</p>
 <div class="table-wrap"><table>
