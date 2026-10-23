@@ -15,10 +15,10 @@ import trimesh
 
 # ---------------- Parameter ----------------
 W, D       = 245.20, 164.00   # Außenmaß (= Rückwandkontur laut Zeichnung)
-R_CORNER   = 7.00             # Eckradius Grundplatte (Zeichnung nennt R4,50 – real deutlich runder, ggf. nachmessen)
+R_CORNER   = 4.50             # Eckradius der Rückwand (Zeichnung R4,50, vom Nutzer am 23.10.2026 bestätigt)
 WALL       = 2.0              # Wandstärke
 FLOOR      = 5.0              # Bodenstärke (verstärkt, trägt die Aufhängung)
-H          = 30.0             # Gesamttiefe außen
+H          = 40.0             # Gesamttiefe außen (23.10.2026: 40 statt 30 mm, Platz für Platine RearCircuitBoard_10 und PG 11)
 CHAMFER    = 1.2              # Fase an der Bodenaußenkante
 
 # Befestigungsbohrungen (Lochmitten)
@@ -26,8 +26,8 @@ HOLES_TB = [(sx * 195.20 / 2, sy * 155.00 / 2) for sx in (-1, 1) for sy in (-1, 
 HOLES_LR = [(sx * 236.20 / 2, sy * 109.00 / 2) for sx in (-1, 1) for sy in (-1, 1)]   # links/rechts
 HOLES = HOLES_TB + HOLES_LR
 
-SCREW_D    = 2.8              # Durchgang M2.5 (M3: 3.4, M2: 2.4)
-HEAD_D     = 5.0              # Senkung für Zylinderkopf M2.5 (M3: 6.0, M2: 4.2)
+SCREW_D    = 3.2              # Durchgang M2.5; 2,8 mm waren gedruckt zu eng (Nutzer, 23.10.2026), 3,2 mm ANNAHME
+HEAD_D     = 5.5              # Senkung für Zylinderkopf M2.5 (Kopf 4,5 mm), gedruckt mit Spiel, ANNAHME
 POST_D     = 8.0              # Domdurchmesser (wird mit der Wand verschmolzen)
 SCREW_GRIP = 4.0              # Material zwischen Kopfauflage und Display
 
@@ -37,13 +37,18 @@ NOTCH_DEPTH  = 5.50
 NOTCH_STRAIT = 34.35
 NOTCH_END    = 42.25
 
-# Kabeldurchführung unten (U-Ausschnitt ab Auflagekante)
-CABLE = False                 # Kabeldurchführung – später
-CABLE_W, CABLE_H, CABLE_X = 18.0, 9.0, 0.0
+# Kabelverschraubungen unten (Vorgabe des Nutzers vom 23.10.2026): 6 × PG 11 in der unteren Wand (y = -D/2),
+# Bohrung 18,9 mm wie beim Gehäuse des HallTapBoard. Die Gegenmuttern (SW 22, etwa 25,4 mm über Eck, ANNAHME nach
+# üblichen PG-11-Muttern) liegen innen mit 31 mm Abstand (etwa 5,6 mm Luft); die äußeren enden 3,4 mm vor den Domen
+# der unteren Befestigungspunkte (x = ±97,6 mm, Ø 8 mm).
+PG_D       = 18.9
+PG_PITCH   = 31.0
+PG_X       = [(i - 2.5) * PG_PITCH for i in range(6)]
+PG_Z       = FLOOR + (H - FLOOR) / 2   # Mitte der Wandhöhe innen
 
 # Stabilisierungsstege innen (Trapez: unten RIB_DEPTH_BOT tief, oben RIB_DEPTH_TOP, endet RIB_GAP unter der Auflagekante)
 RIB_T, RIB_DEPTH_BOT, RIB_DEPTH_TOP, RIB_GAP = 1.6, 6.0, 2.0, 1.0
-RIBS_LONG_X  = (-50.0, 50.0)   # je 2 an den langen Seiten (oben/unten)
+RIBS_LONG_X  = (-50.0, 50.0)   # 2 an der oberen langen Seite; an der unteren sitzen die Verschraubungen
 RIBS_SHORT_Y = (0.0,)          # je 1 an den kurzen Seiten (links/rechts)
 
 # Aufhängung: 2 verdeckte Schlüssellöcher im oberen Bereich (Schraube Ø4 mm, Kopf bis Ø9 mm, Kopfhöhe bis 3,2 mm)
@@ -130,7 +135,7 @@ def rib(px, py, nx, ny):
 
 x_left_inner = -W / 2 + NOTCH_DEPTH + WALL
 for x in RIBS_LONG_X:
-    shell += rib(x, D / 2 - WALL, 0, -1) + rib(x, -D / 2 + WALL, 0, 1)
+    shell += rib(x, D / 2 - WALL, 0, -1)
 for y in RIBS_SHORT_Y:
     shell += rib(W / 2 - WALL, y, -1, 0)
     shell += rib(x_left_inner if abs(y) <= NOTCH_STRAIT else -W / 2 + WALL, y, 1, 0)
@@ -140,11 +145,9 @@ for x, y in HOLES:
     shell -= cyl(H + 2, SCREW_D, x, y, -1)
     shell -= cyl(H - SCREW_GRIP + 1, HEAD_D, x, y, -1)
 
-# Kabeldurchführung unten (y = -D/2)
-u = (CS.square((CABLE_W, CABLE_H - CABLE_W / 2 + 1)).translate((-CABLE_W / 2, H - CABLE_H + CABLE_W / 2))
-     + CS.circle(CABLE_W / 2, SEG).translate((0, H - CABLE_H + CABLE_W / 2)))
-if CABLE:
-    shell -= M.extrude(u, WALL + 4).rotate((90, 0, 0)).translate((CABLE_X, -D / 2 + WALL + 2, 0))
+# Kabelverschraubungen unten (y = -D/2): Bohrungen quer durch die Wand
+for x in PG_X:
+    shell -= M.cylinder(WALL + 4, PG_D / 2, circular_segments=SEG).rotate((90, 0, 0)).translate((x, -D / 2 + WALL + 2, PG_Z))
 
 # Schlüssellöcher (Aufhängung)
 def stadium(w, L, x, y0):
