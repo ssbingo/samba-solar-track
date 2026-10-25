@@ -31,11 +31,14 @@ HEAD_D     = 5.5              # Senkung für Zylinderkopf M2.5 (Kopf 4,5 mm), ge
 POST_D     = 8.0              # Domdurchmesser (wird mit der Wand verschmolzen)
 SCREW_GRIP = 4.0              # Material zwischen Kopfauflage und Display
 
-# Aussparung links (aus Zeichnung): Stirnfläche 8,00 mm ab Frontrahmen = 5,50 mm ab Grundplattenkante,
-# gerader Teil |y| <= 34,35 mm, S-förmiger Übergang (Kosinusverlauf, tangential) bis |y| = 42,25 mm
+# Aussparung links (aus Zeichnung): Stirnfläche 8,00 mm ab Frontrahmen = 5,50 mm ab Grundplattenkante.
+# Übergang aus zwei tangentialen Bögen mit dem Eckradius (25.10.2026: der Kosinusverlauf war an den Enden nur etwa
+# R 2,3 und passte gedruckt nicht; R 4,50 wie an den Ecken ist ANNAHME). Die Mitte des Übergangs bleibt bei |y| = 38,30 mm.
 NOTCH_DEPTH  = 5.50
-NOTCH_STRAIT = 34.35
-NOTCH_END    = 42.25
+NOTCH_R      = 4.50
+NOTCH_LEN    = (4 * NOTCH_R ** 2 - (2 * NOTCH_R - NOTCH_DEPTH) ** 2) ** 0.5   # Länge des Übergangs in y (8,29 mm)
+NOTCH_STRAIT = 38.30 - NOTCH_LEN / 2
+NOTCH_END    = 38.30 + NOTCH_LEN / 2
 
 # Kabelverschraubungen unten (Vorgabe des Nutzers vom 23.10.2026): 6 × PG 11 in der unteren Wand (y = -D/2),
 # Bohrung 18,9 mm wie beim Gehäuse des HallTapBoard. Die Gegenmuttern (SW 22, etwa 25,4 mm über Eck, ANNAHME nach
@@ -84,11 +87,14 @@ def notch_poly():
         a = abs(y)
         if a <= NOTCH_STRAIT:
             return x_edge + NOTCH_DEPTH
-        t = (a - NOTCH_STRAIT) / (NOTCH_END - NOTCH_STRAIT)
-        return x_edge + NOTCH_DEPTH * (1 + math.cos(math.pi * t)) / 2
+        if a >= NOTCH_END:
+            return x_edge
+        if a <= NOTCH_STRAIT + NOTCH_LEN / 2:   # Bogen an der Stirnfläche
+            return x_edge + NOTCH_DEPTH - NOTCH_R + math.sqrt(NOTCH_R ** 2 - (a - NOTCH_STRAIT) ** 2)
+        return x_edge + NOTCH_R - math.sqrt(NOTCH_R ** 2 - (NOTCH_END - a) ** 2)   # Bogen an der Außenkante
     n = 60
     ys = [-NOTCH_END + (NOTCH_END - NOTCH_STRAIT) * i / n for i in range(n + 1)] + \
-         [NOTCH_STRAIT - (NOTCH_END - NOTCH_STRAIT) * i / n for i in range(n, -1, -1)]
+         [NOTCH_STRAIT + (NOTCH_END - NOTCH_STRAIT) * i / n for i in range(n + 1)]
     pts = [(x_edge - 5, -NOTCH_END - 0.5), (x_edge - 0.001, -NOTCH_END - 0.5)]
     pts += [(xf(y), y) for y in ys]
     pts += [(x_edge - 0.001, NOTCH_END + 0.5), (x_edge - 5, NOTCH_END + 0.5)]
