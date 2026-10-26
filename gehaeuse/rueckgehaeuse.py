@@ -65,6 +65,9 @@ KEY_SLOT_LEN = 12.0            # Schlitzlänge nach oben
 KEY_LIP      = 2.0             # tragende Lippe außen
 KEY_POCKET   = 3.4             # Höhe des verdeckten Kopfkanals (Kopfhöhe + Spiel)
 KEY_CEIL     = 2.0             # Decke über dem Kopfkanal zum Innenraum
+KEY_RIDGE    = 1.0             # Grat oben am Dach des Kopfkanals: Dach mit 45° statt flacher Decke, damit der Kanal ohne
+                               # Stützen druckt (Boden liegt auf dem Bett; Vorgabe 26.10.2026)
+KEY_ROOF     = (KEY_HEAD_D - KEY_RIDGE) / 2   # Höhe des Dachs (4,5 mm)
 KEY_PAD_WALL = 3.0             # Wandstärke des Verstärkungspads um den Kanal
 
 # Lüftungsschlitze im Boden
@@ -162,13 +165,18 @@ def stadium(w, L, x, y0):
             + CS.circle(w / 2, SEG).translate((x, y0))
             + CS.circle(w / 2, SEG).translate((x, y0 + L)))
 
-KEY_PAD_H = KEY_LIP + KEY_POCKET + KEY_CEIL          # lokale Bodendicke am Schlüsselloch (ragt KEY_PAD_H - FLOOR nach innen)
+KEY_PAD_H = KEY_LIP + KEY_POCKET + KEY_ROOF + KEY_CEIL   # lokale Bodendicke am Schlüsselloch (ragt KEY_PAD_H - FLOOR nach innen)
 for kx in KEYHOLES_X:
     if KEY_PAD_H > FLOOR:                                                                     # Verstärkungspad innen
         shell += ext(stadium(KEY_HEAD_D + 2 * KEY_PAD_WALL, KEY_SLOT_LEN, kx, KEYHOLE_Y), KEY_PAD_H - 0.01, 0.005)
     shell -= cyl(KEY_LIP + KEY_POCKET + 1, KEY_HEAD_D, kx, KEYHOLE_Y, -1)                     # Einführloch, blind
     shell -= ext(stadium(KEY_SLOT_W, KEY_SLOT_LEN, kx, KEYHOLE_Y), KEY_LIP + 1, -1)           # Schaftschlitz durch die Lippe
     shell -= ext(stadium(KEY_HEAD_D, KEY_SLOT_LEN, kx, KEYHOLE_Y), KEY_POCKET, KEY_LIP)      # verdeckter Kopfkanal
+    steps = round(KEY_ROOF / 0.1)                                                            # Dach 45°, in 0,1-mm-Lagen
+    for i in range(steps):
+        w = KEY_HEAD_D - 2 * (i + 1) * KEY_ROOF / steps
+        shell -= ext(stadium(max(w, KEY_RIDGE), KEY_SLOT_LEN, kx, KEYHOLE_Y), KEY_ROOF / steps + 0.01,
+                     KEY_LIP + KEY_POCKET + i * KEY_ROOF / steps - 0.005)
 
 # Lüftungsschlitze
 slot = CS.square((VENT_LEN - VENT_W, 0.001), center=True).offset(VENT_W / 2, m3.JoinType.Round, circular_segments=24)
