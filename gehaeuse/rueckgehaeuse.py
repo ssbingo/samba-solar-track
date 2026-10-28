@@ -24,7 +24,7 @@ WALL       = 2.0              # Wandstärke
 FLOOR      = 5.0              # Bodenstärke (verstärkt, trägt die Aufhängung)
 # Gesamttiefe außen, zwei Varianten zur Wahl (Vorgabe des Nutzers vom 28.10.2026), je mit eigenen Dateien (_40mm/_50mm):
 #   40 mm: Platine 9 mm über der Rückwand, Verschraubungen in der Mitte der Wandhöhe (Stand bis 26.10.2026)
-#   50 mm: Platine 15 mm über der Rückwand, Kabel im Spalt, Verschraubungen hoch an der Wand
+#   50 mm: Platine 15 mm über der Rückwand, Kabel im Spalt, Verschraubungen in der Mitte der Seitenfläche
 # Gewählt wird über die Umgebungsvariable RUECKGEHAEUSE_TIEFE (Voreinstellung 50); ohne sie erzeugt der Aufruf beide.
 TIEFEN     = (40.0, 50.0)
 H          = float(os.environ.get("RUECKGEHAEUSE_TIEFE", "50"))
@@ -63,8 +63,8 @@ PG_D       = 18.9
 PG_PITCH   = 31.0
 PG_X       = [(i - 2.5) * PG_PITCH for i in range(6)]
 if H == 50.0:
-    PG_Z   = H - 14.0                 # 28.10.2026: hoch an der Wand, auf Höhe des Spalts Rückwand–Platine (15 mm), in dem
-                                      # die Kabel laufen; die Gegenmutter (Ø 25,4 über Eck) endet 1,3 mm unter der Auflagekante
+    PG_Z   = H / 2                    # 28.10.2026: Mitte der Seitenfläche außen (25 mm, Vorgabe des Nutzers); die
+                                      # Gegenmutter (Ø 25,4 über Eck) reicht innen von 12,3 bis 37,7 mm über dem Boden außen
 else:
     PG_Z   = FLOOR + (H - FLOOR) / 2  # 40 mm: Mitte der Wandhöhe innen (wie bis 26.10.2026)
 PG_WALL_Y  = -UP * D / 2                # Außenseite der Wand mit den Verschraubungen (unten nach dem Einbau)
@@ -80,6 +80,7 @@ RIBS_SHORT_Y = (0.0,)          # je 1 an den kurzen Seiten (links/rechts)
 KEYHOLES_X   = (-80.0, 80.0)   # Lochabstand 160 mm, symmetrisch zur Mitte
 KEYHOLE_Y    = UP * 40.0       # Mitte Einführloch (oberer Bereich nach dem Einbau)
 KEY_HEAD_D   = 10.0            # Einführloch und Kopfkanal
+KEY_ENTRY_PLAY = 0.2           # Einführloch weiter als der Kopfkanal (Wände dürfen nicht zusammenfallen)
 KEY_SLOT_W   = 4.6             # Schlitz für den Schraubenschaft
 KEY_SLOT_LEN = 12.0            # Schlitzlänge nach oben
 KEY_LIP      = 2.0             # tragende Lippe außen
@@ -190,7 +191,9 @@ KEY_PAD_H = KEY_LIP + KEY_POCKET + KEY_ROOF + KEY_CEIL   # lokale Bodendicke am 
 for kx in KEYHOLES_X:
     if KEY_PAD_H > FLOOR:                                                                     # Verstärkungspad innen
         shell += ext(stadium(KEY_HEAD_D + 2 * KEY_PAD_WALL, KEY_SLOT_LEN, kx, KEYHOLE_Y), KEY_PAD_H - 0.01, 0.005)
-    shell -= cyl(KEY_LIP + KEY_POCKET + 1, KEY_HEAD_D, kx, KEYHOLE_Y, -1)                     # Einführloch, blind
+    # Einführloch, blind; 0,2 mm weiter als der Kopfkanal, damit ihre Wände nicht zusammenfallen (sonst berühren sich
+    # die Körper in Kanten, und Druckprogramme melden „non-manifold“-Kanten, 28.10.2026)
+    shell -= cyl(KEY_LIP + KEY_POCKET + 1, KEY_HEAD_D + KEY_ENTRY_PLAY, kx, KEYHOLE_Y, -1)
     shell -= ext(stadium(KEY_SLOT_W, KEY_SLOT_LEN, kx, KEYHOLE_Y), KEY_LIP + 1, -1)           # Schaftschlitz durch die Lippe
     shell -= ext(stadium(KEY_HEAD_D, KEY_SLOT_LEN, kx, KEYHOLE_Y), KEY_POCKET, KEY_LIP)      # verdeckter Kopfkanal
     steps = round(KEY_ROOF / 0.1)                                                            # Dach 45°, in 0,1-mm-Lagen

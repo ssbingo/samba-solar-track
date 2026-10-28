@@ -9,7 +9,7 @@ einem gekauften Waveshare ESP32-P4-WIFI6-Touch-LCD-10.1 (10,1-Zoll-Touch-Display
 Meldeleuchten trägt. Dieses Repository enthält ausschließlich, was du für den Nachbau der Steuerung brauchst:
 Handbuch, Platinen und Gehäuse.
 
-**Stand: Release 0.5.0** (erzeugt aus dem Projekt am 28.10.2026)
+**Stand: Release 0.5.2** (erzeugt aus dem Projekt am 28.10.2026)
 
 ## Inhalt
 
