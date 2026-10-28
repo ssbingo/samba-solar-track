@@ -19,6 +19,9 @@
   .card h2 { margin: 0 0 6px; font-size: 20px; }
   .card p { margin: 0 0 10px; color: var(--muted); }
   .card a { color: var(--accent); font-weight: 600; margin-right: 18px; }
+  .langs { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .langs li { display: flex; gap: 18px; align-items: baseline; }
+  .langs span { min-width: 120px; font-weight: 600; }
   .copy { margin-top: 32px; font-size: 13px; color: var(--muted); }
 </style>
 </head>
@@ -33,7 +36,16 @@
   <section class="card">
     <h2>10-Zoll-Version (in Vorbereitung)</h2>
     <p>Waveshare ESP32-P4-WIFI6-Touch-LCD-10.1 mit der Platine RearCircuitBoard_10</p>
-    <a href="10zoll/index.html">Handbuch öffnen</a><a href="Samba-Solar-Track-Handbuch-10Zoll.pdf">PDF</a>
+    <p>Das Handbuch gibt es in sieben Sprachen. Führend ist die deutsche Fassung; die übrigen sind maschinell übersetzt und nicht von Muttersprachlern geprüft.</p>
+    <ul class="langs">
+      <li lang="de"><span>Deutsch</span><a href="10zoll/index.html" hreflang="de">HTML</a><a href="Samba-Solar-Track-Handbuch-10Zoll.pdf" hreflang="de">PDF</a></li>
+      <li lang="en"><span>English</span><a href="10zoll/index.en.html" hreflang="en">HTML</a><a href="Samba-Solar-Track-Handbuch-10Zoll-EN.pdf" hreflang="en">PDF</a></li>
+      <li lang="fr"><span>Français</span><a href="10zoll/index.fr.html" hreflang="fr">HTML</a><a href="Samba-Solar-Track-Handbuch-10Zoll-FR.pdf" hreflang="fr">PDF</a></li>
+      <li lang="es"><span>Español</span><a href="10zoll/index.es.html" hreflang="es">HTML</a><a href="Samba-Solar-Track-Handbuch-10Zoll-ES.pdf" hreflang="es">PDF</a></li>
+      <li lang="nl"><span>Nederlands</span><a href="10zoll/index.nl.html" hreflang="nl">HTML</a><a href="Samba-Solar-Track-Handbuch-10Zoll-NL.pdf" hreflang="nl">PDF</a></li>
+      <li lang="pt"><span>Português</span><a href="10zoll/index.pt.html" hreflang="pt">HTML</a><a href="Samba-Solar-Track-Handbuch-10Zoll-PT.pdf" hreflang="pt">PDF</a></li>
+      <li lang="pl"><span>Polski</span><a href="10zoll/index.pl.html" hreflang="pl">HTML</a><a href="Samba-Solar-Track-Handbuch-10Zoll-PL.pdf" hreflang="pl">PDF</a></li>
+    </ul>
   </section>
 </div>
 <p class="copy">© Silvio Sternitzke, 10/2026 · Samba Solar Track · Lizenz CC BY-NC-SA 4.0 (keine kommerzielle Verwendung durch Dritte, Nachbau für private Zwecke erlaubt)</p>

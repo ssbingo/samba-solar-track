@@ -12,22 +12,22 @@ exec(open("rueckgehaeuse.py").read().split("if __name__")[0])
 
 PW, PH = 297.0, 210.0                     # A4 quer in mm
 cx, y_screw = PW / 2, 160.0               # Schraubenlinie auf der Seite
-y_screw_rel = KEYHOLE_Y + KEY_SLOT_LEN    # Schraube relativ zur Gehäusemitte im eingehängten Zustand
+y_screw_rel = UP * KEYHOLE_Y + KEY_SLOT_LEN   # Schraube über der Gehäusemitte im eingehängten Zustand (UP: oben im Modell)
 cy = y_screw - y_screw_rel                # Gehäusemitte auf der Seite
 
 fig = plt.figure(figsize=(PW / 25.4, PH / 25.4))
 ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(0, PW); ax.set_ylim(0, PH); ax.set_aspect("equal"); ax.axis("off")
 
-# Gehäuseumriss gespiegelt = Ansicht von vorn (Raumseite), Aussparung dann rechts
+# Gehäuseumriss = Ansicht von vorn (Raumseite) in Einbaulage: gespiegelt und, wenn UP = -1, um 180° gedreht
 for p in outline.to_polygons():
-    xs = [cx - x for x, y in p] + [cx - p[0][0]]
-    ys = [cy + y for x, y in p] + [cy + p[0][1]]
+    xs = [cx - UP * x for x, y in p] + [cx - UP * p[0][0]]
+    ys = [cy + UP * y for x, y in p] + [cy + UP * p[0][1]]
     ax.plot(xs, ys, color="0.6", lw=0.6, ls="--")
 ax.text(cx, cy - 60, "Umriss Gehäuse im eingehängten Zustand (Ansicht von vorn)", ha="center", va="center", fontsize=8, color="0.5")
 
 # Schraubenpositionen
 for kx in KEYHOLES_X:
-    x = cx - kx
+    x = cx - UP * kx
     ax.add_patch(Circle((x, y_screw), 2.0, fill=False, lw=0.8))
     ax.add_patch(Circle((x, y_screw), 4.5, fill=False, lw=0.4, ls=":"))
     ax.plot([x - 7, x + 7], [y_screw, y_screw], "k", lw=0.5); ax.plot([x, x], [y_screw - 7, y_screw + 7], "k", lw=0.5)

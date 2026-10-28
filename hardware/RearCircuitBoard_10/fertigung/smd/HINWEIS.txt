@@ -1,5 +1,5 @@
 Samba Solar Track - RearCircuitBoard_10, Fertigungsdaten für JLCPCB, Bestückungsvariante „smd“
-Platine Entwurf 0.10; erzeugt am 11.10.2026 18:29 mit tools/fertigung_export.py (Stand f404c5e 08.10.2026 mit nicht eingecheckten Änderungen).
+Platine Entwurf 0.10; erzeugt am 28.10.2026 14:12 mit tools/fertigung_export.py (Stand b880fad 28.10.2026 mit nicht eingecheckten Änderungen).
 
 Verwendung und Haftung: nur Schutzkleinspannung (SELV), höchstens 30 V DC an allen Anschlüssen, keine
 Netzspannung. Für Schäden durch unsachgemäßes Löten, Falschpolung oder falschen Anschluss externer
@@ -83,10 +83,12 @@ Lose dazu bestellen (JLCPCB verschickt keine Einzelteile; zum Beispiel bei LCSC)
   Steckbrücken: 2 x Steckbrücke 2,54 mm (C5305) für J16 (1-2 = Abschluss ein, 2-3 = aus) und J21 (2-3 = Betrieb, 1-2 = Ladesperre erzwingen), von Hand stecken.
   Stecker: 4 x KF2EDGK-3.5-2P (C440847), 2 x KF2EDGK-3.5-3P (C440848), 1 x KF2EDGK-3.5-5P (C440850), 1 x KF2EDGK-3.5-6P (C440851), 1 x KF2EDGK-5.08-2P-AA (C440880), 2 x KF2EDGKS-3.5-2*2P (C2923215), 2 x KF2EDGKS-3.5-2*3P (C2923216)
   ANNAHME: Stecker KF2EDGK-5.08-2P-AA (C440880) zur Grundleiste KF2EDGRC-5.08-2P von J11 - Paarung laut Datenblatt nicht belegt, am Muster prüfen (P15).
-  J1: Stiftleiste 1 x 40 mit langen Stiften (Länge nach der Messung, Vorschläge in der README).
+  J1: Stiftleiste 1 x 40 mit langen Stiften, 21 mm (C51353), für 15 mm Abstand Rückwand-Platine (Bolzen
+  M2,5 x 12 + 6 Messing C50377852 mit Mutter und Scheibe); Einstecktiefe in J8 3,2 mm bei Rückwand 1,5 mm
+  (Annahme, README).
   Wärmeweg der NTC-Insel (von Hand, kein JLCPCB-Teil für das Pad, E31): Distanzbolzen Messing M3, SW 4,7 mm,
-  6 mm (C551326) oder 8 mm (C551328) nach dem gemessenen Spalt, dazu zwei Wärmeleitpads 6 x 6 mm, 1,0 oder
-  1,5 mm (zum Beispiel Thermal Grizzly Minus Pad 8 oder Arctic TP-3; Auswahl in der README).
+  13 mm (C551333) bei 15 mm Spalt, dazu zwei Wärmeleitpads 6 x 6 x 1,0 mm (zum Beispiel Thermal Grizzly
+  Minus Pad 8 oder Arctic TP-3); bei anderem Spalt 6 mm (C551326) oder 8 mm (C551328), Auswahl in der README).
 
 © Silvio Sternitzke, 10/2026 - Samba Solar Track - Lizenz CC BY-NC-SA 4.0: keine kommerzielle Verwendung durch Dritte, privater Nachbau erlaubt
 Lizenztext: LICENSE und LIZENZ.md im Projekt.

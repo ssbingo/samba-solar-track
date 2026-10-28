@@ -10,6 +10,10 @@ Befestigung über die 8 Randbohrungen der Rückwand (je 4,5 mm vom Rand):
   - oben/unten: Abstand horizontal 195,20 mm, vertikal 155,00 mm
   - links/rechts: Abstand vertikal 109,00 mm, horizontal 236,20 mm
 """
+import os
+import subprocess
+import sys
+
 import manifold3d as m3
 import trimesh
 
@@ -18,7 +22,13 @@ W, D       = 245.20, 164.00   # Außenmaß (= Rückwandkontur laut Zeichnung)
 R_CORNER   = 4.50             # Eckradius der Rückwand (Zeichnung R4,50, vom Nutzer am 23.10.2026 bestätigt)
 WALL       = 2.0              # Wandstärke
 FLOOR      = 5.0              # Bodenstärke (verstärkt, trägt die Aufhängung)
-H          = 40.0             # Gesamttiefe außen (23.10.2026: 40 statt 30 mm, Platz für Platine RearCircuitBoard_10 und PG 11)
+# Gesamttiefe außen, zwei Varianten zur Wahl (Vorgabe des Nutzers vom 28.10.2026), je mit eigenen Dateien (_40mm/_50mm):
+#   40 mm: Platine 9 mm über der Rückwand, Verschraubungen in der Mitte der Wandhöhe (Stand bis 26.10.2026)
+#   50 mm: Platine 15 mm über der Rückwand, Kabel im Spalt, Verschraubungen hoch an der Wand
+# Gewählt wird über die Umgebungsvariable RUECKGEHAEUSE_TIEFE (Voreinstellung 50); ohne sie erzeugt der Aufruf beide.
+TIEFEN     = (40.0, 50.0)
+H          = float(os.environ.get("RUECKGEHAEUSE_TIEFE", "50"))
+assert H in TIEFEN, f"Tiefe {H} mm: nur {TIEFEN} vorgesehen"
 CHAMFER    = 1.2              # Fase an der Bodenaußenkante
 
 # Befestigungsbohrungen (Lochmitten)
@@ -40,25 +50,35 @@ NOTCH_LEN    = (4 * NOTCH_R ** 2 - (2 * NOTCH_R - NOTCH_DEPTH) ** 2) ** 0.5   # 
 NOTCH_STRAIT = 38.30 - NOTCH_LEN / 2
 NOTCH_END    = 38.30 + NOTCH_LEN / 2
 
-# Kabelverschraubungen unten (Vorgabe des Nutzers vom 23.10.2026): 6 × PG 11 in der unteren Wand (y = -D/2),
+# Einbaulage (Vorgabe des Nutzers vom 28.10.2026): Mit Kabeln bei -y stand die Anzeige (Drehung 90 Grad) auf dem Kopf.
+# Das Gehäuse wird deshalb umgekehrt eingebaut: nach dem Einbau zeigt -y nach oben. Kabelverschraubungen und
+# Schlüssellöcher liegen damit seit 28.10.2026 auf der jeweils anderen Seite des Modells (vorher UP = +1).
+UP = -1                        # Richtung im Modell, die nach dem Einbau oben ist (+1 oder -1)
+
+# Kabelverschraubungen unten (Vorgabe des Nutzers vom 23.10.2026): 6 × PG 11 in der unteren Wand (y = -UP·D/2),
 # Bohrung 18,9 mm wie beim Gehäuse des HallTapBoard. Die Gegenmuttern (SW 22, etwa 25,4 mm über Eck, ANNAHME nach
 # üblichen PG-11-Muttern) liegen innen mit 31 mm Abstand (etwa 5,6 mm Luft); die äußeren enden 3,4 mm vor den Domen
 # der unteren Befestigungspunkte (x = ±97,6 mm, Ø 8 mm).
 PG_D       = 18.9
 PG_PITCH   = 31.0
 PG_X       = [(i - 2.5) * PG_PITCH for i in range(6)]
-PG_Z       = FLOOR + (H - FLOOR) / 2   # Mitte der Wandhöhe innen
+if H == 50.0:
+    PG_Z   = H - 14.0                 # 28.10.2026: hoch an der Wand, auf Höhe des Spalts Rückwand–Platine (15 mm), in dem
+                                      # die Kabel laufen; die Gegenmutter (Ø 25,4 über Eck) endet 1,3 mm unter der Auflagekante
+else:
+    PG_Z   = FLOOR + (H - FLOOR) / 2  # 40 mm: Mitte der Wandhöhe innen (wie bis 26.10.2026)
+PG_WALL_Y  = -UP * D / 2                # Außenseite der Wand mit den Verschraubungen (unten nach dem Einbau)
 
 # Stabilisierungsstege innen (Trapez: unten RIB_DEPTH_BOT tief, oben RIB_DEPTH_TOP, endet RIB_GAP unter der Auflagekante)
 RIB_T, RIB_DEPTH_BOT, RIB_DEPTH_TOP, RIB_GAP = 1.6, 6.0, 2.0, 1.0
-RIBS_LONG_X  = (-50.0, 50.0)   # 2 an der oberen langen Seite; an der unteren sitzen die Verschraubungen
+RIBS_LONG_X  = (-50.0, 50.0)   # 2 an der oberen langen Seite (nach dem Einbau); an der unteren sitzen die Verschraubungen
 RIBS_SHORT_Y = (0.0,)          # je 1 an den kurzen Seiten (links/rechts)
 
 # Aufhängung: 2 verdeckte Schlüssellöcher im oberen Bereich (Schraube Ø4 mm, Kopf bis Ø9 mm, Kopfhöhe bis 3,2 mm)
 # Von außen: Einführloch (blind) + Schlitz nach oben durch die tragende Lippe; dahinter ein verdeckter Kopfkanal.
 # Zum Innenraum geschlossen – dafür innen ein Verstärkungspad um jedes Schlüsselloch.
 KEYHOLES_X   = (-80.0, 80.0)   # Lochabstand 160 mm, symmetrisch zur Mitte
-KEYHOLE_Y    = 40.0            # Mitte Einführloch (oberer Bereich, +y = oben)
+KEYHOLE_Y    = UP * 40.0       # Mitte Einführloch (oberer Bereich nach dem Einbau)
 KEY_HEAD_D   = 10.0            # Einführloch und Kopfkanal
 KEY_SLOT_W   = 4.6             # Schlitz für den Schraubenschaft
 KEY_SLOT_LEN = 12.0            # Schlitzlänge nach oben
@@ -144,7 +164,7 @@ def rib(px, py, nx, ny):
 
 x_left_inner = -W / 2 + NOTCH_DEPTH + WALL
 for x in RIBS_LONG_X:
-    shell += rib(x, D / 2 - WALL, 0, -1)
+    shell += rib(x, UP * (D / 2 - WALL), 0, -UP)
 for y in RIBS_SHORT_Y:
     shell += rib(W / 2 - WALL, y, -1, 0)
     shell += rib(x_left_inner if abs(y) <= NOTCH_STRAIT else -W / 2 + WALL, y, 1, 0)
@@ -154,16 +174,17 @@ for x, y in HOLES:
     shell -= cyl(H + 2, SCREW_D, x, y, -1)
     shell -= cyl(H - SCREW_GRIP + 1, HEAD_D, x, y, -1)
 
-# Kabelverschraubungen unten (y = -D/2): Bohrungen quer durch die Wand
+# Kabelverschraubungen unten (y = PG_WALL_Y): Bohrungen quer durch die Wand
 for x in PG_X:
-    shell -= M.cylinder(WALL + 4, PG_D / 2, circular_segments=SEG).rotate((90, 0, 0)).translate((x, -D / 2 + WALL + 2, PG_Z))
+    y_mid = PG_WALL_Y + UP * WALL / 2                       # Mitte der Wand; der Zylinder läuft nach -y
+    shell -= M.cylinder(WALL + 4, PG_D / 2, circular_segments=SEG).rotate((90, 0, 0)).translate((x, y_mid + (WALL + 4) / 2, PG_Z))
 
 # Schlüssellöcher (Aufhängung)
 def stadium(w, L, x, y0):
-    """Langloch der Breite w von (x,y0) um L nach +y, mit runden Enden."""
-    return (CS.square((w, L), center=True).translate((x, y0 + L / 2))
+    """Langloch der Breite w von (x,y0) um L nach oben (nach dem Einbau, Richtung UP), mit runden Enden."""
+    return (CS.square((w, L), center=True).translate((x, y0 + UP * L / 2))
             + CS.circle(w / 2, SEG).translate((x, y0))
-            + CS.circle(w / 2, SEG).translate((x, y0 + L)))
+            + CS.circle(w / 2, SEG).translate((x, y0 + UP * L)))
 
 KEY_PAD_H = KEY_LIP + KEY_POCKET + KEY_ROOF + KEY_CEIL   # lokale Bodendicke am Schlüsselloch (ragt KEY_PAD_H - FLOOR nach innen)
 for kx in KEYHOLES_X:
@@ -185,15 +206,26 @@ for cx, cy in VENT_FIELDS:
     for i in range(VENT_SLOTS):
         shell -= ext(slot, FLOOR + 2, -1).translate((cx, cy - off + i * VENT_PITCH, 0))
 
+def dateiname(basis, endung):
+    return f"{basis}_{H:.0f}mm.{endung}"
+
+
 if __name__ == "__main__":
+    if "RUECKGEHAEUSE_TIEFE" not in os.environ:          # ohne Vorgabe: die andere Tiefe in einem eigenen Lauf
+        for t in TIEFEN:
+            if t != H:
+                subprocess.run([sys.executable, __file__], env={**os.environ, "RUECKGEHAEUSE_TIEFE": f"{t:g}"},
+                               check=True)
     mesh = shell.to_mesh()
     tm = trimesh.Trimesh(vertices=mesh.vert_properties[:, :3], faces=mesh.tri_verts)
-    print("status:", shell.status(), "genus:", shell.genus(),
+    print(f"Tiefe {H:g} mm  status:", shell.status(), "genus:", shell.genus(),
           "bounds:", tm.bounds.round(2).tolist(), "vol cm3:", round(tm.volume / 1000, 1))
-    tm.export("Rueckgehaeuse_ESP32-P4_10.1.stl")
-    tm.export("Rueckgehaeuse_ESP32-P4_10.1.3mf")
+    tm.export(dateiname("Rueckgehaeuse_ESP32-P4_10.1", "stl"))
+    tm.export(dateiname("Rueckgehaeuse_ESP32-P4_10.1", "3mf"))
+    if H != 50.0:
+        sys.exit(0)
 
-    # Passprobe: 1,2 mm Rahmen der Auflagekontur mit den 8 Bohrungen (schneller Testdruck)
+    # Passprobe: 1,2 mm Rahmen der Auflagekontur mit den 8 Bohrungen (schneller Testdruck, für beide Tiefen gleich)
     gauge = ext(outline - outline.offset(-8.0, m3.JoinType.Round, circular_segments=SEG), 1.2)
     for x, y in HOLES:
         gauge -= cyl(4, SCREW_D, x, y, -1)
