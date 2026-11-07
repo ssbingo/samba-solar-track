@@ -573,6 +573,10 @@
       {
         "netclass": "RS485",
         "pattern": "Net-(J16-Pin_2)"
+      },
+      {
+        "netclass": "RS485",
+        "pattern": "/RS485_AC"
       }
     ]
   },

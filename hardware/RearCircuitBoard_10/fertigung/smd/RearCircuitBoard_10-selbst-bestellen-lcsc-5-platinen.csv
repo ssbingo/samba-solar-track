@@ -1,0 +1,23 @@
+Quantity,Manufacture Part Number,Manufacturer,Description,LCSC Part Number,Package,Customer #
+5,KF2EDGR-3.5-6P,Cixi Kefa Elec,Grundleiste (Durchsteckteil),C441175,,J2
+10,KF2EDGSR-3.5-2*2P,Cixi Kefa Elec,Grundleiste (Durchsteckteil),C2923260,,"J3, J4"
+10,KF2EDGSR-3.5-2*3P,Cixi Kefa Elec,Grundleiste (Durchsteckteil),C2923261,,"J5, J6"
+20,KF2EDGR-3.5-2P,Cixi Kefa Elec,Grundleiste (Durchsteckteil),C441171,,"J7, J8, J9, J10"
+5,KF2EDGRC-5.08-2P,Cixi Kefa Elec,Grundleiste (Durchsteckteil),C441236,,J11
+5,KF2EDGR-3.5-5P,Cixi Kefa Elec,Grundleiste (Durchsteckteil),C441174,,J14
+5,KF2EDGR-3.81-5P,Cixi Kefa Elec,Grundleiste (Durchsteckteil),C441185,,J15
+10,PZ254V-11-03P,,"Stiftleiste 1 x 3, Raster 2,54 mm",C2937625,,"J16, J21"
+5,KF2EDGR-3.5-3P,Cixi Kefa Elec,Grundleiste (Durchsteckteil),C441172,,J22
+20,KF2EDGK-3.5-2P,Cixi Kefa Elec,Stecker mit Schraubanschluss,C440847,,"J7, J8, J9, J10 (Stecker)"
+5,KF2EDGK-3.5-3P,Cixi Kefa Elec,Stecker mit Schraubanschluss,C440848,,J22 (Stecker)
+5,KF2EDGK-3.5-5P,Cixi Kefa Elec,Stecker mit Schraubanschluss,C440850,,J14 (Stecker)
+5,KF2EDGK-3.5-6P,Cixi Kefa Elec,Stecker mit Schraubanschluss,C440851,,J2 (Stecker)
+5,KF2EDGK-3.81-5P,Cixi Kefa Elec,Stecker mit Schraubanschluss,C440861,,J15 (Stecker)
+5,KF2EDGK-5.08-2P-AA,Cixi Kefa Elec,Stecker mit Schraubanschluss,C440880,,J11 (Stecker)
+10,KF2EDGKS-3.5-2*2P,Cixi Kefa Elec,Stecker mit Federanschluss,C2923215,,"J3, J4 (Stecker)"
+10,KF2EDGKS-3.5-2*3P,Cixi Kefa Elec,Stecker mit Federanschluss,C2923216,,"J5, J6 (Stecker)"
+10,,,"Steckbrücke 2,54 mm",C5305,,"J16, J21"
+5,,,"Stiftleiste 1 x 40, lange Stifte 21 mm (Steckseite 15,5 mm, Träger 2,5 mm)",C51353,,J1
+5,,,"Distanzbolzen Messing M3, SW 4,7, Innen-/Innengewinde, 13 mm",C551333,,Wärmeweg NTC-Insel
+20,,,"Abstandsbolzen M2,5 Außen-/Innengewinde, Messing, SW 4,6, 12 + 6 mm",C50377852,,Befestigung
+100,PM2.5X6nie,,"Schraube M2,5 x 6, Linsenkopf Kreuzschlitz, Kopf 4,5 mm, Stahl vernickelt",C357395,,Befestigung

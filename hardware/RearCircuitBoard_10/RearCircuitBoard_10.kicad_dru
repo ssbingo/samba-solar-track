@@ -34,6 +34,9 @@
 (rule "U17 Pad zu Pad 0,15 mm (SOT-563, JLCPCB ab 0,1 mm)"
 	(condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U17') && B.memberOfFootprint('U17')")
 	(constraint clearance (min 0.15mm)))
+(rule "U23 Pad zu Pad 0,15 mm (TI RDN0011A, FB/VCC 0,2 mm)"
+	(condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U23') && B.memberOfFootprint('U23')")
+	(constraint clearance (min 0.15mm)))
 
 (rule "Kontaktbereich nur fuer Kontakte"
 	(condition "A.intersectsArea('SF-Kontakt') && (A.Type == 'Track' || A.Type == 'Via') && !A.hasNetclass('KONTAKT')")
@@ -82,6 +85,13 @@
 	(condition "A.Type == 'Via' && B.Type == 'Pad' && B.memberOfFootprint('Q2') && B.Pad_Number == '5' && A.Net == B.Net")
 	(constraint physical_clearance (min 0mm)))
 
+# Ausnahme: Vias in den Kuehlflaechen von U7 (Pad 21) und U16 (Pad 17), gefuellt und verschlossen (seit 04.11.2026
+# echte Vias statt Bohrungen im Footprint, Pruefung B-M1; Lage wie TI-Landmuster), nur gegen die eigene Kuehlflaeche
+(rule "Vias in den Kuehlflaechen von U7 und U16"
+	(layer outer)
+	(condition "A.Type == 'Via' && B.Type == 'Pad' && ((B.memberOfFootprint('U7') && B.Pad_Number == '21') || (B.memberOfFootprint('U16') && B.Pad_Number == '17')) && A.Net == B.Net")
+	(constraint physical_clearance (min 0mm)))
+
 # Potentialfreie Kontakte: bis 30 V fremde Spannung (D1-D4 SMAJ33CA leiten ab 33 V), Abstand zu allen
 # anderen Netzen 1,0 mm; steht am Ende, damit sie auch fuer Vias gilt
 (rule "Kontakte 1,0 mm"
@@ -103,6 +113,15 @@
 (rule "Kontaktpad zu freiem Stift derselben Klemme 0,6 mm"
 	(condition "A.Type == 'Pad' && B.Type == 'Pad' && A.hasNetclass('KONTAKT') && !B.hasNetclass('KONTAKT') && B.NetName == 'unconnected-*' && ((A.memberOfFootprint('J3') && B.memberOfFootprint('J3')) || (A.memberOfFootprint('J4') && B.memberOfFootprint('J4')) || (A.memberOfFootprint('J5') && B.memberOfFootprint('J5')) || (A.memberOfFootprint('J6') && B.memberOfFootprint('J6')))")
 	(constraint clearance (min 0.6mm)))
+
+# Waermefallen der von Hand geloeteten GND-Pads der Klemmen (Pruefung B3, 04.11.2026): Jedes Pad haengt auf vier Lagen
+# an grossen Masseflaechen (vorher 4 Stege x 0,5 mm je Lage, zusammen 16). Schmalere Stege 0,3 mm erleichtern das Loeten
+# von Hand (Variante smd selbst, Variante voll bei JLCPCB von Hand); der Strom dort ist klein (Fuehler, Endschalter,
+# Hall-Abgriff, Windversorgung J15 hoechstens 0,3 A: 16 Stege x 0,3 mm reichen weit). J11.2 (Rueckleiter der ganzen
+# Versorgung) behaelt 0,5 mm, J1 hat eine eigene Regel.
+(rule "Klemmen GND Waermefalle 0,3 mm"
+	(condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole' && A.NetName == 'GND' && (A.memberOfFootprint('J2') || A.memberOfFootprint('J7') || A.memberOfFootprint('J8') || A.memberOfFootprint('J9') || A.memberOfFootprint('J10') || A.memberOfFootprint('J15') || A.memberOfFootprint('J21') || A.memberOfFootprint('J22'))")
+	(constraint thermal_spoke_width (min 0.3mm) (opt 0.3mm)))
 
 # J1 ist ueber die durchgehenden Masselagen L2 und L3 an GND angeschlossen. Aussen laufen Bahnen
 # zwischen den Stiften; Waermefallen haetten dort zu wenige Stege, deshalb aussen keine Flaechenanbindung.

@@ -1,22 +1,38 @@
 Samba Solar Track - RearCircuitBoard_10, Fertigungsdaten für JLCPCB, Bestückungsvariante „smd“
-Platine Entwurf 0.10; erzeugt am 28.10.2026 14:12 mit tools/fertigung_export.py (Stand b880fad 28.10.2026 mit nicht eingecheckten Änderungen).
+Platine Entwurf 0.11; erzeugt am 06.11.2026 11:07 mit tools/fertigung_export.py (Stand 2dc4c35 06.11.2026 mit nicht eingecheckten Änderungen).
 
 Verwendung und Haftung: nur Schutzkleinspannung (SELV), höchstens 30 V DC an allen Anschlüssen, keine
 Netzspannung. Für Schäden durch unsachgemäßes Löten, Falschpolung oder falschen Anschluss externer
 Komponenten wird keine Haftung übernommen, soweit gesetzlich zulässig (README, Abschnitt „Verwendung,
 Spannung und Haftung“).
 
-ENTWURF - NICHT BESTELLEN. Die Mechanik (Rückwand, Bohrungen, Länge von J1, Höhe der Bolzen) ist eine
-ANNAHME bis zur Messung am Gerät. Vor der Bestellung nach der Messung neu erzeugen
-(python3 tools/platine_layout.py, dann python3 tools/fertigung_export.py).
+Stand der Messung am Gerät (Nutzer, 05.11.2026) und der Passprobe J8 (06.11.2026):
+  GEMESSEN: Abstand Rückwand (außen) bis Platinenunterseite S = 13,9 mm mit Abstandsbolzen M2,5 x 12 + 6
+  (C50377852), voll eingedreht mit Mutter, ohne Unterlegscheibe.
+  MIT PASSPROBE GEPRÜFT: Lage J1/J8 am Gerät mit Passprobe geprüft (06.11.2026), passt. Daraus gerechnet
+  (keine Messung mit dem Messschieber): J8 liegt etwa 0,9-1,1 mm unter der Außenseite der Rückwand,
+  Unsicherheit etwa +-0,2 mm durch die Maßhaltigkeit des Drucks. Die Schätzung 0-0,3 mm ist überholt.
+  ANNAHME: Tiefe des Innengewindes der Bolzen (nicht belegt), nutzbare Tiefe von J8 etwa 4,2 mm (STEP-Modell),
+  Stiftlänge von J1 18 mm unter der Platine (LCSC), Dicke der Scheiben 0,5 mm (DIN 433, Nennmaß).
+  ERST BEIM ERSTEN AUFBAU ENTSCHIEDEN (Entscheidung des Nutzers vom 06.11.2026): Scheiben auf den Bolzen
+  (keine: Einstecktiefe von J1 in J8 3,0-3,2 mm, nach der Passprobe voraussichtlich passend; eine: 2,5-2,7 mm;
+  zwei wie Variante A: 2,0-2,2 mm, zu knapp) und Wärmeweg der Insel (Bolzen M3 x 12 mit Pads 1,0 + 1,5 mm,
+  Pressung 24 %, oder M3 x 13 mit Pads 0,5 + 0,5 mm, Pressung 10 %). J1 zuerst ohne Scheiben ansetzen,
+  Einstecktiefe und Sitz prüfen, erst dann einlöten (README, „Prüfung beim ersten Aufbau“).
 
 Dateien:
   RearCircuitBoard_10-gerber.zip  Gerber und Bohrdaten (13 Dateien): RearCircuitBoard_10-B_Cu.gbl, RearCircuitBoard_10-B_Mask.gbs, RearCircuitBoard_10-B_Paste.gbp, RearCircuitBoard_10-B_Silkscreen.gbo, RearCircuitBoard_10-Edge_Cuts.gm1, RearCircuitBoard_10-F_Cu.gtl, RearCircuitBoard_10-F_Mask.gts, RearCircuitBoard_10-F_Paste.gtp, RearCircuitBoard_10-F_Silkscreen.gto, RearCircuitBoard_10-In1_Cu.g1, RearCircuitBoard_10-In2_Cu.g2, RearCircuitBoard_10-NPTH.drl, RearCircuitBoard_10-PTH.drl
   RearCircuitBoard_10-bom.csv     Stückliste (Comment, Designator, Footprint, JLCPCB Part #)
   RearCircuitBoard_10-cpl.csv     Bestückungsdatei (Mitte der Padmitten in mm wie die Gerber, Oberseite)
+  RearCircuitBoard_10-selbst-bestellen.csv/.md  Bestellliste aller Teile, die JLCPCB hier nicht bestückt (Grundleisten,
+                   Stecker, Steckbrücken, J1, Mechanik) mit LCSC-Nummer, Bezugsquelle, Preis und Hinweis
+  RearCircuitBoard_10-selbst-bestellen-lcsc-<n>-platinen.csv  dieselben Teile als BOM zum Hochladen bei LCSC
+                   (lcsc.com/bom), nur Teile mit LCSC-Nummer, Menge für 2 bzw. 5 Platinen, mindestens die Mindestmenge von
+                   JLCPCB. LCSC verlangt bei manchen Teilen eine höhere Mindestmenge und rundet beim Hochladen
+                   selbst darauf auf; die Menge im Warenkorb kann also höher sein als in der Datei.
 
 Bestellung (JLCPCB):
-  Leiterplatte: 4 Lagen, Lagenaufbau JLC04161H-7628, 1,6 mm, 100 x 102 mm, Oberfläche ENIG.
+  Leiterplatte: 4 Lagen, Lagenaufbau JLC04161H-7628, 1,6 mm, 106 x 110 mm (seit 03.11.2026; vorher 100 x 102), Oberfläche ENIG.
   Kupfer: außen 1 oz, Innenlagen 0,5 oz (Entscheidung des Nutzers vom 7.10.2026).
   Via Covering: Epoxy Filled & Capped (alle Vias; Vias in den Kühlflächen von U7 und U16 und im Drain-Pad von Q2, E21).
   Schlitze um die NTC-Insel oben links (Edge.Cuts, 1,0 mm breit, nicht durchkontaktiert, Fräser Ø 1,0 mm; oben zur
@@ -24,7 +40,7 @@ Bestellung (JLCPCB):
   ohne Kupfer gestützt (1,0 mm breit, 2,5 mm lang, y 5,0-6,0 mm; dort ist der Schlitz auf 2,5 mm verbreitert, die
   Radien R 0,5 mm sind gezeichnet). Die Stege sind gewollt und bleiben stehen (keine Nutzenstege, nicht entfernen).
   Bestückung: Economic PCBA, nur Oberseite. R92 und C38 nicht bestücken (DNP, Platz für einen Dämpfer).
-  Bestückungsvariante smd: JLCPCB bestückt 233 SMD-Bauteile. Von Hand: J1 (2 x 20, lange Stifte), alle
+  Bestückungsvariante smd: JLCPCB bestückt 301 SMD-Bauteile. Von Hand: J1 (2 x 20, lange Stifte), alle
   Klemmen (J2-J11, J14, J15, J22), J16 und J21 mit Steckbrücke (C5305); Bestellliste unten.
 
 Vor dem Bezahlen prüfen:
@@ -34,23 +50,27 @@ Vor dem Bezahlen prüfen:
     vom 7.10.2026; C709481 war dort nicht abrufbar). Der Punkt liegt an
     der Marke im Druck bei:
       C14 (C487384): Pluspol (Pad 1); Druck: „+“ und abgeschrägte Ecken an Pad 1
-      C22 (C709481): Pluspol (Pad 1, ANNAHME); Druck: „+“ und abgeschrägte Ecken an Pad 1. C22: Pluspol an Pad 1 (V5_BUCK); Punkt in der Vorschau prüfen, EasyEDA-Footprint war nicht abrufbar.
+      C22 (C709481): Pluspol (Pad 1, belegt (EasyEDA-Footprint über LCSC, 05.11.2026)); Druck: „+“ und abgeschrägte Ecken an Pad 1. C22: Pluspol an Pad 1 (V5_BUCK); EasyEDA „+“ an Pad 1.
       D5 (C2927414): Pin 1 (Anodenbein); Druck: Dreieck an Pin 1 (Anode). D5: Punkt an der Anode, die Kathode ist die große Kühlfahne (Pin 3).
       D6 (C113998): Kathode (Pad 1); Druck: Winkel an der Kathode
       D10 (C2827321): Pad 1 (Kathode Blau); Druck: Strich an Pad 1
-      D13 (C2128): Kathode (Pad 1); Druck: Strich an der Kathode
+      D13, D24, D25, D26, D27, D28, D29, D30, D31, D43, D44, D45, D46 (C2128): Kathode (Pad 1); Druck: Strich an der Kathode
       D14 (C173407): Kathode (Pad 1); Druck: Strich an der Kathode
-      D15 (C19077402): Kathode (Pad 1, ANNAHME); Druck: Strich an der Kathode. D15: Kathode an V5_LOG (Pad 1); Punkt in der Vorschau prüfen, EasyEDA-Footprint war nicht abrufbar.
+      D15 (C19077402): Kathode (Pad 1, belegt (EasyEDA-Footprint über LCSC, 05.11.2026)); Druck: Strich an der Kathode. D15: Kathode an V5_LOG (Pad 1); EasyEDA Pad 1 = Kathode.
+      D18, D37 (C235757): Kathode (Pad 1, belegt (EasyEDA-Footprint über LCSC, 05.11.2026)); Druck: Strich an der Kathode. D18: Kathode an J15.1 (WIND_12V); D37 (seit 05.11.2026 MBR1H100SF statt B5819W): Kathode an J14.1 (LED_5V_EXT, Pad 1). D37 in der Vorschau neu ansehen (anderes Teil, Korrektur 0 Grad wie vorher).
+      D19, D20, D21, D22, D23, D32, D33, D34, D35, D36, D38, D39, D40, D41, D42 (C364281): Kathode (Pad 1, belegt (EasyEDA-Footprint über LCSC, 05.11.2026)); Druck: Strich an der Kathode. D19-D23, D32-D36, D38-D42: Kathode an der Klemme, Anode an GND.
+      D47, D48 (C19077447): Kathode (Pad 1, belegt (EasyEDA-Footprint über LCSC, 05.11.2026)); Druck: Strich an der Kathode. D47/D48 (Z-Dioden 12 V, seit 05.11.2026): Kathode an HALL_A_F/HALL_B_F (Pad 1, oben), Anode an GND.
       K1, K2, K3, K4 (C415471): Pin 1 (Anode der Leuchtdiode); Druck: Strich an Pin 1
       Q1, Q11, Q12 (C20526): Pin 1 (Basis); Druck: Marke an Pin 1
       Q2, Q3 (C840100): Pin 1 (Source); Druck: Strich an Pin 1. Q2/Q3: Pin 1-3 Source, Pin 4 Gate, Drain die große Fläche.
       Q4, Q5, Q6, Q7, Q8, Q9 (C8545): Pin 1 (Gate); Druck: Marke an Pin 1
-      Q10 (C8542): Pin 1 (Basis); Druck: Marke an Pin 1
+      Q10, Q13, Q14, Q15, Q16, Q22 (C8542): Pin 1 (Basis); Druck: Marke an Pin 1
+      Q17, Q18, Q19, Q20 (C24280): Pin 1 (Basis, oben links); Druck: Marke an Pin 1. Q17-Q20 (SOT-89): Pin 1 Basis oben links, Pin 2 Kollektor mit Kuehlfahne nach rechts, Pin 3 Emitter unten links.
+      Q21 (C150147): Pin 1 (Gate); Druck: Marke an Pin 1. Q21 SSM3J351R (SOT-23F): 1 Gate, 2 Source (an J2.1), 3 Drain (an U5).
       U1, U20 (C37593): Pin 1; Druck: Dreieck an Pin 1
       U2, U8 (C201530): Pin 1; Druck: Dreieck an Pin 1
-      U3, U4, U6, U10, U13, U14 (C124691): Pin 1; Druck: Dreieck an Pin 1
       U5, U9 (C55266): Pin 1; Druck: Dreieck an Pin 1
-      U7 (C3188679): Pin 1 (EN/UVLO); Druck: Strich an Pin 1
+      U7 (C2876733): Pin 1 (EN/UVLO, oben links); Druck: Punkt neben Pad 1 und Strich an der Ecke von Pin 1. U7: LM5146QRGYTQ1 (seit 03.11.2026), derselbe EasyEDA-Footprint wie LM5146RGYR. Pin 1 = EN/UVLO an der oberen Kante links (in KiCad oben links, Pins 2-9 links); seit 05.11.2026 nur noch an dieser Ecke markiert (Punkt neben Pad 1), der Strich an der Ecke von Pin 11 entfällt.
       U11 (C1849398): Pin 1; Druck: Dreieck an Pin 1
       U12 (C460397): Pin 1; Druck: Dreieck an Pin 1
       U15 (C3662799): Pin 1 (EN/UVLO); Druck: Strich an Pin 1
@@ -59,6 +79,7 @@ Vor dem Bezahlen prüfen:
       U18, U22 (C2869804): Pin 1; Druck: Marke an Pin 1
       U19 (C5649): Pin 1; Druck: Marke an Pin 1
       U21 (C398375): Pin 1 (REF); Druck: Marke an Pin 1. U21: Pinfolge DBZ 1 REF, 2 K, 3 A.
+      U23 (C20346008): Pin 1 (PGOOD, belegt (EasyEDA-Footprint über LCSC, 05.11.2026)); Druck: Winkel an Pin 1. U23: Pin 1 PGOOD oben links in der Draufsicht (TI RDN0011A, EasyEDA gleich).
     Ausnahmen - der Punkt liegt NICHT an der Marke im Druck; Drehwinkel trotzdem NICHT ändern:
       D9 (C2297): Punkt an der Anode (Pad 2, LED_5V); Druck: Winkel an der Kathode (Pad 1). Im Auftrag an JLCPCB vermerken: "D9: red dot = anode, cathode at silkscreen bracket, keep rotation".
     Ohne Polung (bidirektional, Lage des Punkts gleichgültig): D1, D2, D3, D4, D11, D12, D16, D17 (SMAJ33CA).
@@ -67,6 +88,8 @@ Vor dem Bezahlen prüfen:
     geschieht, ist nicht belegt. Deshalb die Ausnahmen im Auftrag vermerken. Dass die Vorschau den
     Punkt aus der Polaritätslage des EasyEDA-Footprints zeichnet, ist ebenfalls eine ANNAHME. Die
     Korrekturen der Drehwinkel sind aus den JLCPCB-Footprints abgeleitet (ANNAHME, siehe ROTATION).
+  - BOM-Abgleich bei JLCPCB: Zwei Zeilen heißen dort gleich („10u“, 0603): C1, C13, C26, C27 mit C19702 (X5R)
+    und C31 mit C2959727 (X7R). C31 muss C2959727 (X7R) bekommen, nicht C19702.
   - Lagerbestand und Klasse jeder Nummer (Stand der Stückliste siehe README); bei Engpässen
     gleichwertige Teile erst nach Prüfung des Datenblatts eintragen (H5).
 
@@ -78,17 +101,23 @@ Lose dazu bestellen (JLCPCB verschickt keine Einzelteile; zum Beispiel bei LCSC)
     4 x KF2EDGR-3.5-2P (C441171): J7, J8, J9, J10
     1 x KF2EDGRC-5.08-2P (C441236): J11
     1 x KF2EDGR-3.5-5P (C441174): J14
-    2 x KF2EDGR-3.5-3P (C441172): J15, J22
+    1 x KF2EDGR-3.81-5P (C441185): J15
     2 x PZ254V-11-03P (C2937625): J16, J21
+    1 x KF2EDGR-3.5-3P (C441172): J22
   Steckbrücken: 2 x Steckbrücke 2,54 mm (C5305) für J16 (1-2 = Abschluss ein, 2-3 = aus) und J21 (2-3 = Betrieb, 1-2 = Ladesperre erzwingen), von Hand stecken.
-  Stecker: 4 x KF2EDGK-3.5-2P (C440847), 2 x KF2EDGK-3.5-3P (C440848), 1 x KF2EDGK-3.5-5P (C440850), 1 x KF2EDGK-3.5-6P (C440851), 1 x KF2EDGK-5.08-2P-AA (C440880), 2 x KF2EDGKS-3.5-2*2P (C2923215), 2 x KF2EDGKS-3.5-2*3P (C2923216)
+  Stecker: 4 x KF2EDGK-3.5-2P (C440847), 1 x KF2EDGK-3.5-3P (C440848), 1 x KF2EDGK-3.5-5P (C440850), 1 x KF2EDGK-3.5-6P (C440851), 1 x KF2EDGK-3.81-5P (C440861), 1 x KF2EDGK-5.08-2P-AA (C440880), 2 x KF2EDGKS-3.5-2*2P (C2923215), 2 x KF2EDGKS-3.5-2*3P (C2923216)
   ANNAHME: Stecker KF2EDGK-5.08-2P-AA (C440880) zur Grundleiste KF2EDGRC-5.08-2P von J11 - Paarung laut Datenblatt nicht belegt, am Muster prüfen (P15).
-  J1: Stiftleiste 1 x 40 mit langen Stiften, 21 mm (C51353), für 15 mm Abstand Rückwand-Platine (Bolzen
-  M2,5 x 12 + 6 Messing C50377852 mit Mutter und Scheibe); Einstecktiefe in J8 3,2 mm bei Rückwand 1,5 mm
-  (Annahme, README).
-  Wärmeweg der NTC-Insel (von Hand, kein JLCPCB-Teil für das Pad, E31): Distanzbolzen Messing M3, SW 4,7 mm,
-  13 mm (C551333) bei 15 mm Spalt, dazu zwei Wärmeleitpads 6 x 6 x 1,0 mm (zum Beispiel Thermal Grizzly
-  Minus Pad 8 oder Arctic TP-3); bei anderem Spalt 6 mm (C551326) oder 8 mm (C551328), Auswahl in der README).
+  J1: Stiftleiste 1 x 40 mit langen Stiften, 21 mm (C51353), auf Abstandsbolzen M2,5 x 12 + 6 Messing
+  C50377852 (Außen-/Innengewinde, mit Mutter; Scheiben M2,5 DIN 433 obenauf nur falls nötig); Einstecktiefe in
+  J8 ohne Scheiben 3,0-3,2 mm (S gemessen, Lage von J8 mit Passprobe geprüft, README). Erst nach der Prüfung
+  beim ersten Aufbau einlöten.
+  Befestigung: 4 Schrauben M2,5 x 6 (C357395, bei LCSC; bei zu geringer Gewindetiefe M2,5 x 5, Annahme),
+  4 Scheiben M2,5 DIN 433 unter die Köpfe und bis zu 8 auf die Bolzen nur falls nötig (bei LCSC nicht gefunden,
+  Bezugsquelle in der Bestellliste).
+  Wärmeweg der NTC-Insel (von Hand, kein JLCPCB-Teil für das Pad, E31), Entscheidung beim ersten Aufbau:
+  Distanzbolzen Messing M3 12 mm (C551332, nur LCSC) mit je einem Wärmeleitpad 6 x 6 x 1,0 und 1,5 mm
+  (Pressung 24 %) oder 13 mm (C551333) mit zwei Pads 6 x 6 x 0,5 mm (Pressung 10 %); Pads zum Beispiel
+  Thermal Grizzly Minus Pad 8; bei anderem Spalt 6 mm (C551326) oder 8 mm (C551328), Auswahl in der README.
 
 © Silvio Sternitzke, 10/2026 - Samba Solar Track - Lizenz CC BY-NC-SA 4.0: keine kommerzielle Verwendung durch Dritte, privater Nachbau erlaubt
 Lizenztext: LICENSE und LIZENZ.md im Projekt.
