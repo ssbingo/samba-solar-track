@@ -279,6 +279,7 @@ h2 .num { white-space: nowrap; }
     <li><a href="#z10-glossar"><span class="n">10</span>Les termes expliqués simplement</a></li>
     <li><a href="#z10-anhang"><span class="n">11</span>Annexe</a></li>
     <li><a href="#z10-lizenz"><span class="n">12</span>Licence et copyright</a></li>
+    <li><a href="#z10-verlauf"><span class="n">13</span>Historique des modifications</a></li>
   </ol>
   <p class="copy">© Silvio Sternitzke, 10/2026<br>Licence CC BY-NC-SA 4.0</p>
 </nav>
@@ -372,7 +373,7 @@ h2 .num { white-space: nowrap; }
   <circle class="f-ink" cx="192" cy="236" r="5"/><circle class="f-ink" cx="256" cy="82" r="5"/>
   <text x="246" y="212" class="t-s">Vérin linéaire</text>
   <path class="ln s-sun" d="M300 60 A120 120 0 0 1 326 130" marker-start="url(#arr)" marker-end="url(#arr)"/>
-  <text x="318" y="68" class="t-s">HAUT</text><text x="334" y="134" class="t-s">BAS</text>
+  <text x="318" y="68" class="t-s">PLUS RAIDE</text><text x="334" y="134" class="t-s">PLUS PLAT</text>
   <circle class="f-sun" cx="62" cy="62" r="20"/>
   <path class="ln-m dash" d="M82 76 L140 108"/>
 
@@ -454,8 +455,8 @@ h2 .num { white-space: nowrap; }
 <figcaption><b>Fig. 3</b> – Le principe, représenté de manière simplifiée avec deux cellules opposées et un cache entre elles. Le fabricant ne précise pas la construction interne exacte du capteur acheté.</figcaption></figure>
 <div class="table-wrap"><table>
 <tr><th>Comparaison</th><th>Signification</th><th>La commande se déplace</th></tr>
-<tr><td>Nord plus clair que Sud</td><td>Le soleil est plus haut que la direction où regarde le module</td><td>HAUT</td></tr>
-<tr><td>Sud plus clair que Nord</td><td>Le soleil est plus bas</td><td>BAS</td></tr>
+<tr><td>Nord plus clair que Sud</td><td>Le soleil est plus haut que la direction où regarde le module</td><td>plus plat (réglage d’usine : sortie HAUT)</td></tr>
+<tr><td>Sud plus clair que Nord</td><td>Le soleil est plus bas</td><td>plus raide (réglage d’usine : sortie BAS)</td></tr>
 <tr><td>Est plus clair que Ouest</td><td>Le soleil est plus à l’est</td><td>vers EST (uniquement avec deux axes)</td></tr>
 <tr><td>Ouest plus clair que Est</td><td>Le soleil est plus à l’ouest</td><td>vers OUEST (uniquement avec deux axes)</td></tr>
 </table></div>
@@ -1264,8 +1265,9 @@ h2 .num { white-space: nowrap; }
 <p>Après l'installation de l'image d'usine, la carte démarre comme neuve. Elle affiche la configuration, avec le mode de fonctionnement comme premier point (constaté ainsi sur la carte de test le 20.10.2026, firmware 0.4.6). Depuis le firmware 0.4.7, l'interface utilise tout l'écran. Si la carte RearCircuitBoard_10 n'est pas encore enfichée, la commande signale une erreur des entrées et sorties ou propose la <a href="#z10-glossar">simulation</a> ; c'est normal sans la carte. On continue ensuite avec la <a href="#z10-inbetriebnahme">première mise en service du matériel</a>.</p>
 <h3 id="z10-dashboard">Le tableau de bord sur le grand écran (généré sur ordinateur, non vérifié sur l'appareil)</h3>
 <p>Depuis le firmware 0.4.7, le tableau de bord utilise tout l'écran de 1280 × 800 pixels. En haut se trouve l'en-tête avec le logo, l'heure, le Wi-Fi, l'interrupteur <strong>AUTOMATIQUE</strong>, la roue dentée vers les paramètres et tout à droite le niveau de la batterie (<a href="#z10-akku-anzeige">chapitre 7</a>), en dessous les cartes <strong>VENT</strong>, <strong>CAPTEUR SOLAIRE</strong> et <strong>MANUEL</strong>, en bas le bandeau d'état avec <strong>PARQUER À PLAT</strong>. Dans le mode <em>VERTICAL SEUL</em> s'ajoute la carte <strong>INCLINAISON</strong>, avec les touches des angles fixes (<a href="#z10-neigung">Inclinaison sur ordre</a>). Avec deux axes, elle disparaît et les autres cartes s'élargissent. Si un anémomètre avec direction du vent est configuré, une <strong>rose des vents</strong> apparaît dans la carte <strong>VENT</strong> sous la vitesse : le nord en haut, l'est à droite comme sur une carte géographique. L'aiguille jaune pointe avec son point dans la direction d'où vient le vent ; en dessous, la même chose est écrite en texte, par exemple « Vent du SO (228°) ». Si le capteur de direction du vent ne répond pas, l'aiguille disparaît et le texte indique « Direction du vent -- ». S'il y a quelque chose à signaler (voyants, alimentation, blocage de charge, capteur Hall, nouveau firmware), l'avertissement s'affiche en jaune à la place de l'heure (<a href="#z10-versorgung-warnungen">Avertissements sur l'alimentation et le blocage de charge</a>). Attention : la croix du capteur solaire à côté est légendée dans l'autre sens (l'est à gauche), car elle représente la vue vers le sud.</p>
+<p><strong>Mode manuel :</strong> lorsque l’interrupteur <strong>AUTOMATIQUE</strong> est désactivé, l’élévation se déplace tant qu’une touche est maintenue. <strong>PLUS RAIDE</strong> (flèche vers le haut) incline les panneaux davantage, leur bord monte ; <strong>PLUS PLAT</strong> (flèche vers le bas) va vers la position à plat. Avec deux axes s’ajoutent <strong>EST</strong> et <strong>OUEST</strong>. La sortie de la carte qui commute dépend du réglage « Position à plat côté HAUT » sous RÉGLAGES → MISE EN SERVICE : d’usine, PLUS RAIDE commute la sortie BAS et PLUS PLAT la sortie HAUT. La bande d’état affiche les mêmes mots (« MANUEL : VERS PLUS RAIDE », « AUTO : SUIVI ÉLÉVATION PLUS PLAT »). Jusqu’au firmware 0.5.7, les touches portaient le nom des sorties HAUT et BAS ; lors de la mise à jour, attention : d’usine, la touche du haut va désormais dans le sens opposé.</p>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10_fr/n04_neigung_karte_eingemessen.png" alt="Tableau de bord de la version 10 pouces, vertical seul, avec la carte INCLINAISON" width="1280" height="800"></div><figcaption><b>Fig. 13a</b> – Vertical seul : quatre cartes, dont INCLINAISON.</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10_fr/n04_neigung_karte_eingemessen.png" alt="Tableau de bord de la version 10 pouces, vertical seul, avec la carte INCLINAISON" width="1280" height="800"></div><figcaption><b>Fig. 13a</b> – Vertical seul : quatre cartes, dont INCLINAISON. En mode manuel PLUS RAIDE et PLUS PLAT.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_fr/d01_dashboard_2achsen.png" alt="Tableau de bord de la version 10 pouces avec deux axes" width="1280" height="800"></div><figcaption><b>Fig. 13b</b> – Deux axes avec direction du vent : trois cartes plus larges, dans la carte VENT la rose des vents (vent du SO), en mode manuel en plus EST et OUEST.</figcaption></figure>
 </div>
 <div class="note open"><strong>État</strong><p>Les autres écrans (Paramètres, RÉGLAGES, Réseau, Heure, Accès distant, Design, Son, Écran, Firmware, Étalonnage) utilisent eux aussi tout l'écran : ils sont conçus pour 1280 × 800 pixels, avec de gros caractères (par exemple Fig. 24). Le grand tableau de bord a été installé sur la carte de test le 20.10.2026 ; l'appareil est ensuite accessible sur le réseau. Son aspect sur l'appareil, si les doigts touchent bien les boutons et si tout fonctionne de façon fluide n'est pas encore confirmé ; les autres écrans agrandis ne sont compilés que sur ordinateur. Les images présentées ici ont été générées par l'outil de captures d'écran à partir du code réel de l'interface.</p></div>
@@ -1541,7 +1543,7 @@ h2 .num { white-space: nowrap; }
 [ 3690.010][I][motor ] Elevation: Laufzeit-Endlage PLUS erreicht
 <span class="c">   … 30 Minuten später, der Sturm hält an …</span>
 [ 5400.000][D][track ] Zustand STORM haelt an: Flachfahrt wird erneut erlaubt</pre></div>
-<p>Que le log indique « PLUS » ou « MINUS » dépend du réglage « sens de la position à plat » ; d'usine, à plat = HAUT = PLUS.</p>
+<p>Que le log indique « PLUS » ou « MINUS » dépend du réglage « Position à plat côté HAUT » ; d'usine, à plat = HAUT = PLUS.</p>
 <div class="note warn"><strong>D'ici là</strong><p>La carte RearCircuitBoard_10 ne peut être vérifiée que sur le matériel (<a href="#z10-inbetriebnahme">chapitre 9</a>). Sans firmware, aucun contact et aucun voyant ne commute. Ne brancher la batterie que lorsque la carte a passé le test au froid et à la chaleur et qu'un firmware qui contrôle le blocage de charge est en service (<a href="#z10-akku-pruefung">chapitre 7</a>, à vos risques).</p></div>
 
 <h3 id="z10-sync-reset">Réinitialiser la commande synchrone (en préparation, non vérifié sur l'appareil)</h3>
@@ -2022,6 +2024,16 @@ h2 .num { white-space: nowrap; }
 <p>L'interdiction d'utilisation commerciale s'applique à tous ceux qui utilisent le projet sous cette licence. Le titulaire des droits, Silvio Sternitzke, n'y est pas lié : il peut vendre lui-même la carte ou autoriser exceptionnellement d'autres personnes à une utilisation commerciale.</p>
 <div class="note open"><strong>Encore ouvert pour une vente : non vérifié, pas de conseil juridique</strong><p>Aujourd'hui, le projet sert à la reproduction à des fins privées. Une vente commerciale de la carte, d'un kit ou d'un appareil nécessite un examen séparé, par exemple : marquage CE et conformité CEM (compatibilité électromagnétique), enregistrement selon la loi allemande sur les équipements électriques et électroniques (ElektroG, DEEE/WEEE), RoHS (limitation des substances dangereuses), sécurité des produits selon le règlement européen GPSR et loi sur les emballages. Aucun de ces points n'est vérifié ni rempli.</p></div>
 <div class="note info"><strong>Sans garantie</strong><p>Les documents sont fournis sans garantie. Le montage et l'utilisation se font sous votre propre responsabilité. Aucune responsabilité n'est assumée pour les dommages dus à un soudage inapproprié, une inversion de polarité ou un mauvais raccordement de composants externes, dans la mesure permise par la loi (<a href="#z10-sicherheit">chapitre 2</a>).</p></div>
+</section>
+
+<section id="z10-verlauf">
+<h2><span class="num">13</span>Historique des modifications</h2>
+<p class="lead">Ce qui a changé dans ce manuel, la modification la plus récente en premier. L’historique commence avec l’édition du 10 novembre 2026.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Date</th><th>Firmware</th><th>Modification</th></tr></thead>
+<tbody><tr><td>10.11.2026</td><td>0.5.9</td><td>En français, espagnol et portugais, les touches PLUS RAIDE et PLUS PLAT s’affichent sur deux lignes (avec deux axes, elles étaient tronquées en 0.5.8) ; images de ces langues régénérées. Paragraphe dédié au mode manuel au <a href="#z10-dashboard">chapitre 8</a> ; la fig. 18 et l’exemple de log nomment le réglage comme à l’écran, « Position à plat côté HAUT ». L’historique des modifications figure désormais aussi dans la table des matières imprimée.</td></tr>
+<tr><td>10.11.2026</td><td>0.5.8</td><td>Les boutons du mode manuel s’appellent PLUS RAIDE et PLUS PLAT au lieu de HAUT et BAS, de même que le mouvement dans le bandeau d’état (« MANUEL : VERS PLUS RAIDE », « AUTO : SUIVI ÉLÉVATION PLUS PLAT »), dans l’état de l’axe (« Élév : PLUS RAIDE ») et dans l’interface web (<a href="#z10-dashboard">chapitre 8</a>, fig. 13a). La sortie concernée dépend du réglage « Position à plat côté HAUT » ; en réglage d’usine, PLUS RAIDE est la sortie BAS. Les borniers, les contacts, les réglages et les lignes « Ausgang Elevation » du journal s’appellent toujours RAUF et RUNTER (HAUT et BAS). La fig. 2 et le tableau du capteur solaire (<a href="#z10-sensor">chapitre 4</a>) nomment le mouvement des panneaux. Captures d’écran de l’interface régénérées.</td></tr>
+</tbody></table></div>
 </section>
 <footer>
   <p><strong>© Silvio Sternitzke, 10/2026</strong> · Licence CC BY-NC-SA 4.0 : pas d'utilisation commerciale par des tiers, reproduction à des fins privées autorisée (<a href="#z10-lizenz">chapitre 12</a>).</p>

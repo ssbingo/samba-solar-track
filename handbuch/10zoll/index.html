@@ -279,6 +279,7 @@ h2 .num { white-space: nowrap; }
     <li><a href="#z10-glossar"><span class="n">10</span>Begriffe einfach erklärt</a></li>
     <li><a href="#z10-anhang"><span class="n">11</span>Anhang</a></li>
     <li><a href="#z10-lizenz"><span class="n">12</span>Lizenz und Copyright</a></li>
+    <li><a href="#z10-verlauf"><span class="n">13</span>Änderungsverlauf</a></li>
   </ol>
   <p class="copy">© Silvio Sternitzke, 10/2026<br>Lizenz CC BY-NC-SA 4.0</p>
 </nav>
@@ -372,7 +373,7 @@ h2 .num { white-space: nowrap; }
   <circle class="f-ink" cx="192" cy="236" r="5"/><circle class="f-ink" cx="256" cy="82" r="5"/>
   <text x="246" y="212" class="t-s">Linearantrieb</text>
   <path class="ln s-sun" d="M300 60 A120 120 0 0 1 326 130" marker-start="url(#arr)" marker-end="url(#arr)"/>
-  <text x="318" y="68" class="t-s">RAUF</text><text x="334" y="134" class="t-s">RUNTER</text>
+  <text x="318" y="68" class="t-s">STEILER</text><text x="334" y="134" class="t-s">FLACHER</text>
   <circle class="f-sun" cx="62" cy="62" r="20"/>
   <path class="ln-m dash" d="M82 76 L140 108"/>
 
@@ -454,8 +455,8 @@ h2 .num { white-space: nowrap; }
 <figcaption><b>Abb. 3</b> – Das Prinzip, vereinfacht dargestellt mit zwei gegenüberliegenden Fühlern und einer Blende dazwischen. Wie der gekaufte Sensor im Inneren genau aufgebaut ist, nennt der Hersteller nicht.</figcaption></figure>
 <div class="table-wrap"><table>
 <tr><th>Vergleich</th><th>Bedeutung</th><th>Die Steuerung fährt</th></tr>
-<tr><td>Nord heller als Süd</td><td>Die Sonne steht höher, als das Modul schaut</td><td>RAUF</td></tr>
-<tr><td>Süd heller als Nord</td><td>Die Sonne steht tiefer</td><td>RUNTER</td></tr>
+<tr><td>Nord heller als Süd</td><td>Die Sonne steht höher, als das Modul schaut</td><td>flacher (ab Werk Ausgang RAUF)</td></tr>
+<tr><td>Süd heller als Nord</td><td>Die Sonne steht tiefer</td><td>steiler (ab Werk Ausgang RUNTER)</td></tr>
 <tr><td>Ost heller als West</td><td>Die Sonne steht weiter östlich</td><td>nach OST (nur bei zwei Achsen)</td></tr>
 <tr><td>West heller als Ost</td><td>Die Sonne steht weiter westlich</td><td>nach WEST (nur bei zwei Achsen)</td></tr>
 </table></div>
@@ -1264,8 +1265,9 @@ h2 .num { white-space: nowrap; }
 <p>Nach dem Aufspielen des Werksabbilds startet das Board wie neu. Es zeigt die Einrichtung, mit der Betriebsart als erstem Punkt (am Testboard am 20.10.2026 so gesehen, Firmware 0.4.6). Seit Firmware 0.4.7 nutzt die Oberfläche das ganze Display. Steckt die Platine RearCircuitBoard_10 noch nicht auf, meldet die Steuerung einen Fehler der Ein- und Ausgänge oder bietet die <a href="#z10-glossar">Simulation</a> an; das ist ohne Platine richtig. Danach geht es mit der <a href="#z10-inbetriebnahme">ersten Inbetriebnahme der Hardware</a> weiter.</p>
 <h3 id="z10-dashboard">Das Dashboard auf dem großen Display (am Rechner erzeugt, am Gerät ungeprüft)</h3>
 <p>Seit Firmware 0.4.7 nutzt das Dashboard das ganze Display mit 1280 × 800 Bildpunkten. Oben steht die Kopfzeile mit Logo, Uhrzeit, WLAN, dem Schalter <strong>AUTOMATIK</strong>, dem Zahnrad zur Einrichtung und ganz rechts dem Füllstand des Akkus (<a href="#z10-akku-anzeige">Kapitel 7</a>), darunter die Karten <strong>WIND</strong>, <strong>SONNENSENSOR</strong> und <strong>HANDBETRIEB</strong>, unten das Statusband mit <strong>FLACH PARKEN</strong>. In der Betriebsart <em>NUR VERTIKAL</em> kommt die Karte <strong>NEIGUNG</strong> dazu, mit den Tasten für die festen Winkel (<a href="#z10-neigung">Neigung auf Befehl</a>). Bei zwei Achsen fällt sie weg, und die übrigen Karten werden breiter. Ist ein Windmesser mit Windrichtung eingerichtet, steht in der Karte <strong>WIND</strong> unter der Geschwindigkeit eine <strong>Kompassrose</strong>: Norden oben, Osten rechts wie auf einer Landkarte. Die gelbe Nadel zeigt mit ihrem Punkt in die Richtung, aus der der Wind kommt; darunter steht dasselbe als Text, zum Beispiel „Wind aus SW (228°)“. Antwortet der Sensor für die Windrichtung nicht, verschwindet die Nadel, und der Text lautet „Windrichtung --“. Gibt es etwas zu warnen (Leuchten, Versorgung, Ladesperre, Hall-Abgriff, neue Firmware), steht die Warnung in Gelb an der Stelle der Uhrzeit (<a href="#z10-versorgung-warnungen">Warnungen zur Versorgung und zur Ladesperre</a>). Achtung: Das Fadenkreuz des Sonnensensors daneben ist anders herum beschriftet (Osten links), weil es den Blick nach Süden zeigt.</p>
+<p><strong>Handbetrieb:</strong> Ist der Schalter <strong>AUTOMATIK</strong> aus, fährt die Elevation, solange eine Taste gedrückt ist. <strong>STEILER</strong> (Pfeil nach oben) stellt die Paneele steiler, ihre Kante geht hoch; <strong>FLACHER</strong> (Pfeil nach unten) fährt Richtung Flachstellung. Bei zwei Achsen kommen <strong>OST</strong> und <strong>WEST</strong> dazu. Welcher Ausgang der Platine dabei schaltet, folgt der Einstellung „Flachstellung liegt in Richtung RAUF“ unter WERTE → INBETRIEBNAHME: Ab Werk schaltet STEILER den Ausgang RUNTER und FLACHER den Ausgang RAUF. Das Statusband zeigt dieselben Wörter („MANUELL: FAHRE STEILER“, „AUTO: NACHFÜHRUNG ELEVATION FLACHER“). Bis Firmware 0.5.7 hießen die Tasten nach den Ausgängen RAUF und RUNTER; wer umsteigt, beachte: Die obere Taste fährt ab Werk jetzt in die Gegenrichtung.</p>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10/n04_neigung_karte_eingemessen.png" alt="Dashboard der 10-Zoll-Version, nur vertikal, mit Karte NEIGUNG" width="1280" height="800"></div><figcaption><b>Abb. 13a</b> – Nur vertikal: vier Karten, darunter NEIGUNG.</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10/n04_neigung_karte_eingemessen.png" alt="Dashboard der 10-Zoll-Version, nur vertikal, mit Karte NEIGUNG" width="1280" height="800"></div><figcaption><b>Abb. 13a</b> – Nur vertikal: vier Karten, darunter NEIGUNG. Im Handbetrieb STEILER und FLACHER.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10/d01_dashboard_2achsen.png" alt="Dashboard der 10-Zoll-Version mit zwei Achsen" width="1280" height="800"></div><figcaption><b>Abb. 13b</b> – Zwei Achsen mit Windrichtung: drei breitere Karten, in der Karte WIND die Kompassrose (Wind aus SW), im Handbetrieb dazu OST und WEST.</figcaption></figure>
 </div>
 <div class="note open"><strong>Stand</strong><p>Auch die übrigen Bildschirme (Einrichtung, WERTE, Netzwerk, Uhrzeit, Fernzugriff, Design, Ton, Bildschirm, Firmware, Einmessen) nutzen das ganze Display: Sie sind für 1280 × 800 Bildpunkte angelegt, mit großer Schrift (zum Beispiel Abb. 24). Das große Dashboard ist am 20.10.2026 auf das Testboard aufgespielt worden, das Gerät ist danach im Netz erreichbar. Wie es dort aussieht, ob die Finger die Tasten treffen und ob es flüssig läuft, ist noch nicht bestätigt; die vergrößerten übrigen Bildschirme sind nur am Rechner gebaut. Die Bilder hier hat das Werkzeug für die Screenshots aus dem echten Code der Oberfläche erzeugt.</p></div>
@@ -1373,7 +1375,7 @@ h2 .num { white-space: nowrap; }
   <li><strong>Zurück zur Automatik</strong>Tippe in der Karte auf <strong>AUTOMATIK FORTSETZEN</strong>. <em>Erwartet:</em> Das Statusband zeigt wieder AUTO, der Schalter AUTOMATIK ist wieder blau ohne Kreuz, die Nachführung beginnt neu.</li>
 </ol>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10/n05_neigung_bezugsfahrt.png" alt="Bezugsfahrt in die Flachstellung" width="1280" height="800"></div><figcaption><b>Abb. 18</b> – Die Bezugsfahrt: Die Elevation fährt zuerst flach bis zur Endlage. Ob „flach“ am Antrieb RAUF oder RUNTER heißt, bestimmt die Einstellung „Richtung der Flachstellung“.</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10/n05_neigung_bezugsfahrt.png" alt="Bezugsfahrt in die Flachstellung" width="1280" height="800"></div><figcaption><b>Abb. 18</b> – Die Bezugsfahrt: Die Elevation fährt zuerst flach bis zur Endlage. Ob „flach“ am Antrieb RAUF oder RUNTER heißt, bestimmt die Einstellung „Flachstellung liegt in Richtung RAUF“.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10/n06_neigung_fahrt_steiler.png" alt="Fahrt steiler zum Zielwinkel" width="1280" height="800"></div><figcaption><b>Abb. 19</b> – Die Fahrt zum Winkel, mit der laufenden Schätzung „CA. 12°“.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10/n07_neigung_pause_einschaltdauer.png" alt="Pause wegen der Einschaltdauer" width="1280" height="800"></div><figcaption><b>Abb. 20</b> – Die Antriebe brauchen eine Pause (<a href="#z10-einschaltdauer">Einschaltdauer</a>, unten). Danach geht es von selbst weiter.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10/n11_neigung_nicht_eingemessen.png" alt="Fahrzeit nicht eingemessen, keine Fahrt" width="1280" height="800"></div><figcaption><b>Abb. 21</b> – 30° ist verlangt, aber die Fahrzeit ist nicht eingemessen: Es fährt nichts. Erst einmessen (unten).</figcaption></figure>
@@ -1541,7 +1543,7 @@ h2 .num { white-space: nowrap; }
 [ 3690.010][I][motor ] Elevation: Laufzeit-Endlage PLUS erreicht
 <span class="c">   … 30 Minuten später, der Sturm hält an …</span>
 [ 5400.000][D][track ] Zustand STORM haelt an: Flachfahrt wird erneut erlaubt</pre></div>
-<p>Ob im Log „PLUS“ oder „MINUS“ steht, hängt von der Einstellung „Richtung der Flachstellung“ ab; ab Werk ist flach = RAUF = PLUS.</p>
+<p>Ob im Log „PLUS“ oder „MINUS“ steht, hängt von der Einstellung „Flachstellung liegt in Richtung RAUF“ ab; ab Werk ist flach = RAUF = PLUS.</p>
 <div class="note warn"><strong>Bis dahin</strong><p>Die Platine RearCircuitBoard_10 kann nur an der Hardware geprüft werden (<a href="#z10-inbetriebnahme">Kapitel 9</a>). Ohne Firmware schaltet kein Kontakt und keine Leuchte. Den Akku erst anschließen, wenn die Platine die Kälte- und Wärmeprüfung bestanden hat und eine Firmware läuft, die die Ladesperre prüft (<a href="#z10-akku-pruefung">Kapitel 7</a>, auf eigenes Risiko).</p></div>
 
 <h3 id="z10-sync-reset">Synchronsteuerung zurücksetzen (in Vorbereitung, am Gerät ungeprüft)</h3>
@@ -2022,6 +2024,16 @@ h2 .num { white-space: nowrap; }
 <p>Das Verbot der kommerziellen Verwendung gilt für alle, die das Projekt unter dieser Lizenz nutzen. Der Rechteinhaber, Silvio Sternitzke, ist daran nicht gebunden: Er kann die Platine selbst verkaufen oder anderen eine kommerzielle Nutzung ausnahmsweise erlauben.</p>
 <div class="note open"><strong>Für einen Verkauf noch offen: nicht geprüft, keine Rechtsberatung</strong><p>Heute dient das Projekt dem Nachbau für private Zwecke. Ein gewerblicher Verkauf der Platine, eines Bausatzes oder eines Geräts erfordert eine gesonderte Prüfung, zum Beispiel: CE-Kennzeichnung und EMV-Konformität (elektromagnetische Verträglichkeit), Registrierung nach dem Elektro- und Elektronikgerätegesetz (ElektroG, WEEE), RoHS (Beschränkung gefährlicher Stoffe), Produktsicherheit nach der EU-Verordnung GPSR und Verpackungsgesetz. Keiner dieser Punkte ist geprüft oder erfüllt.</p></div>
 <div class="note info"><strong>Ohne Gewähr</strong><p>Die Unterlagen werden ohne Gewähr bereitgestellt. Aufbau und Betrieb geschehen auf eigene Verantwortung. Für Schäden durch unsachgemäßes Löten, Falschpolung oder falschen Anschluss externer Komponenten wird keine Haftung übernommen, soweit gesetzlich zulässig (<a href="#z10-sicherheit">Kapitel 2</a>).</p></div>
+</section>
+
+<section id="z10-verlauf">
+<h2><span class="num">13</span>Änderungsverlauf</h2>
+<p class="lead">Was sich an diesem Handbuch geändert hat, die neueste Änderung zuerst. Der Verlauf beginnt mit der Ausgabe vom 10. November 2026.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Datum</th><th>Firmware</th><th>Änderung</th></tr></thead>
+<tbody><tr><td>10.11.2026</td><td>0.5.9</td><td>Auf Französisch, Spanisch und Portugiesisch stehen die Tasten STEILER und FLACHER zweizeilig (bei zwei Achsen waren sie in 0.5.8 abgeschnitten); Bilder dieser Sprachen neu erzeugt. Eigener Absatz zum Handbetrieb in <a href="#z10-dashboard">Kapitel 8</a>; Abb. 18 und das Log-Beispiel nennen die Einstellung mit ihrem Namen am Display, „Flachstellung liegt in Richtung RAUF“. Der Änderungsverlauf steht jetzt auch im gedruckten Inhaltsverzeichnis.</td></tr>
+<tr><td>10.11.2026</td><td>0.5.8</td><td>Die Tasten im Handbetrieb heißen STEILER und FLACHER statt RAUF und RUNTER, ebenso die Bewegung im Statusband („MANUELL: FAHRE STEILER“, „AUTO: NACHFÜHRUNG ELEVATION FLACHER“), im Zustand der Achse („Elev: STEILER“) und in der Weboberfläche (<a href="#z10-dashboard">Kapitel 8</a>, Abb. 13a). Welcher Ausgang das ist, folgt der Einstellung „Flachstellung liegt in Richtung RAUF“; ab Werk ist STEILER der Ausgang RUNTER. Klemmen, Kontakte, Einstellungen und die Log-Zeilen „Ausgang Elevation“ heißen weiter RAUF und RUNTER. Abb. 2 und die Tabelle zum Sonnensensor (<a href="#z10-sensor">Kapitel 4</a>) nennen die Bewegung der Paneele. Bilder der Bedienoberfläche neu erzeugt.</td></tr>
+</tbody></table></div>
 </section>
 <footer>
   <p><strong>© Silvio Sternitzke, 10/2026</strong> · Lizenz CC BY-NC-SA 4.0: keine kommerzielle Verwendung durch Dritte, Nachbau für private Zwecke erlaubt (<a href="#z10-lizenz">Kapitel 12</a>).</p>

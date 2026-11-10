@@ -279,6 +279,7 @@ h2 .num { white-space: nowrap; }
     <li><a href="#z10-glossar"><span class="n">10</span>Términos explicados de forma sencilla</a></li>
     <li><a href="#z10-anhang"><span class="n">11</span>Anexo</a></li>
     <li><a href="#z10-lizenz"><span class="n">12</span>Licencia y copyright</a></li>
+    <li><a href="#z10-verlauf"><span class="n">13</span>Historial de cambios</a></li>
   </ol>
   <p class="copy">© Silvio Sternitzke, 10/2026<br>Licencia CC BY-NC-SA 4.0</p>
 </nav>
@@ -372,7 +373,7 @@ h2 .num { white-space: nowrap; }
   <circle class="f-ink" cx="192" cy="236" r="5"/><circle class="f-ink" cx="256" cy="82" r="5"/>
   <text x="246" y="212" class="t-s">Actuador lineal</text>
   <path class="ln s-sun" d="M300 60 A120 120 0 0 1 326 130" marker-start="url(#arr)" marker-end="url(#arr)"/>
-  <text x="318" y="68" class="t-s">ARRIBA</text><text x="334" y="134" class="t-s">ABAJO</text>
+  <text x="318" y="68" class="t-s">MÁS INCL.</text><text x="334" y="134" class="t-s">MÁS PLANO</text>
   <circle class="f-sun" cx="62" cy="62" r="20"/>
   <path class="ln-m dash" d="M82 76 L140 108"/>
 
@@ -454,8 +455,8 @@ h2 .num { white-space: nowrap; }
 <figcaption><b>Fig. 3</b> – El principio, representado de forma simplificada con dos fotosensores opuestos y una pantalla entre ellos. El fabricante no indica cómo está construido exactamente por dentro el sensor comprado.</figcaption></figure>
 <div class="table-wrap"><table>
 <tr><th>Comparación</th><th>Significado</th><th>El control mueve</th></tr>
-<tr><td>Norte más claro que sur</td><td>El sol está más alto de lo que apunta el módulo</td><td>ARRIBA</td></tr>
-<tr><td>Sur más claro que norte</td><td>El sol está más bajo</td><td>ABAJO</td></tr>
+<tr><td>Norte más claro que sur</td><td>El sol está más alto de lo que apunta el módulo</td><td>más plano (de fábrica: salida ARRIBA)</td></tr>
+<tr><td>Sur más claro que norte</td><td>El sol está más bajo</td><td>más inclinado (de fábrica: salida ABAJO)</td></tr>
 <tr><td>Este más claro que oeste</td><td>El sol está más al este</td><td>hacia ESTE (solo con dos ejes)</td></tr>
 <tr><td>Oeste más claro que este</td><td>El sol está más al oeste</td><td>hacia OESTE (solo con dos ejes)</td></tr>
 </table></div>
@@ -1264,8 +1265,9 @@ h2 .num { white-space: nowrap; }
 <p>Tras instalar la imagen de fábrica, la placa arranca como nueva. Muestra la configuración, con el modo de funcionamiento como primer punto (así se vio en la placa de pruebas el 20.10.2026, firmware 0.4.6). Desde el firmware 0.4.7 la interfaz usa toda la pantalla. Si la placa RearCircuitBoard_10 aún no está enchufada, el control indica un fallo de las entradas y salidas u ofrece la <a href="#z10-glossar">simulación</a>; sin la placa eso es correcto. Después se continúa con la <a href="#z10-inbetriebnahme">primera puesta en marcha del hardware</a>.</p>
 <h3 id="z10-dashboard">El panel en la pantalla grande (generado en el ordenador, sin comprobar en el equipo)</h3>
 <p>Desde el firmware 0.4.7, el panel usa toda la pantalla de 1280 × 800 píxeles. Arriba está la barra superior con el logotipo, la hora, el Wi-Fi, el interruptor <strong>AUTOMÁTICO</strong>, la rueda dentada para la configuración y, del todo a la derecha, el nivel de la batería (<a href="#z10-akku-anzeige">capítulo 7</a>); debajo, las tarjetas <strong>VIENTO</strong>, <strong>SENSOR SOLAR</strong> y <strong>MANUAL</strong>, y abajo la banda de estado con <strong>APARCAR PLANO</strong>. En el modo de funcionamiento <em>SOLO VERTICAL</em> se añade la tarjeta <strong>INCLINACIÓN</strong>, con los botones para los ángulos fijos (<a href="#z10-neigung">Inclinación por orden</a>). Con dos ejes desaparece, y las demás tarjetas se hacen más anchas. Si hay configurado un anemómetro con dirección del viento, en la tarjeta <strong>VIENTO</strong> aparece bajo la velocidad una <strong>rosa de los vientos</strong>: norte arriba, este a la derecha, como en un mapa. La aguja amarilla señala con su punto la dirección de la que viene el viento; debajo aparece lo mismo como texto, por ejemplo «Viento del SW (228°)». Si el sensor de dirección del viento no responde, la aguja desaparece y el texto dice «Dir. viento --». Si hay algo que avisar (pilotos, alimentación, bloqueo de carga, señal Hall, firmware nuevo), el aviso aparece en amarillo en el lugar de la hora (<a href="#z10-versorgung-warnungen">Avisos sobre la alimentación y el bloqueo de carga</a>). Atención: la cruz del sensor solar que está al lado está rotulada al revés (este a la izquierda), porque muestra la vista hacia el sur.</p>
+<p><strong>Modo manual:</strong> con el interruptor <strong>AUTOMÁTICO</strong> desactivado, la elevación se mueve mientras se mantenga pulsada una tecla. <strong>MÁS INCL.</strong> (flecha arriba) inclina más los paneles, su borde sube; <strong>MÁS PLANO</strong> (flecha abajo) va hacia la posición plana. Con dos ejes se añaden <strong>ESTE</strong> y <strong>OESTE</strong>. Qué salida de la placa conmuta depende del ajuste «Posición plana hacia ARRIBA» en AJUSTES → PUESTA EN MARCHA: de fábrica, MÁS INCL. conmuta la salida ABAJO y MÁS PLANO la salida ARRIBA. La banda de estado muestra las mismas palabras («MANUAL: MOVIENDO MÁS INCL.», «AUTO: SEGUIMIENTO ELEVACIÓN MÁS PLANO»). Hasta el firmware 0.5.7 las teclas se llamaban como las salidas ARRIBA y ABAJO; al actualizar, atención: de fábrica la tecla superior se mueve ahora en sentido contrario.</p>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10_es/n04_neigung_karte_eingemessen.png" alt="Panel de la versión de 10 pulgadas, solo vertical, con la tarjeta INCLINACIÓN" width="1280" height="800"></div><figcaption><b>Fig. 13a</b> – Solo vertical: cuatro tarjetas, entre ellas INCLINACIÓN.</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10_es/n04_neigung_karte_eingemessen.png" alt="Panel de la versión de 10 pulgadas, solo vertical, con la tarjeta INCLINACIÓN" width="1280" height="800"></div><figcaption><b>Fig. 13a</b> – Solo vertical: cuatro tarjetas, entre ellas INCLINACIÓN. En modo manual MÁS INCL. y MÁS PLANO.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_es/d01_dashboard_2achsen.png" alt="Panel de la versión de 10 pulgadas con dos ejes" width="1280" height="800"></div><figcaption><b>Fig. 13b</b> – Dos ejes con dirección del viento: tres tarjetas más anchas, en la tarjeta VIENTO la rosa de los vientos (viento del SW), en modo manual además ESTE y OESTE.</figcaption></figure>
 </div>
 <div class="note open"><strong>Estado</strong><p>También las demás pantallas (configuración, AJUSTES, red, hora, acceso remoto, diseño, sonido, pantalla, firmware, calibración) usan toda la pantalla: están diseñadas para 1280 × 800 píxeles, con letra grande (por ejemplo Fig. 24). El panel grande se instaló el 20.10.2026 en la placa de pruebas; después el equipo es accesible en la red. Aún no está confirmado cómo se ve allí, si los dedos aciertan los botones ni si funciona con fluidez; las demás pantallas ampliadas solo se han compilado en el ordenador. Las imágenes de aquí las ha generado la herramienta de capturas a partir del código real de la interfaz.</p></div>
@@ -1373,7 +1375,7 @@ h2 .num { white-space: nowrap; }
   <li><strong>Volver al automático</strong>Toca en la tarjeta <strong>REANUDAR AUTOMÁTICO</strong>. <em>Resultado esperado:</em> La banda de estado vuelve a mostrar AUTO, el interruptor AUTOMÁTICO vuelve a ser azul sin cruz y el seguimiento empieza de nuevo.</li>
 </ol>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10_es/n05_neigung_bezugsfahrt.png" alt="Recorrido de referencia a la posición plana" width="1280" height="800"></div><figcaption><b>Fig. 18</b> – El recorrido de referencia: la elevación va primero a plano hasta el final de carrera. Si «plano» significa ARRIBA o ABAJO en el motor lo determina el ajuste «Dirección de la posición plana».</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10_es/n05_neigung_bezugsfahrt.png" alt="Recorrido de referencia a la posición plana" width="1280" height="800"></div><figcaption><b>Fig. 18</b> – El recorrido de referencia: la elevación va primero a plano hasta el final de carrera. Si «plano» significa ARRIBA o ABAJO en el motor lo determina el ajuste «Posición plana hacia ARRIBA».</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_es/n06_neigung_fahrt_steiler.png" alt="Movimiento más inclinado hacia el ángulo objetivo" width="1280" height="800"></div><figcaption><b>Fig. 19</b> – El recorrido al ángulo, con la estimación en curso «APROX. 12°».</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_es/n07_neigung_pause_einschaltdauer.png" alt="Pausa por el ciclo de trabajo" width="1280" height="800"></div><figcaption><b>Fig. 20</b> – Los motores necesitan una pausa (<a href="#z10-einschaltdauer">ciclo de trabajo</a>, más abajo). Después continúa por sí solo.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_es/n11_neigung_nicht_eingemessen.png" alt="Tiempo de recorrido sin calibrar, sin movimiento" width="1280" height="800"></div><figcaption><b>Fig. 21</b> – Se pide 30°, pero el tiempo de recorrido no está calibrado: no se mueve nada. Primero calibra (más abajo).</figcaption></figure>
@@ -1541,7 +1543,7 @@ h2 .num { white-space: nowrap; }
 [ 3690.010][I][motor ] Elevation: Laufzeit-Endlage PLUS erreicht
 <span class="c">   … 30 Minuten später, der Sturm hält an …</span>
 [ 5400.000][D][track ] Zustand STORM haelt an: Flachfahrt wird erneut erlaubt</pre></div>
-<p>Que en el log aparezca «PLUS» o «MINUS» depende del ajuste «Dirección de la posición plana»; de fábrica, plano = ARRIBA = PLUS.</p>
+<p>Que en el log aparezca «PLUS» o «MINUS» depende del ajuste «Posición plana hacia ARRIBA»; de fábrica, plano = ARRIBA = PLUS.</p>
 <div class="note warn"><strong>Hasta entonces</strong><p>La placa RearCircuitBoard_10 solo se puede comprobar en el hardware (<a href="#z10-inbetriebnahme">capítulo 9</a>). Sin firmware no conmuta ningún contacto ni se enciende ningún piloto. Conecta la batería solo cuando la placa haya superado la prueba de frío y de calor y esté funcionando un firmware que comprueba el bloqueo de carga (<a href="#z10-akku-pruefung">capítulo 7</a>, bajo tu propio riesgo).</p></div>
 
 <h3 id="z10-sync-reset">Reiniciar el control síncrono (en preparación, sin comprobar en el equipo)</h3>
@@ -2022,6 +2024,16 @@ h2 .num { white-space: nowrap; }
 <p>La prohibición del uso comercial rige para todos los que usan el proyecto bajo esta licencia. El titular de los derechos, Silvio Sternitzke, no está sujeto a ella: puede vender la placa él mismo o permitir excepcionalmente a otros un uso comercial.</p>
 <div class="note open"><strong>Pendiente para una venta: no comprobado, no es asesoramiento jurídico</strong><p>Hoy el proyecto sirve para la construcción con fines privados. Una venta comercial de la placa, de un kit o de un equipo requiere una comprobación aparte, por ejemplo: marcado CE y conformidad CEM (compatibilidad electromagnética), registro según la ley alemana de aparatos eléctricos y electrónicos (ElektroG, RAEE), RoHS (restricción de sustancias peligrosas), seguridad de los productos según el Reglamento GPSR de la UE y ley de envases. Ninguno de estos puntos está comprobado ni cumplido.</p></div>
 <div class="note info"><strong>Sin garantía</strong><p>La documentación se proporciona sin garantía. El montaje y el funcionamiento son bajo tu propia responsabilidad. No se asume ninguna responsabilidad por daños causados por una soldadura inadecuada, una inversión de polaridad o una conexión incorrecta de componentes externos, en la medida en que la ley lo permita (<a href="#z10-sicherheit">capítulo 2</a>).</p></div>
+</section>
+
+<section id="z10-verlauf">
+<h2><span class="num">13</span>Historial de cambios</h2>
+<p class="lead">Lo que ha cambiado en este manual, el cambio más reciente primero. El historial empieza con la edición del 10 de noviembre de 2026.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Fecha</th><th>Firmware</th><th>Cambio</th></tr></thead>
+<tbody><tr><td>10.11.2026</td><td>0.5.9</td><td>En francés, español y portugués las teclas MÁS INCL. y MÁS PLANO aparecen en dos líneas (con dos ejes estaban cortadas en 0.5.8); imágenes de estos idiomas regeneradas. Párrafo propio sobre el modo manual en el <a href="#z10-dashboard">capítulo 8</a>; la fig. 18 y el ejemplo de log nombran el ajuste como en la pantalla, «Posición plana hacia ARRIBA». El historial de cambios aparece ahora también en el índice impreso.</td></tr>
+<tr><td>10.11.2026</td><td>0.5.8</td><td>Los botones del modo manual se llaman MÁS INCL. y MÁS PLANO en lugar de ARRIBA y ABAJO, igual que el movimiento en la barra de estado («MANUAL: MOVIENDO MÁS INCL.», «AUTO: SEGUIMIENTO ELEVACIÓN MÁS PLANO»), en el estado del eje («Elev: MÁS INCL.») y en la interfaz web (<a href="#z10-dashboard">capítulo 8</a>, fig. 13a). Qué salida es depende del ajuste «Posición plana hacia ARRIBA»; de fábrica, MÁS INCL. es la salida ABAJO. Los bornes, los contactos, los ajustes y las líneas «Ausgang Elevation» del registro siguen llamándose RAUF y RUNTER (ARRIBA y ABAJO). La fig. 2 y la tabla del sensor solar (<a href="#z10-sensor">capítulo 4</a>) nombran el movimiento de los paneles. Capturas de la interfaz generadas de nuevo.</td></tr>
+</tbody></table></div>
 </section>
 <footer>
   <p><strong>© Silvio Sternitzke, 10/2026</strong> · Licencia CC BY-NC-SA 4.0: sin uso comercial por parte de terceros, construcción para fines privados permitida (<a href="#z10-lizenz">capítulo 12</a>).</p>

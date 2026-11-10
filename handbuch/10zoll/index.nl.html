@@ -279,6 +279,7 @@ h2 .num { white-space: nowrap; }
     <li><a href="#z10-glossar"><span class="n">10</span>Begrippen eenvoudig uitgelegd</a></li>
     <li><a href="#z10-anhang"><span class="n">11</span>Bijlage</a></li>
     <li><a href="#z10-lizenz"><span class="n">12</span>Licentie en copyright</a></li>
+    <li><a href="#z10-verlauf"><span class="n">13</span>Wijzigingsoverzicht</a></li>
   </ol>
   <p class="copy">© Silvio Sternitzke, 10/2026<br>Licentie CC BY-NC-SA 4.0</p>
 </nav>
@@ -372,7 +373,7 @@ h2 .num { white-space: nowrap; }
   <circle class="f-ink" cx="192" cy="236" r="5"/><circle class="f-ink" cx="256" cy="82" r="5"/>
   <text x="246" y="212" class="t-s">Lineaire aandrijving</text>
   <path class="ln s-sun" d="M300 60 A120 120 0 0 1 326 130" marker-start="url(#arr)" marker-end="url(#arr)"/>
-  <text x="318" y="68" class="t-s">OMHOOG</text><text x="334" y="134" class="t-s">OMLAAG</text>
+  <text x="318" y="68" class="t-s">STEILER</text><text x="334" y="134" class="t-s">VLAKKER</text>
   <circle class="f-sun" cx="62" cy="62" r="20"/>
   <path class="ln-m dash" d="M82 76 L140 108"/>
 
@@ -454,8 +455,8 @@ h2 .num { white-space: nowrap; }
 <figcaption><b>Afb. 3</b> – Het principe, vereenvoudigd weergegeven met twee tegenoverliggende voelers en een schot ertussen. Hoe de gekochte sensor vanbinnen precies is opgebouwd, vermeldt de fabrikant niet.</figcaption></figure>
 <div class="table-wrap"><table>
 <tr><th>Vergelijking</th><th>Betekenis</th><th>De besturing loopt</th></tr>
-<tr><td>Noord helderder dan zuid</td><td>De zon staat hoger dan het paneel kijkt</td><td>OMHOOG</td></tr>
-<tr><td>Zuid helderder dan noord</td><td>De zon staat lager</td><td>OMLAAG</td></tr>
+<tr><td>Noord helderder dan zuid</td><td>De zon staat hoger dan het paneel kijkt</td><td>vlakker (fabrieksinstelling: uitgang OMHOOG)</td></tr>
+<tr><td>Zuid helderder dan noord</td><td>De zon staat lager</td><td>steiler (fabrieksinstelling: uitgang OMLAAG)</td></tr>
 <tr><td>Oost helderder dan west</td><td>De zon staat verder naar het oosten</td><td>naar OOST (alleen bij twee assen)</td></tr>
 <tr><td>West helderder dan oost</td><td>De zon staat verder naar het westen</td><td>naar WEST (alleen bij twee assen)</td></tr>
 </table></div>
@@ -1264,8 +1265,9 @@ h2 .num { white-space: nowrap; }
 <p>Na het flashen van het fabrieksimage start het board als nieuw. Het toont het instellen, met de bedrijfsmodus als eerste punt (op het testboard op 20.10.2026 zo gezien, firmware 0.4.6). Sinds firmware 0.4.7 gebruikt de interface het hele display. Zit de print RearCircuitBoard_10 er nog niet op, dan meldt de besturing een fout van de in- en uitgangen of biedt ze de <a href="#z10-glossar">simulatie</a> aan; dat is zonder print juist. Daarna gaat het verder met de <a href="#z10-inbetriebnahme">eerste ingebruikname van de hardware</a>.</p>
 <h3 id="z10-dashboard">Het dashboard op het grote display (op de computer gegenereerd, niet getest op het apparaat)</h3>
 <p>Sinds firmware 0.4.7 gebruikt het dashboard het hele display met 1280 × 800 beeldpunten. Bovenaan staat de kopregel met logo, tijd, wifi, de schakelaar <strong>AUTOMATISCH</strong>, het tandwiel naar Instellen en helemaal rechts het laadniveau van de accu (<a href="#z10-akku-anzeige">hoofdstuk 7</a>), daaronder de kaarten <strong>WIND</strong>, <strong>ZONNESENSOR</strong> en <strong>HANDMATIG</strong>, onderaan de statusbalk met <strong>PLAT PARKEREN</strong>. In de bedrijfsmodus <em>ALLEEN VERTICAAL</em> komt de kaart <strong>HELLING</strong> erbij, met de knoppen voor de vaste hoeken (<a href="#z10-neigung">Helling op bevel</a>). Bij twee assen vervalt ze, en worden de overige kaarten breder. Is een windmeter met windrichting ingesteld, dan staat in de kaart <strong>WIND</strong> onder de snelheid een <strong>kompasroos</strong>: noord boven, oost rechts zoals op een landkaart. De gele naald wijst met zijn punt in de richting waar de wind vandaan komt; daaronder staat hetzelfde als tekst, bijvoorbeeld „Wind uit ZW (228°)”. Antwoordt de sensor voor de windrichting niet, dan verdwijnt de naald en luidt de tekst „Windrichting --”. Is er iets te waarschuwen (lampjes, voeding, laadblokkering, Hall-aftakking, nieuwe firmware), dan staat de waarschuwing in geel op de plaats van de tijd (<a href="#z10-versorgung-warnungen">Waarschuwingen over de voeding en de laadblokkering</a>). Let op: het dradenkruis van de zonnesensor ernaast is andersom gelabeld (oost links), omdat het de blik naar het zuiden toont.</p>
+<p><strong>Handbediening:</strong> staat de schakelaar <strong>AUTOMATISCH</strong> uit, dan beweegt de elevatie zolang een toets ingedrukt is. <strong>STEILER</strong> (pijl omhoog) zet de panelen steiler, hun rand gaat omhoog; <strong>VLAKKER</strong> (pijl omlaag) beweegt richting vlakke stand. Bij twee assen komen <strong>OOST</strong> en <strong>WEST</strong> erbij. Welke uitgang van de printplaat schakelt, volgt de instelling „Vlakke stand ligt richting OMHOOG” onder WAARDEN → INGEBRUIKNAME: af fabriek schakelt STEILER de uitgang OMLAAG en VLAKKER de uitgang OMHOOG. De statusbalk toont dezelfde woorden („HANDMATIG: LOOP STEILER”, „AUTO: VOLGEN ELEVATIE VLAKKER”). Tot firmware 0.5.7 heetten de toetsen naar de uitgangen OMHOOG en OMLAAG; let bij het overstappen op: af fabriek beweegt de bovenste toets nu in de tegenovergestelde richting.</p>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10_nl/n04_neigung_karte_eingemessen.png" alt="Dashboard van de 10-inch-versie, alleen verticaal, met kaart HELLING" width="1280" height="800"></div><figcaption><b>Afb. 13a</b> – Alleen verticaal: vier kaarten, waaronder HELLING.</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10_nl/n04_neigung_karte_eingemessen.png" alt="Dashboard van de 10-inch-versie, alleen verticaal, met kaart HELLING" width="1280" height="800"></div><figcaption><b>Afb. 13a</b> – Alleen verticaal: vier kaarten, waaronder HELLING. In handbediening STEILER en VLAKKER.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_nl/d01_dashboard_2achsen.png" alt="Dashboard van de 10-inch-versie met twee assen" width="1280" height="800"></div><figcaption><b>Afb. 13b</b> – Twee assen met windrichting: drie bredere kaarten, in de kaart WIND de kompasroos (wind uit ZW), bij handmatig bedrijf daarbij OOST en WEST.</figcaption></figure>
 </div>
 <div class="note open"><strong>Stand</strong><p>Ook de overige schermen (Instellen, WAARDEN, Netwerk, Tijd, Op afstand, Design, Geluid, Scherm, Firmware, Inmeten) gebruiken het hele display: ze zijn opgezet voor 1280 × 800 beeldpunten, met grote letters (bijvoorbeeld Afb. 24). Het grote dashboard is op 20.10.2026 op het testboard gezet, het apparaat is daarna via het netwerk bereikbaar. Hoe het er daar uitziet, of de vingers de knoppen raken en of het vloeiend loopt, is nog niet bevestigd; de vergrote overige schermen zijn alleen op de computer gebouwd. De afbeeldingen hier zijn door het hulpmiddel voor de screenshots gegenereerd uit de echte code van de interface.</p></div>
@@ -2022,6 +2024,16 @@ h2 .num { white-space: nowrap; }
 <p>Het verbod op commercieel gebruik geldt voor iedereen die het project onder deze licentie gebruikt. De rechthebbende, Silvio Sternitzke, is daar niet aan gebonden: hij kan de printplaat zelf verkopen of anderen bij uitzondering commercieel gebruik toestaan.</p>
 <div class="note open"><strong>Voor een verkoop nog open: niet gecontroleerd, geen juridisch advies</strong><p>Op dit moment dient het project voor nabouw voor privédoeleinden. Een commerciële verkoop van de printplaat, een bouwpakket of een apparaat vereist een afzonderlijke controle, bijvoorbeeld: CE-markering en EMC-conformiteit (elektromagnetische compatibiliteit), registratie volgens de Duitse wet op elektrische en elektronische apparatuur (ElektroG, WEEE), RoHS (beperking van gevaarlijke stoffen), productveiligheid volgens de EU-verordening GPSR en de verpakkingswetgeving. Geen van deze punten is gecontroleerd of vervuld.</p></div>
 <div class="note info"><strong>Zonder garantie</strong><p>De documentatie wordt zonder garantie ter beschikking gesteld. Opbouw en gebruik gebeuren op eigen verantwoordelijkheid. Voor schade door ondeskundig solderen, verkeerde polariteit of verkeerde aansluiting van externe componenten wordt geen aansprakelijkheid aanvaard, voor zover wettelijk toegestaan (<a href="#z10-sicherheit">hoofdstuk 2</a>).</p></div>
+</section>
+
+<section id="z10-verlauf">
+<h2><span class="num">13</span>Wijzigingsoverzicht</h2>
+<p class="lead">Wat er in deze handleiding is gewijzigd, de nieuwste wijziging eerst. Het overzicht begint met de uitgave van 10 november 2026.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Datum</th><th>Firmware</th><th>Wijziging</th></tr></thead>
+<tbody><tr><td>10.11.2026</td><td>0.5.9</td><td>In het Frans, Spaans en Portugees staan de toetsen STEILER en VLAKKER op twee regels (bij twee assen waren ze in 0.5.8 afgekapt); afbeeldingen van deze talen opnieuw gemaakt. Eigen alinea over handbediening in <a href="#z10-dashboard">hoofdstuk 8</a>; afb. 18 en het logvoorbeeld noemen de instelling zoals op het display, „Vlakke stand ligt richting OMHOOG”. Het wijzigingsoverzicht staat nu ook in de gedrukte inhoudsopgave.</td></tr>
+<tr><td>10.11.2026</td><td>0.5.8</td><td>De knoppen bij handbediening heten STEILER en VLAKKER in plaats van OMHOOG en OMLAAG, net als de beweging in de statusbalk („HANDMATIG: LOOP STEILER”, „AUTO: VOLGEN ELEVATIE VLAKKER”), in de toestand van de as („Elev: STEILER”) en in de webinterface (<a href="#z10-dashboard">hoofdstuk 8</a>, afb. 13a). Welke uitgang dat is, volgt uit de instelling „Vlakke stand ligt richting OMHOOG”; af fabriek is STEILER de uitgang OMLAAG. Klemmen, contacten, instellingen en de logregels „Ausgang Elevation” heten nog steeds RAUF en RUNTER (OMHOOG en OMLAAG). Afb. 2 en de tabel bij de zonnesensor (<a href="#z10-sensor">hoofdstuk 4</a>) noemen de beweging van de panelen. Schermafbeeldingen van de bediening opnieuw gemaakt.</td></tr>
+</tbody></table></div>
 </section>
 <footer>
   <p><strong>© Silvio Sternitzke, 10/2026</strong> · Licentie CC BY-NC-SA 4.0: geen commercieel gebruik door derden, nabouw voor privédoeleinden toegestaan (<a href="#z10-lizenz">hoofdstuk 12</a>).</p>

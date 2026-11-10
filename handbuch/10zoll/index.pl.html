@@ -279,6 +279,7 @@ h2 .num { white-space: nowrap; }
     <li><a href="#z10-glossar"><span class="n">10</span>Pojęcia prosto wyjaśnione</a></li>
     <li><a href="#z10-anhang"><span class="n">11</span>Załącznik</a></li>
     <li><a href="#z10-lizenz"><span class="n">12</span>Licencja i prawa autorskie</a></li>
+    <li><a href="#z10-verlauf"><span class="n">13</span>Historia zmian</a></li>
   </ol>
   <p class="copy">© Silvio Sternitzke, 10/2026<br>Licencja CC BY-NC-SA 4.0</p>
 </nav>
@@ -372,7 +373,7 @@ h2 .num { white-space: nowrap; }
   <circle class="f-ink" cx="192" cy="236" r="5"/><circle class="f-ink" cx="256" cy="82" r="5"/>
   <text x="246" y="212" class="t-s">Siłownik liniowy</text>
   <path class="ln s-sun" d="M300 60 A120 120 0 0 1 326 130" marker-start="url(#arr)" marker-end="url(#arr)"/>
-  <text x="318" y="68" class="t-s">W GÓRĘ</text><text x="334" y="134" class="t-s">W DÓŁ</text>
+  <text x="318" y="68" class="t-s">STROMIEJ</text><text x="334" y="134" class="t-s">PŁASKIEJ</text>
   <circle class="f-sun" cx="62" cy="62" r="20"/>
   <path class="ln-m dash" d="M82 76 L140 108"/>
 
@@ -454,8 +455,8 @@ h2 .num { white-space: nowrap; }
 <figcaption><b>Rys. 3</b> – Zasada, przedstawiona w uproszczeniu z dwoma przeciwległymi czujnikami i przesłoną pomiędzy nimi. Jak dokładnie jest zbudowany w środku kupiony czujnik, producent nie podaje.</figcaption></figure>
 <div class="table-wrap"><table>
 <tr><th>Porównanie</th><th>Znaczenie</th><th>Sterownik jedzie</th></tr>
-<tr><td>Północ jaśniejsza niż południe</td><td>Słońce stoi wyżej, niż patrzy moduł</td><td>W GÓRĘ</td></tr>
-<tr><td>Południe jaśniejsze niż północ</td><td>Słońce stoi niżej</td><td>W DÓŁ</td></tr>
+<tr><td>Północ jaśniejsza niż południe</td><td>Słońce stoi wyżej, niż patrzy moduł</td><td>płaskiej (fabrycznie: wyjście W GÓRĘ)</td></tr>
+<tr><td>Południe jaśniejsze niż północ</td><td>Słońce stoi niżej</td><td>stromiej (fabrycznie: wyjście W DÓŁ)</td></tr>
 <tr><td>Wschód jaśniejszy niż zachód</td><td>Słońce stoi bardziej na wschodzie</td><td>na WSCHÓD (tylko przy dwóch osiach)</td></tr>
 <tr><td>Zachód jaśniejszy niż wschód</td><td>Słońce stoi bardziej na zachodzie</td><td>na ZACHÓD (tylko przy dwóch osiach)</td></tr>
 </table></div>
@@ -1264,8 +1265,9 @@ h2 .num { white-space: nowrap; }
 <p>Po wgraniu obrazu fabrycznego płyta uruchamia się jak nowa. Pokazuje konfigurację z trybem pracy jako pierwszym punktem (tak widziane na płycie testowej 20.10.2026, firmware 0.4.6). Od firmware 0.4.7 interfejs wykorzystuje cały wyświetlacz. Jeśli płytka RearCircuitBoard_10 nie jest jeszcze nałożona, sterownik zgłasza błąd wejść i wyjść lub proponuje <a href="#z10-glossar">symulację</a>; bez płytki jest to prawidłowe. Potem przechodzisz do <a href="#z10-inbetriebnahme">pierwszego uruchomienia sprzętu</a>.</p>
 <h3 id="z10-dashboard">Pulpit na dużym wyświetlaczu (wygenerowany na komputerze, nie sprawdzony na urządzeniu)</h3>
 <p>Od firmware 0.4.7 pulpit wykorzystuje cały wyświetlacz o rozdzielczości 1280 × 800 pikseli. Na górze jest pasek nagłówka z logo, godziną, Wi-Fi, przełącznikiem <strong>AUTOMATYKA</strong>, kołem zębatym do konfiguracji i skrajnie po prawej poziomem naładowania akumulatora (<a href="#z10-akku-anzeige">rozdział 7</a>), pod nim karty <strong>WIATR</strong>, <strong>CZUJNIK SŁOŃCA</strong> i <strong>TRYB RĘCZNY</strong>, na dole pasek stanu z <strong>PARKUJ POZIOMO</strong>. W trybie pracy <em>TYLKO PIONOWO</em> dochodzi karta <strong>NACHYLENIE</strong> z przyciskami stałych kątów (<a href="#z10-neigung">Nachylenie na polecenie</a>). Przy dwóch osiach jej nie ma, a pozostałe karty są szersze. Jeśli skonfigurowano anemometr z kierunkiem wiatru, w karcie <strong>WIATR</strong> pod prędkością widać <strong>różę wiatrów</strong>: północ u góry, wschód po prawej jak na mapie. Żółta igła wskazuje swoją kropką kierunek, z którego wieje wiatr; pod nią to samo jako tekst, na przykład „Wiatr z SW (228°)”. Jeśli czujnik kierunku wiatru nie odpowiada, igła znika, a tekst brzmi „Kierunek wiatru --”. Jeśli jest o czym ostrzegać (lampki, zasilanie, blokada ładowania, odczyt Halla, nowe firmware), ostrzeżenie pojawia się na żółto w miejscu godziny (<a href="#z10-versorgung-warnungen">Ostrzeżenia dotyczące zasilania i blokady ładowania</a>). Uwaga: krzyż celowniczy czujnika słońca obok jest opisany odwrotnie (wschód po lewej), bo pokazuje widok w kierunku południa.</p>
+<p><strong>Tryb ręczny:</strong> gdy przełącznik <strong>AUTOMATYKA</strong> jest wyłączony, elewacja porusza się, dopóki przycisk jest wciśnięty. <strong>STROMIEJ</strong> (strzałka w górę) ustawia panele bardziej stromo, ich krawędź się podnosi; <strong>PŁASKIEJ</strong> (strzałka w dół) jedzie w kierunku pozycji poziomej. Przy dwóch osiach dochodzą <strong>WSCHÓD</strong> i <strong>ZACHÓD</strong>. To, które wyjście płytki przełącza, wynika z ustawienia „Pozycja pozioma w kierunku W GÓRĘ” w USTAWIENIA → URUCHOMIENIE: fabrycznie STROMIEJ przełącza wyjście W DÓŁ, a PŁASKIEJ wyjście W GÓRĘ. Pasek stanu pokazuje te same słowa („RĘCZNIE: STROMIEJ”, „AUTO: ŚLEDZENIE ELEWACJA PŁASKIEJ”). Do firmware 0.5.7 przyciski nazywały się jak wyjścia W GÓRĘ i W DÓŁ; przy aktualizacji uwaga: fabrycznie górny przycisk jedzie teraz w przeciwnym kierunku.</p>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10_pl/n04_neigung_karte_eingemessen.png" alt="Pulpit wersji 10-calowej, tylko pionowo, z kartą NACHYLENIE" width="1280" height="800"></div><figcaption><b>Rys. 13a</b> – Tylko pionowo: cztery karty, wśród nich NACHYLENIE.</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10_pl/n04_neigung_karte_eingemessen.png" alt="Pulpit wersji 10-calowej, tylko pionowo, z kartą NACHYLENIE" width="1280" height="800"></div><figcaption><b>Rys. 13a</b> – Tylko pionowo: cztery karty, w tym NACHYLENIE. W trybie ręcznym STROMIEJ i PŁASKIEJ.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_pl/d01_dashboard_2achsen.png" alt="Pulpit wersji 10-calowej z dwiema osiami" width="1280" height="800"></div><figcaption><b>Rys. 13b</b> – Dwie osie z kierunkiem wiatru: trzy szersze karty, w karcie WIATR róża wiatrów (wiatr z SW), w trybie ręcznym dodatkowo WSCHÓD i ZACHÓD.</figcaption></figure>
 </div>
 <div class="note open"><strong>Stan</strong><p>Także pozostałe ekrany (konfiguracja, USTAWIENIA, sieć, godzina, dostęp zdalny, motyw, dźwięk, ekran, firmware, kalibracja) wykorzystują cały wyświetlacz: są zaprojektowane na 1280 × 800 pikseli, z dużą czcionką (na przykład Rys. 24). Duży pulpit został 20.10.2026 wgrany na płytę testową, urządzenie jest potem dostępne w sieci. Jak tam wygląda, czy palce trafiają w przyciski i czy działa płynnie, nie zostało jeszcze potwierdzone; powiększone pozostałe ekrany są zbudowane tylko na komputerze. Obrazy tutaj wygenerowało narzędzie do zrzutów ekranu z prawdziwego kodu interfejsu.</p></div>
@@ -1373,7 +1375,7 @@ h2 .num { white-space: nowrap; }
   <li><strong>Powrót do automatyki</strong>Dotknij w karcie <strong>WZNÓW AUTOMATYKĘ</strong>. <em>Oczekiwane:</em> Pasek stanu znów pokazuje AUTO, przełącznik AUTOMATYKA jest znów niebieski bez krzyżyka, śledzenie zaczyna się od nowa.</li>
 </ol>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10_pl/n05_neigung_bezugsfahrt.png" alt="Ruch referencyjny do pozycji poziomej" width="1280" height="800"></div><figcaption><b>Rys. 18</b> – Bazowanie: elewacja najpierw jedzie do poziomu aż do położenia krańcowego. Czy „poziomo” oznacza na napędzie W GÓRĘ czy W DÓŁ, określa ustawienie „Kierunek pozycji poziomej”.</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10_pl/n05_neigung_bezugsfahrt.png" alt="Ruch referencyjny do pozycji poziomej" width="1280" height="800"></div><figcaption><b>Rys. 18</b> – Bazowanie: elewacja najpierw jedzie do poziomu aż do położenia krańcowego. Czy „poziomo” oznacza na napędzie W GÓRĘ czy W DÓŁ, określa ustawienie „Pozycja pozioma w kierunku W GÓRĘ”.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_pl/n06_neigung_fahrt_steiler.png" alt="Ruch stromiej do kąta docelowego" width="1280" height="800"></div><figcaption><b>Rys. 19</b> – Ruch do kąta z bieżącym szacunkiem „OK. 12°”.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_pl/n07_neigung_pause_einschaltdauer.png" alt="Przerwa z powodu cyklu pracy" width="1280" height="800"></div><figcaption><b>Rys. 20</b> – Napędy potrzebują przerwy (<a href="#z10-einschaltdauer">cykl pracy</a>, poniżej). Potem ruch sam się wznawia.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_pl/n11_neigung_nicht_eingemessen.png" alt="Czas ruchu nieskalibrowany, brak ruchu" width="1280" height="800"></div><figcaption><b>Rys. 21</b> – Zażądano 30°, ale czas ruchu nie jest skalibrowany: nic nie jedzie. Najpierw skalibruj (poniżej).</figcaption></figure>
@@ -1541,7 +1543,7 @@ h2 .num { white-space: nowrap; }
 [ 3690.010][I][motor ] Elevation: Laufzeit-Endlage PLUS erreicht
 <span class="c">   … 30 Minuten später, der Sturm hält an …</span>
 [ 5400.000][D][track ] Zustand STORM haelt an: Flachfahrt wird erneut erlaubt</pre></div>
-<p>To, czy w logu stoi „PLUS” czy „MINUS”, zależy od ustawienia „Kierunek pozycji poziomej”; fabrycznie poziomo = W GÓRĘ = PLUS.</p>
+<p>To, czy w logu stoi „PLUS” czy „MINUS”, zależy od ustawienia „Pozycja pozioma w kierunku W GÓRĘ”; fabrycznie poziomo = W GÓRĘ = PLUS.</p>
 <div class="note warn"><strong>Do tego czasu</strong><p>Płytkę RearCircuitBoard_10 można sprawdzić tylko na sprzęcie (<a href="#z10-inbetriebnahme">rozdział 9</a>). Bez firmware nie przełącza żaden styk i nie świeci żadna lampka. Akumulator podłącz dopiero wtedy, gdy płytka przeszła próbę zimna i ciepła i działa firmware, które sprawdza blokadę ładowania (<a href="#z10-akku-pruefung">rozdział 7</a>, na własne ryzyko).</p></div>
 
 <h3 id="z10-sync-reset">Reset sterownika synchronicznego (w przygotowaniu, nie sprawdzone na urządzeniu)</h3>
@@ -2022,6 +2024,16 @@ h2 .num { white-space: nowrap; }
 <p>Zakaz wykorzystania komercyjnego dotyczy wszystkich, którzy korzystają z projektu na tej licencji. Właściciel praw, Silvio Sternitzke, nie jest nim związany: może sam sprzedawać płytkę lub wyjątkowo zezwolić innym na wykorzystanie komercyjne.</p>
 <div class="note open"><strong>Otwarte w przypadku sprzedaży: niesprawdzone, to nie jest porada prawna</strong><p>Obecnie projekt służy budowie do celów prywatnych. Komercyjna sprzedaż płytki, zestawu lub urządzenia wymaga osobnej weryfikacji, na przykład: oznakowanie CE i zgodność EMC (kompatybilność elektromagnetyczna), rejestracja zgodnie z niemiecką ustawą o urządzeniach elektrycznych i elektronicznych (ElektroG, WEEE), RoHS (ograniczenie substancji niebezpiecznych), bezpieczeństwo produktów zgodnie z rozporządzeniem UE GPSR oraz ustawa o opakowaniach. Żaden z tych punktów nie został sprawdzony ani spełniony.</p></div>
 <div class="note info"><strong>Bez gwarancji</strong><p>Dokumentacja jest udostępniana bez gwarancji. Budowa i eksploatacja odbywają się na własną odpowiedzialność. Za szkody wynikające z nieprawidłowego lutowania, odwrotnej polaryzacji lub błędnego podłączenia komponentów zewnętrznych nie ponosi się odpowiedzialności, o ile pozwala na to prawo (<a href="#z10-sicherheit">rozdział 2</a>).</p></div>
+</section>
+
+<section id="z10-verlauf">
+<h2><span class="num">13</span>Historia zmian</h2>
+<p class="lead">Co zmieniło się w tym podręczniku, najnowsza zmiana na początku. Historia zaczyna się od wydania z 10 listopada 2026.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Data</th><th>Firmware</th><th>Zmiana</th></tr></thead>
+<tbody><tr><td>10.11.2026</td><td>0.5.9</td><td>Po francusku, hiszpańsku i portugalsku przyciski STROMIEJ i PŁASKIEJ są w dwóch wierszach (przy dwóch osiach w 0.5.8 były obcięte); obrazy tych języków wygenerowane ponownie. Osobny akapit o trybie ręcznym w <a href="#z10-dashboard">rozdziale 8</a>; rys. 18 i przykład logu podają ustawienie tak jak na wyświetlaczu, „Pozycja pozioma w kierunku W GÓRĘ”. Historia zmian jest teraz także w drukowanym spisie treści.</td></tr>
+<tr><td>10.11.2026</td><td>0.5.8</td><td>Przyciski w trybie ręcznym nazywają się STROMIEJ i PŁASKIEJ zamiast W GÓRĘ i W DÓŁ, podobnie ruch na pasku stanu („RĘCZNIE: STROMIEJ”, „AUTO: ŚLEDZENIE ELEWACJA PŁASKIEJ”), w stanie osi („Elew: STROMIEJ”) i w interfejsie WWW (<a href="#z10-dashboard">rozdział 8</a>, rys. 13a). Które to wyjście, wynika z ustawienia „Pozycja pozioma w kierunku W GÓRĘ”; fabrycznie STROMIEJ to wyjście W DÓŁ. Zaciski, styki, ustawienia i wiersze dziennika „Ausgang Elevation” nadal nazywają się RAUF i RUNTER (W GÓRĘ i W DÓŁ). Rys. 2 i tabela czujnika słońca (<a href="#z10-sensor">rozdział 4</a>) nazywają ruch paneli. Zrzuty ekranu interfejsu wygenerowane na nowo.</td></tr>
+</tbody></table></div>
 </section>
 <footer>
   <p><strong>© Silvio Sternitzke, 10/2026</strong> · Licencja CC BY-NC-SA 4.0: brak komercyjnego wykorzystania przez osoby trzecie, budowa do celów prywatnych dozwolona (<a href="#z10-lizenz">rozdział 12</a>).</p>

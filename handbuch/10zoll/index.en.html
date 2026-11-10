@@ -279,6 +279,7 @@ h2 .num { white-space: nowrap; }
     <li><a href="#z10-glossar"><span class="n">10</span>Terms explained simply</a></li>
     <li><a href="#z10-anhang"><span class="n">11</span>Appendix</a></li>
     <li><a href="#z10-lizenz"><span class="n">12</span>License and copyright</a></li>
+    <li><a href="#z10-verlauf"><span class="n">13</span>Change history</a></li>
   </ol>
   <p class="copy">© Silvio Sternitzke, 10/2026<br>License CC BY-NC-SA 4.0</p>
 </nav>
@@ -372,7 +373,7 @@ h2 .num { white-space: nowrap; }
   <circle class="f-ink" cx="192" cy="236" r="5"/><circle class="f-ink" cx="256" cy="82" r="5"/>
   <text x="246" y="212" class="t-s">Linear actuator</text>
   <path class="ln s-sun" d="M300 60 A120 120 0 0 1 326 130" marker-start="url(#arr)" marker-end="url(#arr)"/>
-  <text x="318" y="68" class="t-s">UP</text><text x="334" y="134" class="t-s">DOWN</text>
+  <text x="318" y="68" class="t-s">STEEPER</text><text x="334" y="134" class="t-s">FLATTER</text>
   <circle class="f-sun" cx="62" cy="62" r="20"/>
   <path class="ln-m dash" d="M82 76 L140 108"/>
 
@@ -454,8 +455,8 @@ h2 .num { white-space: nowrap; }
 <figcaption><b>Fig. 3</b> – The principle, shown simplified with two opposite sensors and a shade between them. The manufacturer does not say exactly how the purchased sensor is built inside.</figcaption></figure>
 <div class="table-wrap"><table>
 <tr><th>Comparison</th><th>Meaning</th><th>The controller moves</th></tr>
-<tr><td>North brighter than south</td><td>The sun is higher than the module is facing</td><td>UP</td></tr>
-<tr><td>South brighter than north</td><td>The sun is lower</td><td>DOWN</td></tr>
+<tr><td>North brighter than south</td><td>The sun is higher than the module is facing</td><td>flatter (factory setting: output UP)</td></tr>
+<tr><td>South brighter than north</td><td>The sun is lower</td><td>steeper (factory setting: output DOWN)</td></tr>
 <tr><td>East brighter than west</td><td>The sun is further east</td><td>to EAST (only with two axes)</td></tr>
 <tr><td>West brighter than east</td><td>The sun is further west</td><td>to WEST (only with two axes)</td></tr>
 </table></div>
@@ -1264,8 +1265,9 @@ h2 .num { white-space: nowrap; }
 <p>After the factory image has been flashed, the board starts as if new. It shows the setup, with the operating mode as the first item (seen like this on the test board on 20.10.2026, firmware 0.4.6). Since firmware 0.4.7 the user interface uses the whole display. If the RearCircuitBoard_10 board is not yet plugged on, the controller reports an error of the inputs and outputs or offers the <a href="#z10-glossar">simulation</a>; that is correct without the RearCircuitBoard_10. After that, continue with the <a href="#z10-inbetriebnahme">first commissioning of the hardware</a>.</p>
 <h3 id="z10-dashboard">The dashboard on the large display (generated on the computer, not checked on the device)</h3>
 <p>Since firmware 0.4.7, the dashboard uses the whole display with 1280 × 800 pixels. At the top is the header with logo, time, Wi-Fi, the <strong>AUTOMATIC</strong> switch, the gear wheel for the setup and, on the far right, the battery level (<a href="#z10-akku-anzeige">Chapter 7</a>); below it the cards <strong>WIND</strong>, <strong>SUN SENSOR</strong> and <strong>MANUAL</strong>, and at the bottom the status bar with <strong>PARK FLAT</strong>. In the <em>VERTICAL ONLY</em> operating mode, the <strong>TILT</strong> card is added, with the buttons for the fixed angles (<a href="#z10-neigung">Tilt on command</a>). With two axes it is omitted, and the remaining cards become wider. If an anemometer with wind direction is set up, a <strong>compass rose</strong> appears in the <strong>WIND</strong> card below the speed: north at the top, east on the right as on a map. The yellow needle points with its dot in the direction the wind is coming from; below it the same is shown as text, for example "Wind from SW (228°)". If the wind direction sensor does not respond, the needle disappears and the text reads "Wind direction --". If there is something to warn about (lamps, supply, charge lock, Hall tap, new firmware), the warning appears in yellow in place of the time (<a href="#z10-versorgung-warnungen">Warnings about the supply and the charge lock</a>). Note: the crosshair of the sun sensor next to it is labelled the other way round (east on the left), because it shows the view towards the south.</p>
+<p><strong>Manual mode:</strong> With the <strong>AUTOMATIC</strong> switch off, the elevation moves as long as a button is held. <strong>STEEPER</strong> (arrow up) tilts the panels steeper, their edge rises; <strong>FLATTER</strong> (arrow down) moves towards the flat position. With two axes, <strong>EAST</strong> and <strong>WEST</strong> are added. Which output of the board switches follows the setting “Flat position is in UP direction” under SETTINGS → COMMISSIONING: by default STEEPER switches the output DOWN and FLATTER the output UP. The status band shows the same words (“MANUAL: MOVING STEEPER”, “AUTO: TRACKING ELEVATION FLATTER”). Up to firmware 0.5.7 the buttons were named after the outputs UP and DOWN; when upgrading, note: by default the upper button now moves in the opposite direction.</p>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10_en/n04_neigung_karte_eingemessen.png" alt="Dashboard of the 10-inch version, vertical only, with TILT card" width="1280" height="800"></div><figcaption><b>Fig. 13a</b> – Vertical only: four cards, including TILT.</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10_en/n04_neigung_karte_eingemessen.png" alt="Dashboard of the 10-inch version, vertical only, with TILT card" width="1280" height="800"></div><figcaption><b>Fig. 13a</b> – Elevation only: four cards, including TILT. In manual mode STEEPER and FLATTER.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_en/d01_dashboard_2achsen.png" alt="Dashboard of the 10-inch version with two axes" width="1280" height="800"></div><figcaption><b>Fig. 13b</b> – Two axes with wind direction: three wider cards, the compass rose in the WIND card (wind from SW), plus EAST and WEST in manual mode.</figcaption></figure>
 </div>
 <div class="note open"><strong>Status</strong><p>The other screens (setup, SETTINGS, network, time, remote access, design, sound, screen, firmware, calibration) also use the whole display: they are laid out for 1280 × 800 pixels, with large lettering (for example Fig. 24). The large dashboard was flashed onto the test board on 20.10.2026, and the device can then be reached on the network. How it looks there, whether fingers hit the buttons and whether it runs smoothly has not yet been confirmed; the enlarged other screens have only been built on the computer. The pictures here were generated by the screenshot tool from the real code of the user interface.</p></div>
@@ -1373,7 +1375,7 @@ h2 .num { white-space: nowrap; }
   <li><strong>Back to automatic</strong>Tap <strong>RESUME AUTOMATIC</strong> in the card. <em>Expected:</em> The status bar shows AUTO again, the AUTOMATIC switch is blue again without a cross, and tracking starts again.</li>
 </ol>
 <div class="shots">
-  <figure><div class="frame"><img src="../img/screens10_en/n05_neigung_bezugsfahrt.png" alt="Reference move to the flat position" width="1280" height="800"></div><figcaption><b>Fig. 18</b> – The reference move: the elevation first moves flat to the end position. Whether "flat" means UP or DOWN on the drive is determined by the setting "Direction of the flat position".</figcaption></figure>
+  <figure><div class="frame"><img src="../img/screens10_en/n05_neigung_bezugsfahrt.png" alt="Reference move to the flat position" width="1280" height="800"></div><figcaption><b>Fig. 18</b> – The reference move: the elevation first moves flat to the end position. Whether “flat” means UP or DOWN on the drive is determined by the setting “Flat position is in UP direction”.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_en/n06_neigung_fahrt_steiler.png" alt="Moving steeper to the target angle" width="1280" height="800"></div><figcaption><b>Fig. 19</b> – The move to the angle, with the running estimate "~12°".</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_en/n07_neigung_pause_einschaltdauer.png" alt="Pause due to the duty cycle" width="1280" height="800"></div><figcaption><b>Fig. 20</b> – The drives need a pause (<a href="#z10-einschaltdauer">duty cycle</a>, below). After that it continues by itself.</figcaption></figure>
   <figure><div class="frame"><img src="../img/screens10_en/n11_neigung_nicht_eingemessen.png" alt="Travel time not calibrated, no move" width="1280" height="800"></div><figcaption><b>Fig. 21</b> – 30° has been requested, but the travel time has not been calibrated: nothing moves. Calibrate first (below).</figcaption></figure>
@@ -1541,7 +1543,7 @@ h2 .num { white-space: nowrap; }
 [ 3690.010][I][motor ] Elevation: Laufzeit-Endlage PLUS erreicht
 <span class="c">   … 30 Minuten später, der Sturm hält an …</span>
 [ 5400.000][D][track ] Zustand STORM haelt an: Flachfahrt wird erneut erlaubt</pre></div>
-<p>Whether the log shows „PLUS“ or „MINUS“ depends on the setting “direction of the flat position”; by default flat = UP = PLUS.</p>
+<p>Whether the log shows „PLUS“ or „MINUS“ depends on the setting “Flat position is in UP direction”; by default flat = UP = PLUS.</p>
 <div class="note warn"><strong>Until then</strong><p>The RearCircuitBoard_10 board can only be checked on the hardware (<a href="#z10-inbetriebnahme">Chapter 9</a>). Without firmware, no contact switches and no lamp lights. Only connect the battery once the board has passed the cold and heat test and a firmware is running that checks the charge lock (<a href="#z10-akku-pruefung">Chapter 7</a>, at your own risk).</p></div>
 
 <h3 id="z10-sync-reset">Resetting the sync controller (in preparation, not checked on the device)</h3>
@@ -2022,6 +2024,16 @@ h2 .num { white-space: nowrap; }
 <p>The prohibition of commercial use applies to everyone who uses the project under this licence. The rights holder, Silvio Sternitzke, is not bound by it: he can sell the board himself or, by way of exception, allow others commercial use.</p>
 <div class="note open"><strong>Still open for a sale: not checked, no legal advice</strong><p>Today the project serves building it for private purposes. A commercial sale of the board, a kit or a device requires a separate review, for example: CE marking and EMC conformity (electromagnetic compatibility), registration under the German Electrical and Electronic Equipment Act (ElektroG, WEEE), RoHS (restriction of hazardous substances), product safety under the EU regulation GPSR and the German Packaging Act. None of these points has been checked or fulfilled.</p></div>
 <div class="note info"><strong>No warranty</strong><p>The documents are provided without warranty. Building and operation are at your own risk. No liability is accepted for damage caused by improper soldering, reversed polarity or incorrect connection of external components, to the extent permitted by law (<a href="#z10-sicherheit">Chapter 2</a>).</p></div>
+</section>
+
+<section id="z10-verlauf">
+<h2><span class="num">13</span>Change history</h2>
+<p class="lead">What has changed in this manual, newest change first. The history starts with the edition of 10 November 2026.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Date</th><th>Firmware</th><th>Change</th></tr></thead>
+<tbody><tr><td>10.11.2026</td><td>0.5.9</td><td>In French, Spanish and Portuguese the buttons STEEPER and FLATTER are shown on two lines (with two axes they were cut off in 0.5.8); images of these languages regenerated. Own paragraph on manual mode in <a href="#z10-dashboard">chapter 8</a>; Fig. 18 and the log example name the setting as on the display, “Flat position is in UP direction”. The change history now also appears in the printed table of contents.</td></tr>
+<tr><td>10.11.2026</td><td>0.5.8</td><td>The buttons in manual mode are called STEEPER and FLATTER instead of UP and DOWN, as is the movement in the status bar (“MANUAL: MOVING STEEPER”, “AUTO: TRACKING ELEVATION FLATTER”), in the axis state (“Elev: STEEPER”) and in the web interface (<a href="#z10-dashboard">chapter 8</a>, fig. 13a). Which output that is follows the setting “Flat position is in UP direction”; by factory default, STEEPER is the output DOWN. Terminals, contacts, settings and the log lines “Ausgang Elevation” are still called RAUF and RUNTER (UP and DOWN). Fig. 2 and the table on the sun sensor (<a href="#z10-sensor">chapter 4</a>) name the movement of the panels. Screenshots of the user interface regenerated.</td></tr>
+</tbody></table></div>
 </section>
 <footer>
   <p><strong>© Silvio Sternitzke, 10/2026</strong> · Licence CC BY-NC-SA 4.0: no commercial use by third parties, building for private purposes permitted (<a href="#z10-lizenz">Chapter 12</a>).</p>
