@@ -563,6 +563,22 @@
         "pattern": "/KONTAKT_AZ_WEST_5"
       },
       {
+        "netclass": "KONTAKT",
+        "pattern": "/KONTAKT_RST_EL_1"
+      },
+      {
+        "netclass": "KONTAKT",
+        "pattern": "/KONTAKT_RST_EL_2"
+      },
+      {
+        "netclass": "KONTAKT",
+        "pattern": "/KONTAKT_RST_AZ_3"
+      },
+      {
+        "netclass": "KONTAKT",
+        "pattern": "/KONTAKT_RST_AZ_4"
+      },
+      {
         "netclass": "RS485",
         "pattern": "/RS485_A"
       },
