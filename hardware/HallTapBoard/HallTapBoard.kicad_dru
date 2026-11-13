@@ -33,12 +33,17 @@
 	(condition "A.Type == 'Via'")
 	(constraint hole_size (min 0.3mm)))
 
+# Restring der Bauteilbohrungen (seit Entwurf 0.6, wie auf der RearCircuitBoard_10; Klemmen J2/J3 0,25 mm)
+(rule "Restring Bauteilbohrung 0,2 mm"
+	(condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+	(constraint annular_width (min 0.2mm)))
+
 (rule "Via zu fremdem Pad 0,35 mm"
 	(layer outer)
 	(condition "A.Type == 'Via' && B.Type == 'Pad' && A.Net != B.Net")
 	(constraint clearance (min 0.35mm)))
 
-# Trennung zwischen Eingangsseite (Masse der SCN4, 24 V der Antriebe) und Ausgangsseite (potentialfrei, Masse der
+# Trennung zwischen Eingangsseite (Masse der Synchronsteuerung, 24 V der Antriebe) und Ausgangsseite (potentialfrei, Masse der
 # RearCircuitBoard_10): Funktionsisolation, Begruendung in der README. Steht am Ende, damit sie vorgeht.
 (rule "Trennstrecke Eingang zu Ausgang 6.0 mm"
 	(condition "A.hasNetclass('AUSGANG') && !B.hasNetclass('AUSGANG') && B.NetName != ''")

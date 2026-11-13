@@ -1,14 +1,14 @@
 Samba Solar Track - HallTapBoard, Fertigungsdaten für JLCPCB, Bestückungsvariante „voll“
-Platine Entwurf 0.5; erzeugt am 13.10.2026 22:18 mit tools/halltap_erzeugen.py (Stand d0c5e90 13.10.2026 mit nicht eingecheckten Änderungen).
+Platine Entwurf 0.6; erzeugt am 11.11.2026 18:39 mit tools/halltap_erzeugen.py (Stand e5aa25d 11.11.2026 mit nicht eingecheckten Änderungen).
 
 Verwendung und Haftung: nur Schutzkleinspannung (SELV), höchstens 30 V DC an allen Anschlüssen, keine
 Netzspannung. Für Schäden durch unsachgemäßes Löten, Falschpolung oder falschen Anschluss externer
 Komponenten wird keine Haftung übernommen, soweit gesetzlich zulässig (README, Abschnitt „Verwendung,
 Spannung und Haftung“).
 
-ENTWURF - MUSTERBESTELLUNG ZUR ERPROBUNG (Freigabe des Nutzers vom 13.10.2026). Nichts davon ist gefertigt oder
-gemessen. Vor einer größeren Stückzahl den Prüfplan am Rack abarbeiten (README, „Platine HallTapBoard“): Impulsrate
-der Antriebe, Pegel der Hall-Leitung, ob die SCN4 den Abgriff verträgt (HAKIWO hat dazu nicht geantwortet).
+ENTWURF 0.6 (nach der Prüfung vom 11.11.2026). Nichts davon ist gefertigt oder gemessen. Offen sind die Messungen
+am Rack (README, „Platine HallTapBoard“, Prüfplan Punkte 1 bis 4): Pegel und Versorgung des Hall-Anschlusses der
+Synchronsteuerung BST-KZQ-15A-2, Impulsrate der Antriebe, ob die Synchronsteuerung den Abgriff verträgt.
 Passende Stecker: hardware/HallTapBoard/STECKER-BESTELLLISTE.md.
 
 Dateien:
@@ -20,7 +20,14 @@ Bestellung (JLCPCB):
   Leiterplatte: 2 Lagen, 1,6 mm, 70 x 40 mm, Kupfer 1 oz, Oberfläche HASL bleifrei, Lötstopp grün.
   Keine Schlitze; vier Bohrungen 3,2 mm ohne Kupfer (NPTH), drei Werkzeuglöcher 1,152 mm.
   Bestückung: Economic PCBA, nur Oberseite.
-  Bestückungsvariante voll: JLCPCB bestückt 45 SMD-Bauteile und 3 Durchsteckteile (J1, J2, J3),
+  Im Bestellformular außerdem wählen bzw. eintragen (Bezeichnungen können bei JLCPCB abweichen):
+    - Lieferform Einzelplatine (kein Nutzen), FR-4, Vias abgedeckt (wie in den Gerbern).
+    - Werkzeuglöcher: vom Kunden gesetzt (die Platine hat drei eigene; sonst setzt JLCPCB zusätzliche Bohrungen).
+    - Bestätigung der Fertigungsdatei und der Bauteilplatzierung vor der Fertigung: jeweils Ja.
+    - Auftragsnummer: an festgelegter Stelle entfernen lassen oder Lage in der Vorschau prüfen (nicht auf Pads).
+    - Stückzahl der Leiterplatten und der bestückten Platinen, Bestückungsvariante (smd oder voll): vor der
+      Bestellung festlegen. Die Vermerke zu D4 und D9 (unten) in das Bemerkungsfeld übernehmen.
+  Bestückungsvariante voll: JLCPCB bestückt 50 SMD-Bauteile und 3 Durchsteckteile (J1, J2, J3),
   die Durchsteckteile von Hand („Wave Soldering“, Preis je Lötstelle laut JLCPCB).
 
 Vor dem Bezahlen prüfen:
@@ -30,7 +37,7 @@ Vor dem Bezahlen prüfen:
       D10 (C123817): Kathode (Pad 1); Druck: Strich an der Kathode. D10: Kathode an +5V.
       U1 (C108469): Pin 1 (IN); Druck: Strich an Pin 1. U1: Kuehlfahne = GND (Pin 2).
       U2 (C2869804): Pin 1; Druck: Marke an Pin 1
-      U3, U4 (C109227): Pin 1 (Anode der LED, ANNAHME); Druck: Marke an Pin 1
+      U3, U4 (C109227): Pin 1 (Anode der LED, ANNAHME); Druck: Kerbe in der Mitte der Oberkante, Pin 1 links davon (oben links)
     Ausnahmen - der Punkt liegt NICHT an der Marke im Druck; Drehwinkel trotzdem NICHT ändern:
       D4 (C2297): Punkt an der Anode (Pad 2, LED_PWR); Druck: Winkel an der Kathode (Pad 1). Im Auftrag an JLCPCB vermerken: "D4: red dot = anode, cathode at silkscreen bracket, keep rotation".
       D9 (C2296): Punkt an der Anode (Pad 2, LED_24V); Druck: Winkel an der Kathode (Pad 1). Im Auftrag an JLCPCB vermerken: "D9: red dot = anode, cathode at silkscreen bracket, keep rotation".
@@ -40,7 +47,8 @@ Vor dem Bezahlen prüfen:
     Ohne Polung (bidirektional): D1, D5, D6, D7, D8 (SMAJ30CA).
     ANNAHME (H4): Drehkorrekturen aus den EasyEDA-Footprints vom 12. und 13.10.2026 (Tabelle in
     tools/halltap_erzeugen.py); U1 (C108469) 180°, Kuehlfahne nach oben zum Platinenrand mit den Leuchten.
-  - Lagerbestand und Klasse jeder Nummer (Stand der Stückliste siehe README).
+  - Lagerbestand und Klasse jeder Nummer am Tag der Bestellung (U1 C108469 war am 11.11.2026 knapp; Stand der
+    Stückliste siehe README).
 
 Lose dazu bestellen (JLCPCB verschickt keine Einzelteile; zum Beispiel bei LCSC):
   Stecker zu J1: 1 x KF2EDGK-5.08-2P-AA (C440880)

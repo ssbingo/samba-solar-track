@@ -1,18 +1,22 @@
 # HallTapBoard – Bestellliste der Stecker
 
-Platine HallTapBoard, Entwurf 0.5 (Musterbestellung zur Erprobung). JLCPCB liefert keine Teile lose mit. Die Stecker
+Platine HallTapBoard, Entwurf 0.6 vom 11.11.2026 (nichts gefertigt, nichts gemessen; vor der Bestellung die Punkte 1–4
+des Prüfplans in der README). JLCPCB liefert keine Teile lose mit. Die Stecker
 deshalb **bei LCSC** bestellen und die Bestellung mit dem JLCPCB-Auftrag zusammenlegen (ein Paket), oder bei einem
 Händler mit Lieferung an Privatkunden (Reichelt).
 
-Bestand und Preise bei LCSC abgefragt am **13.10.2026 um 22:17 MESZ**; Reichelt-Preise vom 13.10.2026, 16:04 MESZ
-(brutto). Vor der Bestellung erneut prüfen.
+Bestand und Preise bei LCSC abgefragt am **13.10.2026 um 22:17 MESZ** (die README nennt für die Kosten den Stand
+18:46 MESZ desselben Tages); Reichelt-Preise vom 13.10.2026, 16:04 MESZ (brutto). Für Entwurf 0.6 nicht neu abgefragt
+(**offen**): vor der Bestellung erneut prüfen. Die Klemmen sind in Entwurf 0.6 dieselben; geändert haben sich nur die
+Bohrungen von J2/J3 auf der Platine (1,5 mm, Pad 2,0 × 2,4 mm wie auf der RearCircuitBoard_10). Ob der Stift der
+KF2EDGR 0,80 mm (Kefa-Datenblatt laut Prüfung) oder 1 × 1 mm misst, ist offen; nach dem Erhalt messen (unten).
 
 ## Welche Klemme, welcher Stecker
 
 | Klemme auf der Platine | Zweck | Raster | Pole | Grundleiste (auf der Platine) | **Stecker (dazu bestellen)** |
 |---|---|---:|---:|---|---|
-| J1 „+24V / 0V“ | Versorgung aus den 24 V der Antriebe | 5,08 mm | 2 | Kefa KF2EDGRC-5.08-2P | **Kefa KF2EDGK-5.08-2P-AA** |
-| J2 „H1 H2 GND“ | Hall-Signale von der SCN4 | 3,81 mm | 3 | Kefa KF2EDGR-3.81-3P | **Kefa KF2EDGK-3.81-3P** |
+| J1 „+24V / 0V“ | Versorgung aus den 24 V der Antriebe (Minus vom Sternpunkt) | 5,08 mm | 2 | Kefa KF2EDGRC-5.08-2P | **Kefa KF2EDGK-5.08-2P-AA** |
+| J2 „H1 H2 GND“ | Hall-Signale von Antrieb 1 vor dem Stecker CH1 der Synchronsteuerung BST-KZQ-15A-2 (bis 09.11.2026: SCN4) | 3,81 mm | 3 | Kefa KF2EDGR-3.81-3P | **Kefa KF2EDGK-3.81-3P** |
 | J3 „J22: A B GND“ | Kontakte zur Steuerung (J22 der RearCircuitBoard_10) | 3,5 mm | 3 | Kefa KF2EDGR-3.5-3P | **Kefa KF2EDGK-3.5-3P** |
 
 Das unterschiedliche Raster von J2 (3,81 mm) und J3 (3,5 mm) ist Absicht: Die beiden 3-poligen Stecker lassen sich
@@ -63,7 +67,14 @@ Kefa-Grundleiste passt, ist eine **Annahme** (nur der Footprint ist für J1 gepr
 ## Nach dem Erhalt prüfen
 
 1. Jeden Stecker einmal in seine Grundleiste stecken. *Erwartet:* Er rastet ohne Kraft ein, sitzt bündig, kein Pin bleibt frei.
-2. Den 3,81-mm-Stecker (J2) probeweise an J3 halten. *Erwartet:* Er passt nicht – das ist der Verwechslungsschutz.
+   Beim Stecker von J1 (KF2EDGK-5.08-2P-AA) zur Grundleiste KF2EDGRC-5.08-2P mit Stirnwänden ist die Paarung im Datenblatt
+   nicht belegt (**Annahme**) – hier besonders prüfen.
+2. Den 3,81-mm-Stecker (J2) probeweise an J3 halten und den 3,5-mm-Stecker an J2. *Erwartet:* Keiner passt – das ist der
+   Verwechslungsschutz (**Annahme** nach Raster).
+3. Den Stift einer Grundleiste KF2EDGR (J2 oder J3) mit dem Messschieber messen. *Erwartet:* höchstens etwa 1 × 1 mm
+   (dann passt er in die Bohrung 1,5 mm); den Wert notieren.
+4. Überstand des gesteckten Steckers über die Vorderkante der Grundleiste messen (für das Gehäuse mit 9 mm gerechnet,
+   wahrscheinlich mehr). *Erwartet:* Wert notieren und mit der README („Gehäuse“, Zeile „Stecker und Kabel“) vergleichen.
 
 ---
 
